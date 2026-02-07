@@ -333,8 +333,8 @@ public partial class @Player: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""6150420c-d5c5-4586-a14b-45197e0a3697"",
-                    ""path"": ""<Mouse>/rightButton"",
+                    ""id"": ""ed135f8c-81c6-4278-81dc-a1c78d4e1064"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -344,8 +344,8 @@ public partial class @Player: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""ed135f8c-81c6-4278-81dc-a1c78d4e1064"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""id"": ""5a6095ec-3569-49ca-94ec-e6cf5caf716a"",
+                    ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

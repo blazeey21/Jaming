@@ -13,11 +13,17 @@ public class CursorLogic : MonoBehaviour
     [SerializeField] private Camera playerCamera;
     [SerializeField] private InputActionProperty grabAction;
 
+    [Header("Cursor Settings")]
+    [SerializeField] private bool useMouseCursor = true; // Si es false, usa centro de pantalla
+    [SerializeField] private Texture2D grabCursorTexture; // Textura personalizada para el cursor
+    [SerializeField] private Texture2D normalCursorTexture; // Textura normal del cursor
+
     private GameObject currentGrabbable;
     private GameObject grabbedObject;
     private Renderer currentRenderer;
     private Material originalMaterial;
     private Color originalColor;
+    private Vector2 lastMousePosition;
 
     private void Start()
     {
@@ -25,6 +31,12 @@ public class CursorLogic : MonoBehaviour
         if (grabAction.action == null)
         {
             Debug.LogWarning("No se ha asignado una acción de agarre. Se usará la tecla E por defecto.");
+        }
+
+        // Configurar cursor inicial
+        if (useMouseCursor && normalCursorTexture != null)
+        {
+            Cursor.SetCursor(normalCursorTexture, Vector2.zero, CursorMode.Auto);
         }
 
         // Suscribir eventos de la acción de entrada
@@ -52,12 +64,38 @@ public class CursorLogic : MonoBehaviour
 
         ResetCurrentGrabbable();
         ReleaseObject();
+
+        // Restaurar cursor normal
+        if (useMouseCursor)
+        {
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        }
     }
 
     private void Update()
     {
-        // Raycast desde la cámara hacia adelante
-        Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+        Ray ray;
+
+        if (useMouseCursor)
+        {
+            // Raycast desde la posición actual del cursor del ratón
+            Vector2 mousePosition = Mouse.current.position.ReadValue();
+
+            // Solo actualizar si el cursor se ha movido (para optimización)
+            if (mousePosition == lastMousePosition && currentGrabbable != null && grabbedObject == null)
+            {
+                return;
+            }
+
+            lastMousePosition = mousePosition;
+            ray = playerCamera.ScreenPointToRay(mousePosition);
+        }
+        else
+        {
+            // Raycast desde el centro de la pantalla (comportamiento original)
+            ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+        }
+
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, grabDistance, grabbableLayer))
@@ -75,6 +113,12 @@ public class CursorLogic : MonoBehaviour
                     originalMaterial = currentRenderer.material;
                     originalColor = currentRenderer.material.color;
                     currentRenderer.material.color = hoverColor;
+
+                    // Cambiar cursor si está configurado
+                    if (useMouseCursor && grabCursorTexture != null)
+                    {
+                        Cursor.SetCursor(grabCursorTexture, Vector2.zero, CursorMode.Auto);
+                    }
                 }
             }
         }
@@ -82,6 +126,12 @@ public class CursorLogic : MonoBehaviour
         {
             // Si no estamos apuntando a ningún objeto agarrable
             ResetCurrentGrabbable();
+
+            // Restaurar cursor normal si no hay objeto agarrable
+            if (useMouseCursor && normalCursorTexture != null && grabbedObject == null)
+            {
+                Cursor.SetCursor(normalCursorTexture, Vector2.zero, CursorMode.Auto);
+            }
         }
 
         // Actualizar posición del objeto agarrado
@@ -122,6 +172,12 @@ public class CursorLogic : MonoBehaviour
             {
                 currentRenderer.material.color = grabbedColor;
             }
+
+            // Cambiar cursor a agarrado si está configurado
+            if (useMouseCursor && grabCursorTexture != null)
+            {
+                Cursor.SetCursor(grabCursorTexture, Vector2.zero, CursorMode.Auto);
+            }
         }
         else if (grabbedObject != null)
         {
@@ -146,6 +202,9 @@ public class CursorLogic : MonoBehaviour
         {
             rb.isKinematic = false;
             rb.useGravity = true;
+
+            // Aplicar velocidad para simular lanzamiento
+            // rb.velocity = playerCamera.transform.forward * 5f;
         }
 
         // Restaurar color original si no está siendo apuntado
@@ -158,6 +217,12 @@ public class CursorLogic : MonoBehaviour
             currentRenderer.material.color = originalColor;
         }
 
+        // Restaurar cursor normal si está configurado
+        if (useMouseCursor && normalCursorTexture != null)
+        {
+            Cursor.SetCursor(normalCursorTexture, Vector2.zero, CursorMode.Auto);
+        }
+
         grabbedObject = null;
     }
 
@@ -165,11 +230,23 @@ public class CursorLogic : MonoBehaviour
     {
         if (grabbedObject == null || playerCamera == null) return;
 
-        // Calcular posición frente a la cámara
-        Vector3 targetPosition = playerCamera.transform.position +
-                                playerCamera.transform.forward * (grabDistance * 0.7f);
+        // Calcular posición frente a la cámara basada en la posición del cursor
+        Vector3 targetPosition;
 
-        // Suavizar el movimiento (opcional)
+        if (useMouseCursor)
+        {
+            // Si usamos cursor, mantener el objeto en el punto de mira del cursor
+            Ray ray = playerCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+            targetPosition = ray.origin + ray.direction * (grabDistance * 0.7f);
+        }
+        else
+        {
+            // Comportamiento original: frente a la cámara
+            targetPosition = playerCamera.transform.position +
+                            playerCamera.transform.forward * (grabDistance * 0.7f);
+        }
+
+        // Suavizar el movimiento
         grabbedObject.transform.position = Vector3.Lerp(
             grabbedObject.transform.position,
             targetPosition,
@@ -194,15 +271,43 @@ public class CursorLogic : MonoBehaviour
         }
     }
 
-    // Método para debug (opcional)
+    // Método para debug
     private void OnDrawGizmos()
     {
         if (playerCamera != null)
         {
             Gizmos.color = Color.red;
-            Vector3 rayStart = playerCamera.transform.position;
-            Vector3 rayDirection = playerCamera.transform.forward * grabDistance;
-            Gizmos.DrawRay(rayStart, rayDirection);
+
+            if (Application.isPlaying && useMouseCursor)
+            {
+                // Dibujar rayo desde la posición del cursor en tiempo de ejecución
+                Vector2 mousePosition = Mouse.current != null ? Mouse.current.position.ReadValue() :
+                    new Vector2(Screen.width / 2, Screen.height / 2);
+                Ray ray = playerCamera.ScreenPointToRay(mousePosition);
+                Gizmos.DrawRay(ray.origin, ray.direction * grabDistance);
+            }
+            else
+            {
+                // Dibujar rayo desde el centro de la pantalla
+                Vector3 rayStart = playerCamera.transform.position;
+                Vector3 rayDirection = playerCamera.transform.forward * grabDistance;
+                Gizmos.DrawRay(rayStart, rayDirection);
+            }
+        }
+    }
+
+    // Método público para cambiar entre modos de cursor
+    public void SetUseMouseCursor(bool useCursor)
+    {
+        useMouseCursor = useCursor;
+
+        if (useMouseCursor && normalCursorTexture != null)
+        {
+            Cursor.SetCursor(normalCursorTexture, Vector2.zero, CursorMode.Auto);
+        }
+        else
+        {
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         }
     }
 }
