@@ -187,6 +187,69 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1105990273}
   m_SourcePrefab: {fileID: 100100000, guid: f43897ee6a08de34c89bd01eefdb9539, type: 3}
+--- !u!1 &352304446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 352304448}
+  - component: {fileID: 352304447}
+  m_Layer: 0
+  m_Name: Cursor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &352304447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352304446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1476f7dcfd7d06d40ab4559a1d7483be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  grabbableLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  grabDistance: 5
+  hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  grabbedColor: {r: 0, g: 1, b: 0, a: 1}
+  playerCamera: {fileID: 836683736}
+  grabAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Grab
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: a32dbbd6-09dc-4970-ae13-67379e4ec68a
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -3045212205327133378, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
+--- !u!4 &352304448
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352304446}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.1, y: 4.973, z: -29.61}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +322,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 5000
+  m_ColorTemperature: 5560
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -479,7 +542,7 @@ Transform:
   m_GameObject: {fileID: 763583604}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 5.5622463, z: -29.547245}
+  m_LocalPosition: {x: 0.1, y: 5.1992464, z: -29.547245}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -641,12 +704,12 @@ Camera:
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 50
+  m_FocalLength: 19.557049
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
   m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
+  m_SensorSize: {x: 21.946, y: 16.002}
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -683,7 +746,7 @@ Transform:
   m_GameObject: {fileID: 836683733}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 5.5622463, z: -29.547245}
+  m_LocalPosition: {x: 0.1, y: 5.1992464, z: -29.547245}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -811,13 +874,14 @@ MonoBehaviour:
   deceleration: 15
   gravity: 0
   jumpHeight: 2
+  cameraTransform: {fileID: 836683737}
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967295
   groundCheckDistance: 0.4
   groundCheckPoint: {fileID: 0}
   rotationSmoothTime: 0.1
-  cursorDragDrop: {fileID: 1412963355}
+  rotateToMoveDirection: 1
 --- !u!136 &1412512087
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -906,12 +970,11 @@ Transform:
   m_GameObject: {fileID: 1412512083}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 4.973, z: -29.61}
+  m_LocalPosition: {x: 0.1, y: 4.61, z: -29.61}
   m_LocalScale: {x: 0.66059, y: 0.66059, z: 0.66059}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2128632637}
-  - {fileID: 1412963354}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1412512091
@@ -975,10 +1038,6 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: dfd8d505-d5cc-4444-881b-9808d6cdf174
     m_ActionName: 'New action map/Grab[/Mouse/rightButton]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: baa806f8-8635-4267-9072-c3b6cd9e4bbd
-    m_ActionName: 'New action map/Jump[/Keyboard/space]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: New action map
@@ -1009,63 +1068,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1412963353
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1412963354}
-  - component: {fileID: 1412963355}
-  m_Layer: 0
-  m_Name: CursorDragDrop
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1412963354
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412963353}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1412512090}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1412963355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412963353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1777bea860924d43bab1f3e86a24eda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  cursorSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  grabColor: {r: 0, g: 1, b: 0, a: 1}
-  cursorOffset: {x: 0, y: -100}
-  grabDistance: 7
-  throwForce: 5
-  grabMask:
-    serializedVersion: 2
-    m_Bits: 8
-  holdDistance: 2
-  smoothFollowSpeed: 10
-  verticalHoldOffset: -0.4
 --- !u!1 &1435741681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,3 +1329,4 @@ SceneRoots:
   - {fileID: 1412512090}
   - {fileID: 763583609}
   - {fileID: 1593548630}
+  - {fileID: 352304448}

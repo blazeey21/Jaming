@@ -12,6 +12,9 @@ public class PlayerLogic : MonoBehaviour
     [SerializeField] private float gravity = -25f;
     [SerializeField] private float jumpHeight = 2f;
 
+    [Header("Camera Reference")]
+    [SerializeField] private Transform cameraTransform;
+
     [Header("Ground Check")]
     [SerializeField] private LayerMask groundMask = -1;
     [SerializeField] private float groundCheckDistance = 0.4f;
@@ -19,6 +22,7 @@ public class PlayerLogic : MonoBehaviour
 
     [Header("Rotation")]
     [SerializeField] private float rotationSmoothTime = 0.1f;
+    [SerializeField] private bool rotateToMoveDirection = true;
 
     private CharacterController controller;
     private Vector2 moveInput;
@@ -34,9 +38,13 @@ public class PlayerLogic : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
 
-        // Si no se asigna groundCheckPoint, usar el transform del personaje
         if (groundCheckPoint == null)
             groundCheckPoint = transform;
+
+        if (cameraTransform == null)
+        {
+            cameraTransform = Camera.main?.transform;
+        }
     }
 
     void Update()
@@ -55,12 +63,7 @@ public class PlayerLogic : MonoBehaviour
     {
         isSprinting = context.ReadValueAsButton();
     }
-    public CursorDragDrop cursorDragDrop;
-    public void Grab(InputAction.CallbackContext context)
-    {
-        cursorDragDrop.OnGrab(context);
-    }
-    
+
     public void Jump(InputAction.CallbackContext context)
     {
         if (context.performed && isGrounded)
@@ -72,11 +75,11 @@ public class PlayerLogic : MonoBehaviour
 
     void HandleGroundCheck()
     {
-        // Usar esfera para mejor detección de suelo
         isGrounded = Physics.CheckSphere(
             groundCheckPoint.position,
             groundCheckDistance,
-            groundMask
+            groundMask,
+            QueryTriggerInteraction.Ignore
         );
 
         if (isGrounded && verticalVelocity < 0f)
@@ -90,15 +93,16 @@ public class PlayerLogic : MonoBehaviour
     {
         float targetSpeed = isSprinting ? sprintSpeed : moveSpeed;
 
-        // Normalizar input diagonal para mantener velocidad constante
         Vector2 normalizedInput = moveInput.normalized;
-        Vector3 moveDirection = new Vector3(normalizedInput.x, 0f, normalizedInput.y);
 
-        if (moveDirection.magnitude >= 0.1f)
+        if (moveInput.magnitude >= 0.1f)
         {
-            float targetAngle = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg;
-            Vector3 worldDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            targetVelocity = worldDirection * targetSpeed;
+            Vector3 moveDirection = GetCameraRelativeMovement(normalizedInput);
+
+            if (moveDirection.magnitude >= 0.1f)
+            {
+                targetVelocity = moveDirection * targetSpeed;
+            }
         }
         else
         {
@@ -114,33 +118,85 @@ public class PlayerLogic : MonoBehaviour
 
         verticalVelocity += gravity * Time.deltaTime;
 
-        // Combinar movimientos
         Vector3 finalMovement = currentVelocity + Vector3.up * verticalVelocity;
 
-        // Aplicar movimiento
         controller.Move(finalMovement * Time.deltaTime);
+    }
+
+    Vector3 GetCameraRelativeMovement(Vector2 input)
+    {
+        if (cameraTransform == null)
+        {
+            return new Vector3(input.x, 0f, input.y);
+        }
+
+        Vector3 cameraForward = cameraTransform.forward;
+        Vector3 cameraRight = cameraTransform.right;
+
+        cameraForward.y = 0f;
+        cameraRight.y = 0f;
+
+        cameraForward.Normalize();
+        cameraRight.Normalize();
+
+        Vector3 relativeForward = cameraForward * input.y;
+        Vector3 relativeRight = cameraRight * input.x;
+
+        return (relativeForward + relativeRight).normalized;
     }
 
     void HandleRotation()
     {
-        if (currentVelocity.magnitude > 0.1f)
+        if (currentVelocity.magnitude <= 0.1f || !rotateToMoveDirection)
+            return;
+
+        Vector3 horizontalVelocity = new Vector3(currentVelocity.x, 0f, currentVelocity.z);
+
+        if (horizontalVelocity.magnitude > 0.1f)
         {
-            float targetRotation = Mathf.Atan2(currentVelocity.x, currentVelocity.z) * Mathf.Rad2Deg;
+            float targetRotation = Mathf.Atan2(horizontalVelocity.x, horizontalVelocity.z) * Mathf.Rad2Deg;
+
             float smoothedRotation = Mathf.SmoothDampAngle(
                 transform.eulerAngles.y,
                 targetRotation,
                 ref rotationVelocity,
                 rotationSmoothTime
             );
+
             transform.rotation = Quaternion.Euler(0f, smoothedRotation, 0f);
         }
+    }
+
+    public void SetCameraReference(Transform newCameraTransform)
+    {
+        cameraTransform = newCameraTransform;
+    }
+
+    public Vector3 GetCurrentVelocity()
+    {
+        return currentVelocity;
+    }
+
+    public bool IsGrounded()
+    {
+        return isGrounded;
+    }
+
+    public bool IsJumping()
+    {
+        return isJumping;
+    }
+
+    public float GetVerticalVelocity()
+    {
+        return verticalVelocity;
     }
 
     void OnDrawGizmosSelected()
     {
         if (groundCheckPoint != null)
         {
-            Gizmos.color = isGrounded ? Color.green : Color.red;
+            Gizmos.color = Application.isPlaying ? (isGrounded ? Color.green : Color.red) : Color.yellow;
             Gizmos.DrawWireSphere(groundCheckPoint.position, groundCheckDistance);
         }
     }
