@@ -120,9 +120,45 @@ public partial class @Player: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Close"",
+                    ""name"": ""ClosePanel"",
                     ""type"": ""Button"",
                     ""id"": ""886f4f5a-aff5-458b-8af3-d28545286fe3"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ChoseNumber"",
+                    ""type"": ""Button"",
+                    ""id"": ""d100c4ca-eea5-4f3b-8edc-8f5a10ef7377"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Increment"",
+                    ""type"": ""Button"",
+                    ""id"": ""3145ab5d-e5de-4cd8-a4eb-12c6c793f679"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Decrement"",
+                    ""type"": ""Button"",
+                    ""id"": ""211cac2e-360c-4f37-a524-849beaba9a7b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Valid"",
+                    ""type"": ""Button"",
+                    ""id"": ""cf49a4be-5580-44c8-9511-4d66467191f1"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -324,7 +360,7 @@ public partial class @Player: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Close"",
+                    ""action"": ""ClosePanel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -335,7 +371,172 @@ public partial class @Player: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Close"",
+                    ""action"": ""ClosePanel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""889c0800-bff3-4020-96f8-7dac4843d643"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChoseNumber"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1974f431-66c1-4db6-8b60-37d2b696b073"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChoseNumber"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e950159a-b26f-4cd3-98f1-985b2bdd8bf6"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChoseNumber"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""19c32df0-fc1d-4ee1-92b5-8d440ff1ef02"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChoseNumber"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3747fa98-c51d-4472-b596-a313204fe956"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChoseNumber"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8954a2db-f98c-4f94-bfd2-6941441eb15e"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChoseNumber"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2d850736-3d11-4e37-9b7e-ff8d7ed5fc19"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Increment"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bae0c0bd-6c3d-4126-a34b-b060c9ee7511"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Increment"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""426f155c-78cd-4ebc-99de-f5fc45a152a4"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Increment"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ea730346-9a14-4280-a0bc-c93620c26d3c"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Increment"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""436df7f4-c62b-461b-913f-40aafe081721"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Decrement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cd30a8e5-0a4e-4b78-986b-d2e7ffbaf38a"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Decrement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1d9ef268-0d6d-4b01-ab56-41b718ed14e6"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Decrement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""12ec8093-4f33-4c4f-b99b-32dffd660f6a"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Valid"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5689ee51-aafd-43a6-a3ba-84fa0faed934"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Valid"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -349,7 +550,11 @@ public partial class @Player: IInputActionCollection2, IDisposable
         m_Newactionmap_Move = m_Newactionmap.FindAction("Move", throwIfNotFound: true);
         m_Newactionmap_Look = m_Newactionmap.FindAction("Look", throwIfNotFound: true);
         m_Newactionmap_Grab = m_Newactionmap.FindAction("Grab", throwIfNotFound: true);
-        m_Newactionmap_Close = m_Newactionmap.FindAction("Close", throwIfNotFound: true);
+        m_Newactionmap_ClosePanel = m_Newactionmap.FindAction("ClosePanel", throwIfNotFound: true);
+        m_Newactionmap_ChoseNumber = m_Newactionmap.FindAction("ChoseNumber", throwIfNotFound: true);
+        m_Newactionmap_Increment = m_Newactionmap.FindAction("Increment", throwIfNotFound: true);
+        m_Newactionmap_Decrement = m_Newactionmap.FindAction("Decrement", throwIfNotFound: true);
+        m_Newactionmap_Valid = m_Newactionmap.FindAction("Valid", throwIfNotFound: true);
     }
 
     ~@Player()
@@ -433,7 +638,11 @@ public partial class @Player: IInputActionCollection2, IDisposable
     private readonly InputAction m_Newactionmap_Move;
     private readonly InputAction m_Newactionmap_Look;
     private readonly InputAction m_Newactionmap_Grab;
-    private readonly InputAction m_Newactionmap_Close;
+    private readonly InputAction m_Newactionmap_ClosePanel;
+    private readonly InputAction m_Newactionmap_ChoseNumber;
+    private readonly InputAction m_Newactionmap_Increment;
+    private readonly InputAction m_Newactionmap_Decrement;
+    private readonly InputAction m_Newactionmap_Valid;
     /// <summary>
     /// Provides access to input actions defined in input action map "New action map".
     /// </summary>
@@ -458,9 +667,25 @@ public partial class @Player: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Grab => m_Wrapper.m_Newactionmap_Grab;
         /// <summary>
-        /// Provides access to the underlying input action "Newactionmap/Close".
+        /// Provides access to the underlying input action "Newactionmap/ClosePanel".
         /// </summary>
-        public InputAction @Close => m_Wrapper.m_Newactionmap_Close;
+        public InputAction @ClosePanel => m_Wrapper.m_Newactionmap_ClosePanel;
+        /// <summary>
+        /// Provides access to the underlying input action "Newactionmap/ChoseNumber".
+        /// </summary>
+        public InputAction @ChoseNumber => m_Wrapper.m_Newactionmap_ChoseNumber;
+        /// <summary>
+        /// Provides access to the underlying input action "Newactionmap/Increment".
+        /// </summary>
+        public InputAction @Increment => m_Wrapper.m_Newactionmap_Increment;
+        /// <summary>
+        /// Provides access to the underlying input action "Newactionmap/Decrement".
+        /// </summary>
+        public InputAction @Decrement => m_Wrapper.m_Newactionmap_Decrement;
+        /// <summary>
+        /// Provides access to the underlying input action "Newactionmap/Valid".
+        /// </summary>
+        public InputAction @Valid => m_Wrapper.m_Newactionmap_Valid;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -496,9 +721,21 @@ public partial class @Player: IInputActionCollection2, IDisposable
             @Grab.started += instance.OnGrab;
             @Grab.performed += instance.OnGrab;
             @Grab.canceled += instance.OnGrab;
-            @Close.started += instance.OnClose;
-            @Close.performed += instance.OnClose;
-            @Close.canceled += instance.OnClose;
+            @ClosePanel.started += instance.OnClosePanel;
+            @ClosePanel.performed += instance.OnClosePanel;
+            @ClosePanel.canceled += instance.OnClosePanel;
+            @ChoseNumber.started += instance.OnChoseNumber;
+            @ChoseNumber.performed += instance.OnChoseNumber;
+            @ChoseNumber.canceled += instance.OnChoseNumber;
+            @Increment.started += instance.OnIncrement;
+            @Increment.performed += instance.OnIncrement;
+            @Increment.canceled += instance.OnIncrement;
+            @Decrement.started += instance.OnDecrement;
+            @Decrement.performed += instance.OnDecrement;
+            @Decrement.canceled += instance.OnDecrement;
+            @Valid.started += instance.OnValid;
+            @Valid.performed += instance.OnValid;
+            @Valid.canceled += instance.OnValid;
         }
 
         /// <summary>
@@ -519,9 +756,21 @@ public partial class @Player: IInputActionCollection2, IDisposable
             @Grab.started -= instance.OnGrab;
             @Grab.performed -= instance.OnGrab;
             @Grab.canceled -= instance.OnGrab;
-            @Close.started -= instance.OnClose;
-            @Close.performed -= instance.OnClose;
-            @Close.canceled -= instance.OnClose;
+            @ClosePanel.started -= instance.OnClosePanel;
+            @ClosePanel.performed -= instance.OnClosePanel;
+            @ClosePanel.canceled -= instance.OnClosePanel;
+            @ChoseNumber.started -= instance.OnChoseNumber;
+            @ChoseNumber.performed -= instance.OnChoseNumber;
+            @ChoseNumber.canceled -= instance.OnChoseNumber;
+            @Increment.started -= instance.OnIncrement;
+            @Increment.performed -= instance.OnIncrement;
+            @Increment.canceled -= instance.OnIncrement;
+            @Decrement.started -= instance.OnDecrement;
+            @Decrement.performed -= instance.OnDecrement;
+            @Decrement.canceled -= instance.OnDecrement;
+            @Valid.started -= instance.OnValid;
+            @Valid.performed -= instance.OnValid;
+            @Valid.canceled -= instance.OnValid;
         }
 
         /// <summary>
@@ -584,11 +833,39 @@ public partial class @Player: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnGrab(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Close" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "ClosePanel" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnClose(InputAction.CallbackContext context);
+        void OnClosePanel(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ChoseNumber" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnChoseNumber(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Increment" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnIncrement(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Decrement" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnDecrement(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Valid" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnValid(InputAction.CallbackContext context);
     }
 }

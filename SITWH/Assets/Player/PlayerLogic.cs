@@ -33,6 +33,7 @@ public class PlayerLogic : MonoBehaviour
     private bool isSprinting;
     private bool isGrounded;
     private bool isJumping;
+    public bool CanMove;
 
     void Awake()
     {
@@ -45,6 +46,7 @@ public class PlayerLogic : MonoBehaviour
         {
             cameraTransform = Camera.main?.transform;
         }
+        CanMove = true;
     }
 
     void Update()
@@ -91,36 +93,39 @@ public class PlayerLogic : MonoBehaviour
 
     void HandleMovement()
     {
-        float targetSpeed = isSprinting ? sprintSpeed : moveSpeed;
-
-        Vector2 normalizedInput = moveInput.normalized;
-
-        if (moveInput.magnitude >= 0.1f)
+        if (CanMove == true)
         {
-            Vector3 moveDirection = GetCameraRelativeMovement(normalizedInput);
+            float targetSpeed = isSprinting ? sprintSpeed : moveSpeed;
 
-            if (moveDirection.magnitude >= 0.1f)
+            Vector2 normalizedInput = moveInput.normalized;
+
+            if (moveInput.magnitude >= 0.1f)
             {
-                targetVelocity = moveDirection * targetSpeed;
+                Vector3 moveDirection = GetCameraRelativeMovement(normalizedInput);
+
+                if (moveDirection.magnitude >= 0.1f)
+                {
+                    targetVelocity = moveDirection * targetSpeed;
+                }
             }
+            else
+            {
+                targetVelocity = Vector3.zero;
+            }
+
+            float currentAcceleration = targetVelocity.magnitude > 0.01f ? acceleration : deceleration;
+            currentVelocity = Vector3.Lerp(
+                currentVelocity,
+                targetVelocity,
+                currentAcceleration * Time.deltaTime
+            );
+
+            verticalVelocity += gravity * Time.deltaTime;
+
+            Vector3 finalMovement = currentVelocity + Vector3.up * verticalVelocity;
+
+            controller.Move(finalMovement * Time.deltaTime);
         }
-        else
-        {
-            targetVelocity = Vector3.zero;
-        }
-
-        float currentAcceleration = targetVelocity.magnitude > 0.01f ? acceleration : deceleration;
-        currentVelocity = Vector3.Lerp(
-            currentVelocity,
-            targetVelocity,
-            currentAcceleration * Time.deltaTime
-        );
-
-        verticalVelocity += gravity * Time.deltaTime;
-
-        Vector3 finalMovement = currentVelocity + Vector3.up * verticalVelocity;
-
-        controller.Move(finalMovement * Time.deltaTime);
     }
 
     Vector3 GetCameraRelativeMovement(Vector2 input)
