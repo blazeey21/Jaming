@@ -9,16 +9,17 @@ public class PlayerLogic : MonoBehaviour
     [SerializeField] private float sprintSpeed = 8f;
     [SerializeField] private float acceleration = 10f;
     [SerializeField] private float deceleration = 15f;
-    [SerializeField] private float gravity = -25f;
+    [SerializeField] private float gravity = -30f; // Aumentada
     [SerializeField] private float jumpHeight = 2f;
+
+    [Header("Ground Settings")]
+    [SerializeField] private LayerMask groundMask = -1;
+    [SerializeField] private float groundCheckDistance = 0.4f;
+    [SerializeField] private float groundStickForce = 20f; // Aumentada
+    [SerializeField] private Transform groundCheckPoint;
 
     [Header("Camera Reference")]
     [SerializeField] private Transform cameraTransform;
-
-    [Header("Ground Check")]
-    [SerializeField] private LayerMask groundMask = -1;
-    [SerializeField] private float groundCheckDistance = 0.4f;
-    [SerializeField] private Transform groundCheckPoint;
 
     [Header("Rotation")]
     [SerializeField] private float rotationSmoothTime = 0.1f;
@@ -32,8 +33,12 @@ public class PlayerLogic : MonoBehaviour
     private float rotationVelocity;
     private bool isSprinting;
     private bool isGrounded;
+    private bool wasGrounded;
     private bool isJumping;
     public bool CanMove;
+
+    private float lastGroundedTime;
+    private const float GROUNDED_REMEMBER_TIME = 0.2f;
 
     void Awake()
     {
@@ -46,7 +51,13 @@ public class PlayerLogic : MonoBehaviour
         {
             cameraTransform = Camera.main?.transform;
         }
+
         CanMove = true;
+
+        controller.slopeLimit = 45f;
+        controller.stepOffset = 0.3f;
+        controller.skinWidth = 0.08f;
+        controller.minMoveDistance = 0f;
     }
 
     void Update()
@@ -68,15 +79,19 @@ public class PlayerLogic : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && isGrounded)
+        if (context.performed && (isGrounded || Time.time - lastGroundedTime <= GROUNDED_REMEMBER_TIME))
         {
             isJumping = true;
             verticalVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            lastGroundedTime = 0f;
         }
     }
 
     void HandleGroundCheck()
     {
+        wasGrounded = isGrounded;
+
+        // Usar CheckSphere para detección más simple y confiable
         isGrounded = Physics.CheckSphere(
             groundCheckPoint.position,
             groundCheckDistance,
@@ -84,10 +99,29 @@ public class PlayerLogic : MonoBehaviour
             QueryTriggerInteraction.Ignore
         );
 
-        if (isGrounded && verticalVelocity < 0f)
+        // También verificar con el CharacterController
+        if (!isGrounded)
         {
-            verticalVelocity = -2f;
-            isJumping = false;
+            isGrounded = controller.isGrounded;
+        }
+
+        // Si estamos en el suelo, ajustar la velocidad vertical
+        if (isGrounded)
+        {
+            lastGroundedTime = Time.time;
+
+            // Solo resetear la velocidad vertical si estamos cayendo
+            if (verticalVelocity < 0f)
+            {
+                verticalVelocity = -groundStickForce; // Fuerza hacia abajo más fuerte
+                isJumping = false;
+            }
+        }
+
+        // Aplicar gravedad siempre, incluso en el suelo
+        if (!isJumping)
+        {
+            verticalVelocity += gravity * Time.deltaTime;
         }
     }
 
@@ -120,11 +154,19 @@ public class PlayerLogic : MonoBehaviour
                 currentAcceleration * Time.deltaTime
             );
 
-            verticalVelocity += gravity * Time.deltaTime;
+            // Mover el CharacterController
+            Vector3 finalMovement = currentVelocity * Time.deltaTime;
+            finalMovement.y = verticalVelocity * Time.deltaTime;
 
-            Vector3 finalMovement = currentVelocity + Vector3.up * verticalVelocity;
+            controller.Move(finalMovement);
 
-            controller.Move(finalMovement * Time.deltaTime);
+            // Si el CharacterController reporta que está en el suelo pero nuestra detección no lo hace,
+            // forzar el estado grounded
+            if (controller.isGrounded && !isGrounded)
+            {
+                isGrounded = true;
+                verticalVelocity = -groundStickForce;
+            }
         }
     }
 

@@ -152,7 +152,9 @@ public class ManagerLevel2 : MonoBehaviour
         }
 
         if (panelNumeros != null) panelNumeros.SetActive(false);
+
     }
+    
 
 
     private void DesactivarElementosUI()
@@ -269,6 +271,13 @@ public class ManagerLevel2 : MonoBehaviour
             {
                 if (num != null) num.color = Color.green;
             }
+            BoxCollider collider = GetComponent<BoxCollider>();
+            if (collider != null)
+            {
+                collider.enabled = false;
+            }
+
+
         }
         else
         {
@@ -286,7 +295,7 @@ public class ManagerLevel2 : MonoBehaviour
             }
         }
     }
-
+   
     public void SetNumeroCorrecto(int[] nuevoCodigo)
     {
         if (nuevoCodigo.Length == 4)
