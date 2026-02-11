@@ -5,6 +5,8 @@ public class TriggerManager : MonoBehaviour
     private SingleTrigger[] childTriggers;
     [SerializeField] private bool allActive = false;
 
+
+
     void Start()
     {
         FindAllTriggers();

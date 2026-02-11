@@ -11,6 +11,7 @@ public class PuertaLevel1 : MonoBehaviour
     public float delayDestruccion = 0.5f;
 
     private bool puertaAbierta = false;
+ 
 
     void Start()
     {
@@ -60,6 +61,8 @@ public class PuertaLevel1 : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+  
+
     }
 
     void OnGUI()
