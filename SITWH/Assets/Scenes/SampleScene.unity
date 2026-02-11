@@ -6612,6 +6612,98 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1794678115389430474, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: lengthInSec
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794678115389430474, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: simulationSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794678115389430474, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: ShapeModule.type
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794678115389430474, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: ShapeModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794678115389430474, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: InitialModule.size3D
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794678115389430474, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: ShapeModule.arc.mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794678115389430474, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: ShapeModule.arc.value
+      value: 20.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794678115389430474, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794678115389430474, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794678115389430474, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794678115389430474, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2807040369393178659, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.46881574
+      objectReference: {fileID: 0}
+    - target: {fileID: 2807040369393178659, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.46881574
+      objectReference: {fileID: 0}
+    - target: {fileID: 2807040369393178659, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.46881574
+      objectReference: {fileID: 0}
+    - target: {fileID: 2807040369393178659, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.059000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 2807040369393178659, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.06500006
+      objectReference: {fileID: 0}
+    - target: {fileID: 2807040369393178659, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.71807575
+      objectReference: {fileID: 0}
+    - target: {fileID: 2807040369393178659, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.69596505
+      objectReference: {fileID: 0}
+    - target: {fileID: 2807040369393178659, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2807040369393178659, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2807040369393178659, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 88.209
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891032923952575832, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: m_MaxParticleSize
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891032923952575832, guid: 94410176fd8abbd40b2d994d5f4b49de, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: befc78072f2f5234aa3a0d088586f7f5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
