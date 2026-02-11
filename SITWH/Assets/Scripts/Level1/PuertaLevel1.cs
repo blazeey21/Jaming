@@ -25,13 +25,6 @@ public class PuertaLevel1 : MonoBehaviour
             triggerSitio = GameObject.Find("TriggerSitio")?.GetComponent<SingleTrigger>();
         }
 
-        if (triggerColor == null)
-            Debug.LogError("❌ No se encontró TriggerColor");
-        if (triggerSitio == null)
-            Debug.LogError("❌ No se encontró TriggerSitio");
-
-        if (triggerColor != null && triggerSitio != null)
-            Debug.Log($"🚪 Puerta '{gameObject.name}' lista. Esperando ambos triggers...");
     }
 
     void Update()
@@ -53,7 +46,6 @@ public class PuertaLevel1 : MonoBehaviour
     void AbrirPuerta()
     {
         puertaAbierta = true;
-        Debug.Log($"🎉 ¡PUERTA ABIERTA! Ambos triggers activos");
 
         Invoke(nameof(ProcesarPuerta), delayDestruccion);
     }
@@ -62,12 +54,10 @@ public class PuertaLevel1 : MonoBehaviour
     {
         if (destruirPuerta)
         {
-            Debug.Log($"🗑️ Destruyendo puerta: {gameObject.name}");
             Destroy(gameObject);
         }
         else
         {
-            Debug.Log($"🔒 Desactivando puerta: {gameObject.name}");
             gameObject.SetActive(false);
         }
     }
