@@ -4,10 +4,18 @@ using UnityEngine.InputSystem;
 
 public class InterruptorZonas : MonoBehaviour
 {
-    public Zona[] zonas = new Zona[4];
+    [Header("Zonas")]
+    public Zona zona1;
+    public Zona zona2;
+    public Zona zona3;
+    public Zona zona4;
+
+    [Header("Activación")]
     public bool activarConClick = true;
-    public bool activarConTrigger = true;
+    public bool activarConProximidad = true;
+    public float rangoInteraccion = 3f;
     public InputActionReference inputAction;
+
     public UnityEvent alCambiarZona;
 
     [System.Serializable]
@@ -17,14 +25,21 @@ public class InterruptorZonas : MonoBehaviour
         public GameObject[] desactivar;
     }
 
-    private int zonaActual = -1;
-    private int zonaAnterior = -1;
-    private bool jugadorDentro = false;
+    private int zonaActual = 0;
+    private int zonaAnterior = 0;
+    private Transform jugador;
+    private bool puedeActivar = true; // Para evitar doble activación
 
     void OnEnable()
     {
         if (inputAction != null)
+        {
+            inputAction.action.Enable();
             inputAction.action.performed += OnInputAction;
+        }
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null) jugador = player.transform;
     }
 
     void OnDisable()
@@ -35,47 +50,74 @@ public class InterruptorZonas : MonoBehaviour
 
     void OnInputAction(InputAction.CallbackContext ctx)
     {
-        if (activarConTrigger && !jugadorDentro) return;
-        Interact();
+        // Ignorar si el dispositivo es ratón o teclado
+        if (ctx.control.device is Mouse || ctx.control.device is Keyboard)
+            return;
+
+        if (!activarConProximidad) return;
+        if (jugador == null) return;
+
+        float dist = Vector3.Distance(transform.position, jugador.position);
+        if (dist <= rangoInteraccion)
+            Interact();
     }
 
     public void Interact()
     {
-        zonaAnterior = zonaActual;
-        zonaActual = (zonaActual + 1) % 4;
+        if (!puedeActivar) return;
+        puedeActivar = false;
 
-        if (zonaAnterior >= 0)
+        zonaAnterior = zonaActual;
+        zonaActual = zonaActual % 4 + 1;
+
+        Debug.Log($"🔁 Cambio de zona: {zonaAnterior} → {zonaActual}");
+
+        if (zonaAnterior >= 1 && zonaAnterior <= 4)
         {
-            Aplicar(zonas[zonaAnterior].activar, false);
-            Aplicar(zonas[zonaAnterior].desactivar, true);
+            Zona ant = ObtenerZona(zonaAnterior);
+            AplicarEstado(ant.activar, false);
+            AplicarEstado(ant.desactivar, true);
         }
 
-        Aplicar(zonas[zonaActual].activar, true);
-        Aplicar(zonas[zonaActual].desactivar, false);
+        Zona nueva = ObtenerZona(zonaActual);
+        if (nueva != null)
+        {
+            AplicarEstado(nueva.activar, true);
+            AplicarEstado(nueva.desactivar, false);
+        }
 
         alCambiarZona.Invoke();
+
+        Invoke(nameof(Reactivar), 0.1f); // Pequeña pausa para evitar doble input
     }
 
-    void Aplicar(GameObject[] objs, bool estado)
+    void Reactivar()
+    {
+        puedeActivar = true;
+    }
+
+    private Zona ObtenerZona(int num)
+    {
+        switch (num)
+        {
+            case 1: return zona1;
+            case 2: return zona2;
+            case 3: return zona3;
+            case 4: return zona4;
+            default: return null;
+        }
+    }
+
+    private void AplicarEstado(GameObject[] objs, bool estado)
     {
         if (objs == null) return;
-        foreach (var o in objs) if (o) o.SetActive(estado);
+        foreach (GameObject o in objs)
+            if (o != null) o.SetActive(estado);
     }
 
     void OnMouseDown()
     {
-        if (activarConClick) Interact();
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (activarConTrigger && other.CompareTag("Player"))
-            jugadorDentro = true;
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (activarConTrigger && other.CompareTag("Player"))
-            jugadorDentro = false;
+        if (activarConClick)
+            Interact();
     }
 }
