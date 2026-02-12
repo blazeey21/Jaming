@@ -338,7 +338,7 @@ Transform:
   m_GameObject: {fileID: 177995942}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.89131814, y: 0.6042143, z: -1.8455715}
+  m_LocalPosition: {x: 1.781, y: 0.6042143, z: -1.8455715}
   m_LocalScale: {x: 0.66766, y: 0.66766, z: 0.66766}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -377,33 +377,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39492719b2825b84f9eae36b13791ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  zona1:
-    objetosAActivar:
-    - {fileID: 1891694369}
-    objetosADesactivar:
-    - {fileID: 1884645264}
-    - {fileID: 1820093883}
-  zona2:
-    objetosAActivar:
-    - {fileID: 468903963}
-    objetosADesactivar:
-    - {fileID: 9062971703716218528}
-    - {fileID: 1820093883}
-  zona3:
-    objetosAActivar:
-    - {fileID: 1699177514}
-    objetosADesactivar:
-    - {fileID: 2038919882}
-    - {fileID: 1820093883}
-  zona4:
-    objetosAActivar:
+  zonas:
+  - activar:
     - {fileID: 2090371759}
-    objetosADesactivar:
-    - {fileID: 672468657}
+    desactivar:
     - {fileID: 1820093883}
-  activarConClick: 0
-  activarConTrigger: 0
-  inputAction: {fileID: -7015075821696825231, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
+    - {fileID: 672468657}
+  - activar: []
+    desactivar: []
+  - activar: []
+    desactivar: []
+  - activar: []
+    desactivar: []
+  activarConClick: 1
+  activarConTrigger: 1
+  inputAction: {fileID: -3359667613083277608, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
   alCambiarZona:
     m_PersistentCalls:
       m_Calls: []
