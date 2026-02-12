@@ -4,29 +4,22 @@ using UnityEngine.InputSystem;
 
 public class InterruptorZonas : MonoBehaviour
 {
-    [System.Serializable]
-    public class Zona
-    {
-        public GameObject[] objetosAActivar;
-        public GameObject[] objetosADesactivar;
-    }
-
-    [Header("Zonas (1 a 4)")]
-    public Zona zona1;
-    public Zona zona2;
-    public Zona zona3;
-    public Zona zona4;
-
-    [Header("Métodos de Activación")]
+    public Zona[] zonas = new Zona[4];
     public bool activarConClick = true;
     public bool activarConTrigger = true;
     public InputActionReference inputAction;
-
-    [Header("Evento")]
     public UnityEvent alCambiarZona;
 
-    private int zonaActual = 0; 
-    private int zonaAnterior = 0;
+    [System.Serializable]
+    public class Zona
+    {
+        public GameObject[] activar;
+        public GameObject[] desactivar;
+    }
+
+    private int zonaActual = -1;
+    private int zonaAnterior = -1;
+    private bool jugadorDentro = false;
 
     void OnEnable()
     {
@@ -40,78 +33,49 @@ public class InterruptorZonas : MonoBehaviour
             inputAction.action.performed -= OnInputAction;
     }
 
-    private void OnInputAction(InputAction.CallbackContext context)
+    void OnInputAction(InputAction.CallbackContext ctx)
     {
+        if (activarConTrigger && !jugadorDentro) return;
         Interact();
     }
 
-    
     public void Interact()
     {
-        SiguienteZona();
-    }
-
-    public void SiguienteZona()
-    {
-        int nuevaZona = (zonaActual % 4) + 1;
-        CambiarAZona(nuevaZona);
-    }
-
-    public void CambiarAZona(int numZona)
-    {
-        if (numZona < 1 || numZona > 4) return;
-
         zonaAnterior = zonaActual;
-        zonaActual = numZona;
+        zonaActual = (zonaActual + 1) % 4;
 
-        if (zonaAnterior >= 1 && zonaAnterior <= 4)
+        if (zonaAnterior >= 0)
         {
-            Zona ant = ObtenerZona(zonaAnterior);
-            AplicarEstado(ant.objetosAActivar, false);   
-            AplicarEstado(ant.objetosADesactivar, true); 
+            Aplicar(zonas[zonaAnterior].activar, false);
+            Aplicar(zonas[zonaAnterior].desactivar, true);
         }
 
-        Zona nueva = ObtenerZona(zonaActual);
-        AplicarEstado(nueva.objetosAActivar, true);  
-        AplicarEstado(nueva.objetosADesactivar, false); 
+        Aplicar(zonas[zonaActual].activar, true);
+        Aplicar(zonas[zonaActual].desactivar, false);
 
-        alCambiarZona?.Invoke();
+        alCambiarZona.Invoke();
     }
 
-    private void AplicarEstado(GameObject[] objetos, bool estado)
+    void Aplicar(GameObject[] objs, bool estado)
     {
-        if (objetos == null) return;
-        foreach (GameObject obj in objetos)
-        {
-            if (obj != null)
-                obj.SetActive(estado);
-        }
+        if (objs == null) return;
+        foreach (var o in objs) if (o) o.SetActive(estado);
     }
 
-    private Zona ObtenerZona(int numZona)
-    {
-        switch (numZona)
-        {
-            case 1: return zona1;
-            case 2: return zona2;
-            case 3: return zona3;
-            case 4: return zona4;
-            default: return null;
-        }
-    }
-
-    // --- Activación por clic ---
     void OnMouseDown()
     {
-        if (activarConClick)
-            Interact();
+        if (activarConClick) Interact();
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (activarConTrigger && other.CompareTag("Player"))
-            Interact();
+            jugadorDentro = true;
     }
 
-  
+    void OnTriggerExit(Collider other)
+    {
+        if (activarConTrigger && other.CompareTag("Player"))
+            jugadorDentro = false;
+    }
 }

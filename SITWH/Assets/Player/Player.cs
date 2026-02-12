@@ -166,8 +166,8 @@ public partial class @Player: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Interact"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""7e835390-5d48-4786-b75e-9d1d461ae4f4"",
+                    ""type"": ""Button"",
+                    ""id"": ""2701751c-41c9-4c57-97b0-2a435334b589"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -551,7 +551,7 @@ public partial class @Player: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""6d4c73a5-358c-43b8-b9e9-551c06f47c73"",
+                    ""id"": ""79265503-277f-49f1-968c-facdfeb21a59"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -562,8 +562,19 @@ public partial class @Player: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""27e458f5-83a0-4f70-ab6a-c28a48ec680b"",
-                    ""path"": ""<Mouse>/clickCount"",
+                    ""id"": ""09b7c98f-e357-4dea-b691-77cf5b646de9"",
+                    ""path"": ""<Mouse>/press"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""472348ea-1099-4c96-87fb-4c104e6bcdc7"",
+                    ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
