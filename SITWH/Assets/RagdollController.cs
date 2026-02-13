@@ -104,7 +104,6 @@ public class RagdollController : MonoBehaviour
                 }
                 else
                 {
-                    // Elegir un waypoint inicial aleatorio
                     state.targetWaypointPos = state.waypointPath.GetRandomWaypointPosition(-1, out int newIndex);
                     state.currentWaypointIndex = newIndex;
                     Debug.Log($"Target {pair.target.name} empezará en waypoint {newIndex}: {state.targetWaypointPos}");
@@ -144,7 +143,6 @@ public class RagdollController : MonoBehaviour
                 }
             }
 
-            // ----- 2. CALCULAR LA POSICIÓN DESEADA PARA EL HUESO (CON LÍMITE DE DISTANCIA SI TIENE RIGIDBODY) -----
             Vector3 desiredPos = pair.target.position;
 
             // Solo aplicamos límite si el hueso tiene Rigidbody y padre (para medir distancia)
@@ -160,7 +158,6 @@ public class RagdollController : MonoBehaviour
                 }
             }
 
-            // ----- 3. MOVER EL HUESO HACIA LA POSICIÓN DESEADA -----
             if (state.boneRigidbody != null)
             {
                 // Hueso con física: usar MovePosition
