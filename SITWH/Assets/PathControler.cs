@@ -1,73 +1,157 @@
 using UnityEngine;
 
-public class PathController : MonoBehaviour
+public class PathControler : MonoBehaviour
 {
-    [Header("Configuración de Movimiento")]
-    public float velocidadMovimiento = 2f;   // Velocidad de desplazamiento de los hijos
-    public bool moverHijos = true;           // Activar/desactivar el movimiento
+    [Header("Área de movimiento")]
+    [Tooltip("Collider que define la zona donde el objeto puede moverse (debe tener un volumen)")]
+    public Collider movementArea;
 
-    private Collider triggerCollider;         // Collider trigger del padre
-    private Transform[] hijos;                // Referencias a los hijos
-    private Vector3[] direcciones;            // Dirección actual de cada hijo
+    [Header("Movimiento")]
+    public float moveSpeed = 2f;           
+    public float rotateSpeed = 180f;       
+    public float arrivalTolerance = 0.5f;  
+    public float waitTimeAtDestination = 1f; 
+
+    [Header("Límite de rotación (como muñeca)")]
+    [Tooltip("Ángulo máximo de desviación desde la rotación inicial (en grados)")]
+    public float maxWristAngle = 30f;
+
+    [Header("Opciones físicas")]
+    [Tooltip("Si el objeto tiene Rigidbody, se usará MovePosition/MoveRotation para respetar la física")]
+    public bool useRigidbody = true;
+
+    private Rigidbody rb;
+    private Vector3 targetPosition;
+    private Quaternion initialRotation;
+    private float waitTimer = 0f;
+    private bool isWaiting = false;
 
     void Start()
     {
-        // Obtener el collider del padre y verificar que sea trigger
-        triggerCollider = GetComponent<Collider>();
-        if (triggerCollider == null || !triggerCollider.isTrigger)
+        if (useRigidbody)
         {
-            Debug.LogError("El objeto padre necesita un Collider configurado como Trigger.");
-            enabled = false;  // Desactivar el script si no hay collider válido
+            rb = GetComponent<Rigidbody>();
+            if (rb == null)
+            {
+                useRigidbody = false;
+            }
+        }
+
+        if (movementArea == null)
+        {
+            enabled = false;
             return;
         }
 
-        int childCount = transform.childCount;
-        hijos = new Transform[childCount];
-        direcciones = new Vector3[childCount];
+        initialRotation = transform.rotation;
 
-        for (int i = 0; i < childCount; i++)
-        {
-            hijos[i] = transform.GetChild(i);
-            direcciones[i] = Random.insideUnitSphere.normalized;
-        }
+        PickNewDestination();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if (!moverHijos) return;
+        if (movementArea == null) return;
 
-        for (int i = 0; i < hijos.Length; i++)
+        if (isWaiting)
         {
-            if (hijos[i] == null) continue;
-
-            // Calcular nueva posición
-            Vector3 nuevaPos = hijos[i].position + direcciones[i] * velocidadMovimiento * Time.deltaTime;
-
-            // Si la nueva posición está dentro del collider, mover
-            if (EstaDentroDelCollider(nuevaPos))
+            waitTimer -= Time.fixedDeltaTime;
+            if (waitTimer <= 0f)
             {
-                hijos[i].position = nuevaPos;
+                isWaiting = false;
+                PickNewDestination();
             }
             else
             {
-                // Si está fuera, cambiar dirección aleatoriamente (efecto "rebote suave")
-                direcciones[i] = Random.insideUnitSphere.normalized;
+                RotateTowards(initialRotation);
             }
+            return;
+        }
+
+        Vector3 direction = (targetPosition - transform.position).normalized;
+        float distance = Vector3.Distance(transform.position, targetPosition);
+
+        if (distance > arrivalTolerance)
+        {
+            Vector3 newPosition = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.fixedDeltaTime);
+
+            if (useRigidbody && rb != null)
+            {
+                rb.MovePosition(newPosition);
+            }
+            else
+            {
+                transform.position = newPosition;
+            }
+
+            if (direction != Vector3.zero)
+            {
+                Quaternion desiredRotation = Quaternion.LookRotation(direction, Vector3.up);
+                Quaternion limitedRotation = LimitWristRotation(desiredRotation);
+                RotateTowards(limitedRotation);
+            }
+        }
+        else
+        {
+            isWaiting = true;
+            waitTimer = waitTimeAtDestination;
         }
     }
 
-    bool EstaDentroDelCollider(Vector3 punto)
+    private void RotateTowards(Quaternion targetRot)
     {
-        Vector3 puntoMasCercano = triggerCollider.ClosestPoint(punto);
-        return puntoMasCercano == punto; // Si el punto más cercano es él mismo, está dentro
+        if (useRigidbody && rb != null)
+        {
+            Quaternion newRot = Quaternion.RotateTowards(rb.rotation, targetRot, rotateSpeed * Time.fixedDeltaTime);
+            rb.MoveRotation(newRot);
+        }
+        else
+        {
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRot, rotateSpeed * Time.deltaTime);
+        }
     }
 
-    void OnDrawGizmosSelected()
+    private Quaternion LimitWristRotation(Quaternion desiredRotation)
     {
-        if (triggerCollider != null)
+        Quaternion delta = desiredRotation * Quaternion.Inverse(initialRotation);
+        float angle; Vector3 axis;
+        delta.ToAngleAxis(out angle, out axis);
+
+        // Normalizar ángulo
+        if (angle > 180f) angle -= 360f;
+
+        angle = Mathf.Clamp(angle, -maxWristAngle, maxWristAngle);
+        Quaternion limitedDelta = Quaternion.AngleAxis(angle, axis);
+        return limitedDelta * initialRotation;
+    }
+    private void PickNewDestination()
+    {
+        if (movementArea == null) return;
+
+        Bounds bounds = movementArea.bounds;
+        Vector3 randomPoint = new Vector3(
+            Random.Range(bounds.min.x, bounds.max.x),
+            Random.Range(bounds.min.y, bounds.max.y),
+            Random.Range(bounds.min.z, bounds.max.z)
+        );
+
+
+        targetPosition = randomPoint;
+    }
+
+    public void ResetMovement()
+    {
+        isWaiting = false;
+        waitTimer = 0f;
+        PickNewDestination();
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (Application.isPlaying && movementArea != null)
         {
             Gizmos.color = Color.green;
-            Gizmos.DrawWireCube(triggerCollider.bounds.center, triggerCollider.bounds.size);
+            Gizmos.DrawSphere(targetPosition, 0.2f);
+            Gizmos.DrawLine(transform.position, targetPosition);
         }
     }
 }
