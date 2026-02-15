@@ -2,21 +2,21 @@
 
 public class PathControler : MonoBehaviour
 {
-    [Header("Área de movimiento")]
+   
     public Collider movementArea;
 
-    [Header("Movimiento")]
+    [Header("Mov")]
     public float moveSpeed = 2f;
     public float smoothTime = 0.3f;
     public float rotateSpeed = 180f;
     public float arrivalTolerance = 0.5f;
     public float waitTimeAtDestination = 1f;
 
-    [Header("Límite de inclinación (eje X)")]
+    [Header(" (eje X)")]
     [Tooltip("Ángulo máximo de desviación en el eje X respecto a la rotación inicial (en grados)")]
     public float maxPitchDeviation = 30f;
 
-    [Header("Opciones físicas")]
+    [Header("Opciones ")]
     public bool useRigidbody = true;
 
     private Rigidbody rb;
@@ -26,7 +26,6 @@ public class PathControler : MonoBehaviour
     private float waitTimer = 0f;
     private bool isWaiting = false;
 
-    // Almacenamos los ángulos Euler iniciales para limitar solo el pitch
     private float initialPitch;
     private float initialYaw;
     private float initialRoll;
@@ -47,7 +46,6 @@ public class PathControler : MonoBehaviour
             return;
         }
 
-        // Guardamos la rotación inicial completa y sus ángulos Euler
         initialRotation = transform.rotation;
         Vector3 euler = initialRotation.eulerAngles;
         initialPitch = euler.x;
@@ -71,7 +69,6 @@ public class PathControler : MonoBehaviour
             }
             else
             {
-                // Mientras espera, vuelve suavemente a la rotación inicial (completa)
                 RotateTowards(initialRotation);
             }
             return;
@@ -81,7 +78,6 @@ public class PathControler : MonoBehaviour
 
         if (distance > arrivalTolerance)
         {
-            // Movimiento suave hacia el destino
             Vector3 newPosition = Vector3.SmoothDamp(transform.position, targetPosition, ref smoothVelocity, smoothTime, moveSpeed, Time.fixedDeltaTime);
 
             if (useRigidbody && rb != null)
@@ -89,17 +85,13 @@ public class PathControler : MonoBehaviour
             else
                 transform.position = newPosition;
 
-            // Calcular dirección del movimiento
             Vector3 direction = (targetPosition - transform.position).normalized;
             if (direction != Vector3.zero)
             {
-                // Rotación que mira hacia la dirección (solo modifica yaw y pitch)
                 Quaternion desiredRotation = Quaternion.LookRotation(direction, Vector3.up);
 
-                // Aplicar límite solo al eje X (pitch)
                 Quaternion limitedRotation = LimitPitch(desiredRotation);
 
-                // Rotar suavemente hacia la rotación limitada
                 RotateTowards(limitedRotation);
             }
         }
@@ -113,19 +105,13 @@ public class PathControler : MonoBehaviour
 
     private Quaternion LimitPitch(Quaternion desiredRotation)
     {
-        // Convertir la rotación deseada a ángulos Euler
         Vector3 desiredEuler = desiredRotation.eulerAngles;
 
-        // Limitar el ángulo X (pitch) para que no se desvíe más de maxPitchDeviation respecto al inicial
         float deltaPitch = Mathf.DeltaAngle(desiredEuler.x, initialPitch);
         float clampedPitch = initialPitch + Mathf.Clamp(deltaPitch, -maxPitchDeviation, maxPitchDeviation);
 
-        // Mantener el yaw (Y) deseado (para mirar hacia el destino) y el roll (Z) inicial (sin cambios)
-        // Si quieres que el roll también pueda variar, puedes usar desiredEuler.z o limitarlo aparte.
-        float newYaw = desiredEuler.y;      // Libertad total para mirar
-        float newRoll = initialRoll;         // Mantenemos el roll original (puedes cambiarlo si quieres)
-
-        // Construir la nueva rotación
+        float newYaw = desiredEuler.y;      
+        float newRoll = initialRoll;         
         Quaternion limitedRotation = Quaternion.Euler(clampedPitch, newYaw, newRoll);
         return limitedRotation;
     }
