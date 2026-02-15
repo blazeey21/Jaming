@@ -10,10 +10,11 @@ public class CenterScreenGrab : MonoBehaviour
     [SerializeField] private Color grabbedColor = Color.green;
     [SerializeField] private Camera playerCamera;
     [SerializeField] private InputActionProperty grabAction;
-    [SerializeField] private Transform centerSprite; // Sprite en el centro de la pantalla
+    [SerializeField] private Transform centerSprite;
+    [SerializeField] private float throwForce = 12f;
 
     [Header("Referencias")]
-    [SerializeField] private GameObject crosshairUI; // Opcional: UI para el punto central
+    [SerializeField] private GameObject crosshairUI;
 
     private GameObject currentGrabbable;
     private GameObject grabbedObject;
@@ -28,7 +29,6 @@ public class CenterScreenGrab : MonoBehaviour
             Debug.LogWarning("No se ha asignado una acción de agarre. Se usará la tecla E por defecto.");
         }
 
-        // Ocultar cursor del sistema
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 
@@ -38,7 +38,6 @@ public class CenterScreenGrab : MonoBehaviour
             grabAction.action.canceled += OnGrabCanceled;
         }
 
-        // Activar sprite/UI del centro si existe
         if (centerSprite != null) centerSprite.gameObject.SetActive(true);
         if (crosshairUI != null) crosshairUI.SetActive(true);
     }
@@ -64,7 +63,6 @@ public class CenterScreenGrab : MonoBehaviour
 
     private void Update()
     {
-        // Siempre usar el centro de la pantalla
         Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
         RaycastHit hit;
 
@@ -139,8 +137,6 @@ public class CenterScreenGrab : MonoBehaviour
 
     private void OnGrabCanceled(InputAction.CallbackContext context)
     {
-        // Opcional: soltar al liberar el botón
-        // ReleaseObject();
     }
 
     private void ReleaseObject()
@@ -152,6 +148,7 @@ public class CenterScreenGrab : MonoBehaviour
         {
             rb.isKinematic = false;
             rb.useGravity = true;
+            rb.AddForce(playerCamera.transform.forward * throwForce, ForceMode.Impulse);
         }
 
         Destruible destruible = grabbedObject.GetComponent<Destruible>();
@@ -176,7 +173,6 @@ public class CenterScreenGrab : MonoBehaviour
     {
         if (grabbedObject == null || playerCamera == null) return;
 
-        // Posicionar objeto delante de la cámara
         Vector3 targetPosition = playerCamera.transform.position +
                                 playerCamera.transform.forward * (grabDistance * 0.7f);
 
@@ -207,7 +203,6 @@ public class CenterScreenGrab : MonoBehaviour
         }
     }
 
-    // Método para cambiar el color del sprite central (opcional)
     public void SetCenterSpriteColor(Color color)
     {
         if (centerSprite != null)

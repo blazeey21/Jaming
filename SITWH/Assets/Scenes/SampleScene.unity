@@ -1415,8 +1415,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.9366858, y: 1.618577, z: 1.709549}
-  m_Center: {x: -1.869711, y: 0.32634425, z: -5.095686}
+  m_Size: {x: 1.4453545, y: 0.15428221, z: 0.7488518}
+  m_Center: {x: -1.0988648, y: -0.23994255, z: -5.543125}
 --- !u!1001 &328530786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1916,8 +1916,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   grabDistance: 5
-  hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 0.10980392}
-  grabbedColor: {r: 0, g: 1, b: 0, a: 0.5803922}
+  hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  grabbedColor: {r: 0, g: 1, b: 0, a: 1}
   playerCamera: {fileID: 836683736}
   grabAction:
     m_UseReference: 1
@@ -1932,6 +1932,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -3045212205327133378, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
   centerSprite: {fileID: 1494064959}
+  throwForce: 250
   crosshairUI: {fileID: 1494064958}
 --- !u!4 &352304448
 Transform:
@@ -4012,7 +4013,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.6377357, g: 0.6293128, b: 0.6293128, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9382,7 +9383,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.02641511, g: 0.021281607, b: 0.021281607, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -15411,8 +15412,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.8490566, g: 0.20425417, b: 0.7789864, a: 1}
-        key1: {r: 0.8490566, g: 0.20425417, b: 0.7789864, a: 1}
+        key0: {r: 0.8509804, g: 0.20392154, b: 0.28961128, a: 1}
+        key1: {r: 0, g: 0, b: 0, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -15441,8 +15442,8 @@ ParticleSystem:
         m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
-        key0: {r: 0.33530873, g: 0.23584905, b: 0.9433962, a: 1}
-        key1: {r: 0.33530873, g: 0.23584905, b: 0.9433962, a: 1}
+        key0: {r: 0, g: 0, b: 0, a: 1}
+        key1: {r: 1, g: 0.3805667, b: 0.3075471, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -20585,8 +20586,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.8490566, g: 0.20425417, b: 0.7789864, a: 1}
-        key1: {r: 0.8490566, g: 0.20425417, b: 0.7789864, a: 1}
+        key0: {r: 0.8509804, g: 0.20392154, b: 0.28961128, a: 1}
+        key1: {r: 0, g: 0, b: 0, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -20615,8 +20616,8 @@ ParticleSystem:
         m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
-        key0: {r: 0.33530873, g: 0.23584905, b: 0.9433962, a: 1}
-        key1: {r: 0.33530873, g: 0.23584905, b: 0.9433962, a: 1}
+        key0: {r: 0, g: 0, b: 0, a: 1}
+        key1: {r: 1, g: 0.3805667, b: 0.3075471, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -27244,7 +27245,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.6377357, g: 0.6293128, b: 0.6293128, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -32824,7 +32825,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.02641511, g: 0.021281607, b: 0.021281607, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -39080,58 +39081,6 @@ Transform:
   - {fileID: 803837243}
   m_Father: {fileID: 1712536016}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1706141634
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1706141635}
-  - component: {fileID: 1706141636}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1706141635
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706141634}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.38, y: 0.71, z: -35.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5375271726586731678}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1706141636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706141634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dfc65f0b7a674d4e9da547abf6c634a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  movementArea: {fileID: 320717616}
-  moveSpeed: 3
-  rotateSpeed: 180
-  arrivalTolerance: 0.5
-  waitTimeAtDestination: 0.02
-  maxWristAngle: 30
-  useRigidbody: 0
 --- !u!1 &1707235828
 GameObject:
   m_ObjectHideFlags: 0
@@ -46239,7 +46188,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3984854487870377718}
   serializedVersion: 5
-  m_Mass: 1.25
+  m_Mass: 0.66
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -46567,6 +46516,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5375271726586731678}
   - component: {fileID: 2051638065924589284}
+  - component: {fileID: 5375271726586731679}
   m_Layer: 0
   m_Name: krampstext@T-Pose (1)
   m_TagString: Untagged
@@ -46769,8 +46719,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4743167317282080292}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8, y: 0.03, z: 0.5}
+  m_LocalRotation: {x: -0.04134668, y: 0.05130395, z: -0.0021258742, w: 0.9978246}
+  m_LocalPosition: {x: -0.53283906, y: 0.381405, z: -35.84553}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -46778,8 +46728,28 @@ Transform:
   - {fileID: 488816392605891594}
   - {fileID: 788789210}
   - {fileID: 1866121024}
-  m_Father: {fileID: 1706141635}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5375271726586731679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4743167317282080292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dfc65f0b7a674d4e9da547abf6c634a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  movementArea: {fileID: 320717616}
+  moveSpeed: 87665430
+  smoothTime: 0.3
+  rotateSpeed: 180
+  arrivalTolerance: 0.5
+  waitTimeAtDestination: 0.02
+  maxPitchDeviation: 30
+  useRigidbody: 0
 --- !u!4 &5474919904209084735
 Transform:
   m_ObjectHideFlags: 0
@@ -48283,7 +48253,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8925881055463616062}
   serializedVersion: 5
-  m_Mass: 1.25
+  m_Mass: 0.66
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -48500,4 +48470,4 @@ SceneRoots:
   - {fileID: 2004365031}
   - {fileID: 320717614}
   - {fileID: 1652241707}
-  - {fileID: 1706141635}
+  - {fileID: 5375271726586731678}
