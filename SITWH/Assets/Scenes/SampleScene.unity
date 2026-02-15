@@ -1916,8 +1916,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   grabDistance: 5
-  hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 0.10980392}
-  grabbedColor: {r: 0, g: 1, b: 0, a: 0.5803922}
+  hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  grabbedColor: {r: 0, g: 1, b: 0, a: 1}
   playerCamera: {fileID: 836683736}
   grabAction:
     m_UseReference: 1
@@ -1932,6 +1932,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -3045212205327133378, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
   centerSprite: {fileID: 1494064959}
+  throwForce: 250
   crosshairUI: {fileID: 1494064958}
 --- !u!4 &352304448
 Transform:
