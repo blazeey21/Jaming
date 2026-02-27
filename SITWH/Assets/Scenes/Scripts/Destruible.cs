@@ -7,6 +7,7 @@ public class Destruible : MonoBehaviour
     [SerializeField] private bool destroyOnFloorTouch = true;
     [SerializeField] private float timeToDestroy = 0.5f;
     [SerializeField] private float floorCheckDelay = 3f;
+    [SerializeField] private GameObject prefabDeParticulas;
 
     private bool hasBeenGrabbed = false;
     private bool isCheckingFloor = false;
@@ -119,10 +120,19 @@ public class Destruible : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (hasBeenGrabbed &&
+            IsLayerInMask(collision.gameObject.layer, floorLayer) &&
+            IsOnFloor() &&
+            prefabDeParticulas != null)
+        {
+            Vector3 spawnPos = collision.contacts.Length > 0 ? collision.contacts[0].point : transform.position;
+            Instantiate(prefabDeParticulas, spawnPos, Quaternion.identity);
+        }
+
         if (hasBeenGrabbed && !isCheckingFloor && IsLayerInMask(collision.gameObject.layer, floorLayer))
             StartCoroutine(StartFloorCheckAfterDelay(0.5f));
     }
-
+    
     private bool IsLayerInMask(int layer, LayerMask mask)
     {
         return mask == (mask | (1 << layer));
