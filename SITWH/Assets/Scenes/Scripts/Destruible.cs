@@ -125,14 +125,32 @@ public class Destruible : MonoBehaviour
             IsOnFloor() &&
             prefabDeParticulas != null)
         {
-            Vector3 spawnPos = collision.contacts.Length > 0 ? collision.contacts[0].point : transform.position;
-            Instantiate(prefabDeParticulas, spawnPos, Quaternion.identity);
+            int count = GetParticleCountBySize();
+
+            for (int i = 0; i < count; i++)
+            {
+                Vector3 spawnPos = collision.contacts.Length > 0
+                    ? collision.contacts[0].point + Random.insideUnitSphere * 0.2f
+                    : transform.position;
+
+                Instantiate(prefabDeParticulas, spawnPos, Quaternion.identity);
+            }
         }
 
         if (hasBeenGrabbed && !isCheckingFloor && IsLayerInMask(collision.gameObject.layer, floorLayer))
             StartCoroutine(StartFloorCheckAfterDelay(0.5f));
     }
-    
+    int GetParticleCountBySize()
+    {
+        if (objectCollider == null) return 1;
+
+        Vector3 size = objectCollider.bounds.size;
+        float volume = size.x * size.y * size.z;
+
+        float normalized = Mathf.Clamp01(volume / 3f);
+        return Mathf.Clamp(Mathf.CeilToInt(normalized * 6f), 1, 6);
+    }
+
     private bool IsLayerInMask(int layer, LayerMask mask)
     {
         return mask == (mask | (1 << layer));
