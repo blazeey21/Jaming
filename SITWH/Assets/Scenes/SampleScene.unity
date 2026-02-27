@@ -18932,6 +18932,7 @@ MonoBehaviour:
   hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 0.39215687}
   grabbedColor: {r: 0, g: 1, b: 0, a: 0.36862746}
   playerCamera: {fileID: 836683736}
+  virtualCamera: {fileID: 763583608}
   grabAction:
     m_UseReference: 1
     m_Action:
@@ -18946,6 +18947,21 @@ MonoBehaviour:
     m_Reference: {fileID: -3045212205327133378, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
   centerSprite: {fileID: 1494064959}
   throwForce: 90
+  zoomAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Zoom
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: e688996d-365b-49ce-b24a-56af556dd7f2
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -8628929546956672215, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
+  normalFOV: 60
+  zoomFOV: 25
+  zoomSpeed: 10
   crosshairUI: {fileID: 1494064958}
 --- !u!4 &352304448
 Transform:

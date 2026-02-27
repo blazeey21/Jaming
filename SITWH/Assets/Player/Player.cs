@@ -172,6 +172,15 @@ public partial class @Player: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Zoom"",
+                    ""type"": ""Button"",
+                    ""id"": ""b7a07e57-f6c0-4406-aaa7-55446a006462"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -559,6 +568,28 @@ public partial class @Player: IInputActionCollection2, IDisposable
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3365f92c-c12d-4dba-9b1a-b63b177ae1bc"",
+                    ""path"": ""<Keyboard>/ctrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Zoom"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""af0c77ea-98c7-4555-8be0-e1414144c471"",
+                    ""path"": ""<Gamepad>/rightStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Zoom"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -598,6 +629,7 @@ public partial class @Player: IInputActionCollection2, IDisposable
         m_Newactionmap_Decrement = m_Newactionmap.FindAction("Decrement", throwIfNotFound: true);
         m_Newactionmap_Valid = m_Newactionmap.FindAction("Valid", throwIfNotFound: true);
         m_Newactionmap_Interact = m_Newactionmap.FindAction("Interact", throwIfNotFound: true);
+        m_Newactionmap_Zoom = m_Newactionmap.FindAction("Zoom", throwIfNotFound: true);
     }
 
     ~@Player()
@@ -687,6 +719,7 @@ public partial class @Player: IInputActionCollection2, IDisposable
     private readonly InputAction m_Newactionmap_Decrement;
     private readonly InputAction m_Newactionmap_Valid;
     private readonly InputAction m_Newactionmap_Interact;
+    private readonly InputAction m_Newactionmap_Zoom;
     /// <summary>
     /// Provides access to input actions defined in input action map "New action map".
     /// </summary>
@@ -734,6 +767,10 @@ public partial class @Player: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Newactionmap/Interact".
         /// </summary>
         public InputAction @Interact => m_Wrapper.m_Newactionmap_Interact;
+        /// <summary>
+        /// Provides access to the underlying input action "Newactionmap/Zoom".
+        /// </summary>
+        public InputAction @Zoom => m_Wrapper.m_Newactionmap_Zoom;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -787,6 +824,9 @@ public partial class @Player: IInputActionCollection2, IDisposable
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
+            @Zoom.started += instance.OnZoom;
+            @Zoom.performed += instance.OnZoom;
+            @Zoom.canceled += instance.OnZoom;
         }
 
         /// <summary>
@@ -825,6 +865,9 @@ public partial class @Player: IInputActionCollection2, IDisposable
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
+            @Zoom.started -= instance.OnZoom;
+            @Zoom.performed -= instance.OnZoom;
+            @Zoom.canceled -= instance.OnZoom;
         }
 
         /// <summary>
@@ -941,5 +984,12 @@ public partial class @Player: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnInteract(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Zoom" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnZoom(InputAction.CallbackContext context);
     }
 }

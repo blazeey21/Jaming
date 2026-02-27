@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿
+using Unity.Cinemachine;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class CenterScreenGrab : MonoBehaviour
@@ -10,9 +12,16 @@ public class CenterScreenGrab : MonoBehaviour
     [SerializeField] private Color hoverColor = Color.yellow;
     [SerializeField] private Color grabbedColor = Color.green;
     [SerializeField] private Camera playerCamera;
+    [SerializeField] private CinemachineCamera virtualCamera;
     [SerializeField] private InputActionProperty grabAction;
     [SerializeField] private Transform centerSprite;
     [SerializeField] private float throwForce = 12f;
+
+    [Header("Zoom")]
+    [SerializeField] private InputActionProperty zoomAction;
+    [SerializeField] private float normalFOV = 60f;
+    [SerializeField] private float zoomFOV = 30f;
+    [SerializeField] private float zoomSpeed = 10f;
 
     [Header("Referencias")]
     [SerializeField] private GameObject crosshairUI;
@@ -23,12 +32,11 @@ public class CenterScreenGrab : MonoBehaviour
     private Material originalMaterial;
     private Color originalColor;
 
+    private bool isZooming;
+
     private void Start()
     {
-        if (grabAction.action == null)
-        {
-            Debug.LogWarning("No se ha asignado una acción de agarre. Se usará la tecla E por defecto.");
-        }
+        SetFOV(normalFOV);
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -39,24 +47,26 @@ public class CenterScreenGrab : MonoBehaviour
             grabAction.action.canceled += OnGrabCanceled;
         }
 
+        if (zoomAction.action != null)
+        {
+            zoomAction.action.started += OnZoomStarted;
+            zoomAction.action.canceled += OnZoomCanceled;
+        }
+
         if (centerSprite != null) centerSprite.gameObject.SetActive(true);
         if (crosshairUI != null) crosshairUI.SetActive(true);
     }
 
     private void OnEnable()
     {
-        if (grabAction.action != null)
-        {
-            grabAction.action.Enable();
-        }
+        if (grabAction.action != null) grabAction.action.Enable();
+        if (zoomAction.action != null) zoomAction.action.Enable();
     }
 
     private void OnDisable()
     {
-        if (grabAction.action != null)
-        {
-            grabAction.action.Disable();
-        }
+        if (grabAction.action != null) grabAction.action.Disable();
+        if (zoomAction.action != null) zoomAction.action.Disable();
 
         ResetCurrentGrabbable();
         ReleaseObject();
@@ -64,6 +74,8 @@ public class CenterScreenGrab : MonoBehaviour
 
     private void Update()
     {
+        UpdateZoom();
+
         Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
         RaycastHit hit;
 
@@ -95,6 +107,35 @@ public class CenterScreenGrab : MonoBehaviour
         }
     }
 
+    private void UpdateZoom()
+    {
+        float currentFOV = GetFOV();
+        float targetFOV = isZooming ? zoomFOV : normalFOV;
+        float newFOV = Mathf.Lerp(currentFOV, targetFOV, Time.deltaTime * zoomSpeed);
+        SetFOV(newFOV);
+    }
+
+    private float GetFOV()
+    {
+        if (virtualCamera != null) return virtualCamera.Lens.FieldOfView;
+        if (playerCamera != null) return playerCamera.fieldOfView;
+        return normalFOV;
+    }
+
+    private void SetFOV(float value)
+    {
+        if (virtualCamera != null)
+        {
+            var lens = virtualCamera.Lens;
+            lens.FieldOfView = value;
+            virtualCamera.Lens = lens;
+        }
+        else if (playerCamera != null)
+        {
+            playerCamera.fieldOfView = value;
+        }
+    }
+
     private void ResetCurrentGrabbable()
     {
         if (currentGrabbable != null && currentRenderer != null && currentGrabbable != grabbedObject)
@@ -120,26 +161,12 @@ public class CenterScreenGrab : MonoBehaviour
             }
 
             Collider[] cols = grabbedObject.GetComponentsInChildren<Collider>();
-            
+            foreach (Collider col in cols) col.enabled = false;
 
-
-            foreach (Collider col in cols)
-            {
-                col.enabled = false;
-            }
             Destruible destruible = grabbedObject.GetComponent<Destruible>();
-            if (destruible != null)
-            {
-                destruible.OnGrabbed();
-            }
+            if (destruible != null) destruible.OnGrabbed();
 
-
-          
-
-            if (currentRenderer != null)
-            {
-                currentRenderer.material.color = grabbedColor;
-            }
+            if (currentRenderer != null) currentRenderer.material.color = grabbedColor;
         }
         else if (grabbedObject != null)
         {
@@ -147,8 +174,16 @@ public class CenterScreenGrab : MonoBehaviour
         }
     }
 
-    private void OnGrabCanceled(InputAction.CallbackContext context)
+    private void OnGrabCanceled(InputAction.CallbackContext context) { }
+
+    private void OnZoomStarted(InputAction.CallbackContext context)
     {
+        isZooming = true;
+    }
+
+    private void OnZoomCanceled(InputAction.CallbackContext context)
+    {
+        isZooming = false;
     }
 
     private void ReleaseObject()
@@ -163,10 +198,7 @@ public class CenterScreenGrab : MonoBehaviour
         }
 
         Collider[] cols = grabbedObject.GetComponentsInChildren<Collider>();
-        foreach (Collider col in cols)
-        {
-            col.enabled = true;
-        }
+        foreach (Collider col in cols) col.enabled = true;
 
         if (rb != null)
         {
@@ -174,10 +206,7 @@ public class CenterScreenGrab : MonoBehaviour
         }
 
         Destruible destruible = grabbedObject.GetComponent<Destruible>();
-        if (destruible != null)
-        {
-            destruible.OnReleased();
-        }
+        if (destruible != null) destruible.OnReleased();
 
         if (currentRenderer != null && grabbedObject == currentGrabbable)
         {
@@ -195,8 +224,7 @@ public class CenterScreenGrab : MonoBehaviour
     {
         if (grabbedObject == null || playerCamera == null) return;
 
-        Vector3 targetPosition = playerCamera.transform.position +
-                                 playerCamera.transform.forward * holdDistance;
+        Vector3 targetPosition = playerCamera.transform.position + playerCamera.transform.forward * holdDistance;
 
         grabbedObject.transform.position = Vector3.Lerp(
             grabbedObject.transform.position,
@@ -211,6 +239,12 @@ public class CenterScreenGrab : MonoBehaviour
         {
             grabAction.action.started -= OnGrabStarted;
             grabAction.action.canceled -= OnGrabCanceled;
+        }
+
+        if (zoomAction.action != null)
+        {
+            zoomAction.action.started -= OnZoomStarted;
+            zoomAction.action.canceled -= OnZoomCanceled;
         }
     }
 
@@ -230,10 +264,7 @@ public class CenterScreenGrab : MonoBehaviour
         if (centerSprite != null)
         {
             SpriteRenderer spriteRenderer = centerSprite.GetComponent<SpriteRenderer>();
-            if (spriteRenderer != null)
-            {
-                spriteRenderer.color = color;
-            }
+            if (spriteRenderer != null) spriteRenderer.color = color;
         }
     }
 }
