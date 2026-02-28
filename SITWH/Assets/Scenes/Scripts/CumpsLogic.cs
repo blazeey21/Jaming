@@ -15,11 +15,13 @@ public class CrumpsLogic : MonoBehaviour
     void Start()
     {
         if (animator == null) animator = GetComponent<Animator>();
+        health = health - 220;
+    
     }
 
     public void OnGoodObjectDestroyed(Vector3 position)
     {
-        health += healthChangeAmount;
+        health = health+5;
         StartReaction(GoodReaction());
     }
 
