@@ -27,6 +27,7 @@ public class CrumpsLogic : MonoBehaviour
 
     public void OnBadObjectDestroyed(Vector3 position)
     {
+
         health -= healthChangeAmount;
         StartReaction(BadReaction());
     }
