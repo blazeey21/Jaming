@@ -121754,6 +121754,7 @@ GameObject:
   - component: {fileID: 4933762728625205994}
   - component: {fileID: 8347391788655017295}
   - component: {fileID: 6067214920256817541}
+  - component: {fileID: 8347391788655017296}
   m_Layer: 0
   m_Name: TV
   m_TagString: Untagged
@@ -124282,6 +124283,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5707168636829182032}
   m_Mesh: {fileID: -5243098771569098612, guid: 7acaea47e39f96240ae7b2f54b2c158c, type: 3}
+--- !u!114 &8347391788655017296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5707168636829182032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12f5a30821a95064a903a7b6c847004c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  lines: []
+  volume: 1.5
+  followCamera: 1
 --- !u!4 &8352548717634475400
 Transform:
   m_ObjectHideFlags: 0
