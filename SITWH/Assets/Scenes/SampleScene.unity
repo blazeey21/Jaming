@@ -124295,9 +124295,105 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12f5a30821a95064a903a7b6c847004c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  lines: []
+  audioFollowTarget: {fileID: 763583609}
   volume: 1.5
-  followCamera: 1
+  lines:
+  - id: A
+    dialogueEvent:
+      Guid:
+        Data1: -1671348161
+        Data2: 1289002779
+        Data3: -758632269
+        Data4: -771272510
+      Path: event:/Dialogue/Nivel 1/Dicks/Dick1
+    subtitle: "Oh. You're awake. Excellent. You are officially my cognitive experiment
+      number\u2026 Well, I lost count after the guy who acted like a horse."
+  - id: B
+    dialogueEvent:
+      Guid:
+        Data1: 1599547165
+        Data2: 1282655608
+        Data3: 1691149457
+        Data4: -312222029
+      Path: event:/Dialogue/Nivel 1/Dicks/Dick1_2
+    subtitle: I am a superior intelligence based on the mind of Elon Dicks, but enhanced.
+      Without unnecessary empathy.
+  - id: C
+    dialogueEvent:
+      Guid:
+        Data1: -1574816717
+        Data2: 1081995017
+        Data3: 2146296728
+        Data4: 1727518300
+      Path: event:/Dialogue/Nivel 1/Dicks/Dick3_1
+    subtitle: "Your only objective is to tell me where you are. If you guess correctly\u2026
+      well\u2026 my life is connected to the door. But don't worry. A little kid
+      could never figure it out. "
+  - id: Clue1
+    dialogueEvent:
+      Guid:
+        Data1: -1720708502
+        Data2: 1188449916
+        Data3: -1904022083
+        Data4: 2044853309
+      Path: event:/Dialogue/Nivel 1/Dicks/Dicks4_HC
+    subtitle: This place saw worse decisions than the launch of Mortal Kombat without
+      the blood code.
+  - id: Clue2
+    dialogueEvent:
+      Guid:
+        Data1: -1829960563
+        Data2: 1185818513
+        Data3: 632405380
+        Data4: 47584829
+      Path: event:/Dialogue/Nivel 1/Dicks/Dicks4_2LC
+    subtitle: This place saw worse decisions than the launch of Mortal Kombat without
+      the blood code.
+  - id: Incorrect
+    dialogueEvent:
+      Guid:
+        Data1: -1829960563
+        Data2: 1185818513
+        Data3: 632405380
+        Data4: 47584829
+      Path: event:/Dialogue/Nivel 1/Dicks/Dicks4_2LC
+    subtitle: 'Incorrect. Yes, I''m such a genius troll. '
+  - id: FirstCorrect
+    dialogueEvent:
+      Guid:
+        Data1: -632479800
+        Data2: 1109242039
+        Data3: 47771292
+        Data4: -294062445
+      Path: event:/Dialogue/Nivel 1/Dicks/Dick6
+    subtitle: That was not part of the plan.
+  - id: Dead1
+    dialogueEvent:
+      Guid:
+        Data1: -262335466
+        Data2: 1183691576
+        Data3: -1798379108
+        Data4: -187996529
+      Path: event:/Dialogue/Nivel 1/Dicks/Dick7_1
+    subtitle: "Disconnecting audiovisual system\u2026"
+  - id: Dead2
+    dialogueEvent:
+      Guid:
+        Data1: 1024499683
+        Data2: 1314151260
+        Data3: -6433142
+        Data4: -801042497
+      Path: event:/Dialogue/Nivel 1/Dicks/Dicks7_2
+    subtitle: 'I SHOULDN''T HAVE LINKED MY LIFE TO A RIDDLE. '
+  - id: Dead3
+    dialogueEvent:
+      Guid:
+        Data1: 466042061
+        Data2: 1111400125
+        Data3: -267973997
+        Data4: -391681891
+      Path: event:/Dialogue/Nivel 1/Dicks/Dicks7_3
+    subtitle: 'But I''m such a trooooooollllll. '
 --- !u!4 &8352548717634475400
 Transform:
   m_ObjectHideFlags: 0
