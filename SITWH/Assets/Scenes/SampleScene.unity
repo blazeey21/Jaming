@@ -5979,7 +5979,7 @@ MonoBehaviour:
   destroyOnFloorTouch: 1
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 1944277455376878916, guid: c9b30df22cf247641a2135ab5c55643c, type: 3}
+  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
 --- !u!1 &120307437
 GameObject:
   m_ObjectHideFlags: 0
@@ -23922,7 +23922,7 @@ MonoBehaviour:
   destroyOnFloorTouch: 1
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 1944277455376878916, guid: c9b30df22cf247641a2135ab5c55643c, type: 3}
+  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
 --- !u!1 &401291054
 GameObject:
   m_ObjectHideFlags: 0
@@ -25973,7 +25973,7 @@ MonoBehaviour:
   destroyOnFloorTouch: 1
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 1944277455376878916, guid: c9b30df22cf247641a2135ab5c55643c, type: 3}
+  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
 --- !u!1 &545037439
 GameObject:
   m_ObjectHideFlags: 0
@@ -46260,8 +46260,8 @@ MonoBehaviour:
   player: {fileID: 1412512090}
   mat: {fileID: 2100000, guid: f8e5bdce25d09444aa5916fbc428a4a0, type: 2}
   maxDistance: 5
-  speed: 1
-  intensity: 0.1
+  speed: 6
+  intensity: 3
   noiseScale: 2
 --- !u!23 &884028763
 MeshRenderer:
@@ -47375,7 +47375,7 @@ MonoBehaviour:
   destroyOnFloorTouch: 1
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 1944277455376878916, guid: c9b30df22cf247641a2135ab5c55643c, type: 3}
+  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
 --- !u!1 &988697136
 GameObject:
   m_ObjectHideFlags: 0
@@ -53752,7 +53752,7 @@ MonoBehaviour:
   destroyOnFloorTouch: 1
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 1944277455376878916, guid: c9b30df22cf247641a2135ab5c55643c, type: 3}
+  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
 --- !u!1 &1115448850
 GameObject:
   m_ObjectHideFlags: 0
@@ -54181,7 +54181,7 @@ MonoBehaviour:
   destroyOnFloorTouch: 1
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 1944277455376878916, guid: c9b30df22cf247641a2135ab5c55643c, type: 3}
+  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
 --- !u!1 &1152825338
 GameObject:
   m_ObjectHideFlags: 0
@@ -56615,7 +56615,7 @@ MonoBehaviour:
   destroyOnFloorTouch: 1
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 1944277455376878916, guid: c9b30df22cf247641a2135ab5c55643c, type: 3}
+  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
 --- !u!1 &1234739572
 GameObject:
   m_ObjectHideFlags: 0
@@ -70374,7 +70374,7 @@ MonoBehaviour:
   destroyOnFloorTouch: 1
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 1944277455376878916, guid: c9b30df22cf247641a2135ab5c55643c, type: 3}
+  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
 --- !u!1 &1508050214
 GameObject:
   m_ObjectHideFlags: 0
@@ -93467,7 +93467,7 @@ MonoBehaviour:
   destroyOnFloorTouch: 1
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 1944277455376878916, guid: c9b30df22cf247641a2135ab5c55643c, type: 3}
+  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
 --- !u!1 &2122564534
 GameObject:
   m_ObjectHideFlags: 0
@@ -116824,7 +116824,7 @@ MonoBehaviour:
   destroyOnFloorTouch: 1
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 1944277455376878916, guid: c9b30df22cf247641a2135ab5c55643c, type: 3}
+  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
 --- !u!54 &3469287837027036881
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -117051,7 +117051,7 @@ MonoBehaviour:
   destroyOnFloorTouch: 1
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 1944277455376878916, guid: c9b30df22cf247641a2135ab5c55643c, type: 3}
+  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
 --- !u!54 &3469287837360741690
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -117406,7 +117406,7 @@ MonoBehaviour:
   destroyOnFloorTouch: 1
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 1944277455376878916, guid: c9b30df22cf247641a2135ab5c55643c, type: 3}
+  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
 --- !u!54 &3469287837557900425
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -117641,7 +117641,7 @@ MonoBehaviour:
   destroyOnFloorTouch: 1
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 1944277455376878916, guid: c9b30df22cf247641a2135ab5c55643c, type: 3}
+  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
 --- !u!33 &3469287837823994239
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -118439,7 +118439,7 @@ MonoBehaviour:
   destroyOnFloorTouch: 1
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 1944277455376878916, guid: c9b30df22cf247641a2135ab5c55643c, type: 3}
+  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
 --- !u!33 &3469287838482731716
 MeshFilter:
   m_ObjectHideFlags: 0
