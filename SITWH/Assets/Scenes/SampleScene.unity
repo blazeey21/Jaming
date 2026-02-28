@@ -6630,6 +6630,75 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.024153007, y: 0.027092606, z: 0.027379863}
   m_Center: {x: -1.1159369e-10, y: 0.0037444634, z: -0.0036907406}
+--- !u!1 &174206631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 174206634}
+  - component: {fileID: 174206633}
+  - component: {fileID: 174206632}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &174206632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174206631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 628718153e147eb41b8a28852655c72b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  player: {fileID: 1412512090}
+  audioObjects:
+  - objeto: {fileID: 1329809056}
+    sonidoLoop:
+      Guid:
+        Data1: 20523700
+        Data2: 1337681720
+        Data3: -783231577
+        Data4: 1455284650
+      Path: event:/SFX/nivel 1/crepitar fuego
+    distanciaActivacion: 0.39
+    sonando: 0
+--- !u!114 &174206633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174206631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 391358ffb898610448c72316b0b19dd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!4 &174206634
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174206631}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.16313, y: 1.79126, z: -24.26322}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &174713613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58203,6 +58272,7 @@ GameObject:
   - component: {fileID: 1329809055}
   - component: {fileID: 1329809054}
   - component: {fileID: 1329809057}
+  - component: {fileID: 1329809058}
   m_Layer: 0
   m_Name: LuzCadelabro
   m_TagString: Untagged
@@ -58335,6 +58405,25 @@ MonoBehaviour:
   intensidadMax: 0.94
   intervaloMin: 0.2
   intervaloMax: 0.66
+--- !u!114 &1329809058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329809053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8519b412688a5314abefb1b9e7d083ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  puertaSFX:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &1339129719
 GameObject:
   m_ObjectHideFlags: 0
@@ -70858,6 +70947,37 @@ MonoBehaviour:
   intensidadMax: 0.35
   intervaloMin: 0.2
   intervaloMax: 0.66
+--- !u!1 &1550443288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1550443289}
+  m_Layer: 0
+  m_Name: Fmod
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1550443289
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550443288}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.27308, y: 0.6062, z: -17.64297}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1562293824
 GameObject:
   m_ObjectHideFlags: 0
@@ -124060,3 +124180,5 @@ SceneRoots:
   - {fileID: 2496701201426006196}
   - {fileID: 884028765}
   - {fileID: 1250216279}
+  - {fileID: 174206634}
+  - {fileID: 1550443289}
