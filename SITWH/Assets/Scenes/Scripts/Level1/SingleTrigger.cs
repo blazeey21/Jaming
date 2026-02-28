@@ -28,7 +28,6 @@ public class SingleTrigger : MonoBehaviour
     {
         if (other.gameObject.layer != layerValue)
         {
-            Debug.Log($"{gameObject.name}: Ignorado {other.name} - Layer incorrecta");
             return;
         }
 

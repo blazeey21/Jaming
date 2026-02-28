@@ -1,5 +1,86 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8779517489426666508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_3
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_3
+  Guid:
+    Data1: 2071679850
+    Data2: 1081277554
+    Data3: 1295947648
+    Data4: 1907679692
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3200
+--- !u!114 &-8773128362012840131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_3
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_3
+  Guid:
+    Data1: -1948937851
+    Data2: 1198062565
+    Data3: -1524362088
+    Data4: 1400329774
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2993
+--- !u!114 &-8108562455481317508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks11_1
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks11_1
+  Guid:
+    Data1: 1463534307
+    Data2: 1275152404
+    Data3: 735201408
+    Data4: 442392640
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &-7971962508838600034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,6 +108,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2298
+--- !u!114 &-7760166608198924008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_6
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_6
+  Guid:
+    Data1: 1036695140
+    Data2: 1191266206
+    Data3: -498136683
+    Data4: -995293617
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2458
 --- !u!114 &-7089056778795493647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54,6 +162,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6882578828774463871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks16_3
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks16_3
+  Guid:
+    Data1: 388602904
+    Data2: 1234448625
+    Data3: 1224171932
+    Data4: 1311928117
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2006
+--- !u!114 &-6751403907977987253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Hallway/Diks18_2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Diks18_2
+  Guid:
+    Data1: -300860183
+    Data2: 1115503000
+    Data3: -963646284
+    Data4: -574954994
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1471
 --- !u!114 &-6238868492191558507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +270,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2430
+--- !u!114 &-6023425367377272315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks8_3
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks8_3
+  Guid:
+    Data1: 1928188045
+    Data2: 1206690526
+    Data3: 2144927876
+    Data4: -302515594
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5144
+--- !u!114 &-5731188597965975751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_1
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_1
+  Guid:
+    Data1: -1374877567
+    Data2: 1111659690
+    Data3: -1210595176
+    Data4: 1309223733
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2455
 --- !u!114 &-5716400300997911420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +351,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 624
+--- !u!114 &-5707757235041973629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks15_1
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks15_1
+  Guid:
+    Data1: -2102954384
+    Data2: 1206468161
+    Data3: 1569951
+    Data4: 360454293
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3254
 --- !u!114 &-5287236263397107665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,6 +405,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6631
+--- !u!114 &-5256538402388335319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks11_3
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks11_3
+  Guid:
+    Data1: -192948145
+    Data2: 1302080154
+    Data3: -1642687089
+    Data4: -1683561359
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2305
 --- !u!114 &-4715216740732792810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +513,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 16866
+--- !u!114 &-3963134241976490150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks12C
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks12C
+  Guid:
+    Data1: 1190227777
+    Data2: 1233830775
+    Data3: -1979227457
+    Data4: -1291818564
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 876
+--- !u!114 &-3230958188375496601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_4
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_4
+  Guid:
+    Data1: -1957799505
+    Data2: 1155134979
+    Data3: -2119150405
+    Data4: -1045201652
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4519
 --- !u!114 &-2793596633929853305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,9 +582,90 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639079041445922470
+  lastModified: 639079214248673198
   FileSizes: []
   Exists: 1
+--- !u!114 &-2590481804851507045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks11_2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks11_2
+  Guid:
+    Data1: -1438072872
+    Data2: 1273029195
+    Data3: 1848414099
+    Data4: 627134022
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2499
+--- !u!114 &-2406612417737845662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_7
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_7
+  Guid:
+    Data1: 1849397736
+    Data2: 1187244525
+    Data3: 1494734226
+    Data4: -601915481
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2714
+--- !u!114 &-2341696683420455912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks14
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks14
+  Guid:
+    Data1: -128388794
+    Data2: 1318868765
+    Data3: -980923006
+    Data4: 1728570576
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3505
 --- !u!114 &-2325362655018939667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,6 +747,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 500
+--- !u!114 &-926636028872082804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_2
+  Guid:
+    Data1: -1135400249
+    Data2: 1114761291
+    Data3: 685705356
+    Data4: 1835853630
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2185
 --- !u!114 &-819826707295892725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,6 +801,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 18346
+--- !u!114 &-662998948393807564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks17
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks17
+  Guid:
+    Data1: 1128583615
+    Data2: 1304670683
+    Data3: -1160091233
+    Data4: -798271482
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2239
+--- !u!114 &-402590194885462146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_5
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_5
+  Guid:
+    Data1: 2023498957
+    Data2: 1089818101
+    Data3: 1943260607
+    Data4: -2013733816
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1983
 --- !u!114 &-360386435988368120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,6 +882,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-235915008432257920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks16_2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks16_2
+  Guid:
+    Data1: 1577789575
+    Data2: 1222345964
+    Data3: -1296882044
+    Data4: 1581824312
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1483
+--- !u!114 &-117953597226223391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_2
+  Guid:
+    Data1: -294210355
+    Data2: 1213322714
+    Data3: -1032309583
+    Data4: -523043633
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2410
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,13 +988,47 @@ MonoBehaviour:
   - {fileID: -4396439657802853801}
   - {fileID: 4659600278530681131}
   - {fileID: 1433201434230425119}
+  - {fileID: 5397911682948826158}
+  - {fileID: -6882578828774463871}
+  - {fileID: 3298605585311886607}
+  - {fileID: 7108504773639446661}
+  - {fileID: -3963134241976490150}
+  - {fileID: -2341696683420455912}
+  - {fileID: 8857890499054996121}
+  - {fileID: -5256538402388335319}
+  - {fileID: 458207953333086819}
+  - {fileID: 3716819186162701136}
+  - {fileID: -7760166608198924008}
+  - {fileID: -8779517489426666508}
+  - {fileID: -5707757235041973629}
+  - {fileID: 8640601659193192049}
+  - {fileID: 4427256201304430768}
+  - {fileID: -5731188597965975751}
+  - {fileID: -8773128362012840131}
+  - {fileID: -235915008432257920}
+  - {fileID: -6023425367377272315}
+  - {fileID: 63524966801804226}
+  - {fileID: 6201164506116573369}
+  - {fileID: 5452986999714675218}
+  - {fileID: -3230958188375496601}
+  - {fileID: -662998948393807564}
+  - {fileID: -926636028872082804}
+  - {fileID: 6352515843864663744}
+  - {fileID: -402590194885462146}
+  - {fileID: -117953597226223391}
+  - {fileID: -2590481804851507045}
+  - {fileID: -8108562455481317508}
+  - {fileID: -2406612417737845662}
+  - {fileID: -6751403907977987253}
+  - {fileID: 1709289028974403145}
+  - {fileID: 8552515934086321834}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2793596633929853305}
   StringsBanks:
   - {fileID: 2854216806268686269}
   cacheVersion: 131858
-  cacheTime: 639079041509814677
+  cacheTime: 639079214248673198
   SerializableEventsDict:
   - key: event:/SFX/nivel 2/susurros
     index: 0
@@ -526,6 +1100,128 @@ MonoBehaviour:
     index: 33
   - key: event:/Dialogue/Nivel 1/Dicks/Dicks3_2
     index: 34
+  - key: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks15_2
+    index: 35
+  - key: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks16_3
+    index: 36
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_4
+    index: 37
+  - key: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks18_3
+    index: 38
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks12C
+    index: 39
+  - key: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks14
+    index: 40
+  - key: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks16_1
+    index: 41
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks11_3
+    index: 42
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_1
+    index: 43
+  - key: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks18_1
+    index: 44
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_6
+    index: 45
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_3
+    index: 46
+  - key: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks15_1
+    index: 47
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_1
+    index: 48
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_2
+    index: 49
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_1
+    index: 50
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_3
+    index: 51
+  - key: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks16_2
+    index: 52
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks8_3
+    index: 53
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_5
+    index: 54
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks8_1
+    index: 55
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks8_2
+    index: 56
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_4
+    index: 57
+  - key: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks17
+    index: 58
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_2
+    index: 59
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_4
+    index: 60
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_5
+    index: 61
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_2
+    index: 62
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks11_2
+    index: 63
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks11_1
+    index: 64
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_7
+    index: 65
+  - key: event:/Dialogue/Nivel 2/Dicks/Hallway/Diks18_2
+    index: 66
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_5
+    index: 67
+  - key: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_3
+    index: 68
+--- !u!114 &63524966801804226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_5
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_5
+  Guid:
+    Data1: 358222993
+    Data2: 1201114149
+    Data3: -496803413
+    Data4: -561633107
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3065
+--- !u!114 &458207953333086819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_1
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_1
+  Guid:
+    Data1: 67275603
+    Data2: 1225876617
+    Data3: 796024740
+    Data4: -595889458
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3756
 --- !u!114 &637566890006261411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -715,6 +1411,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6144
+--- !u!114 &1709289028974403145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_5
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_5
+  Guid:
+    Data1: -1409042707
+    Data2: 1221505465
+    Data3: -887503218
+    Data4: -1642870683
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3678
 --- !u!114 &2196368513605516265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -775,11 +1498,65 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639079041509814677
+  lastModified: 639079213907112918
   FileSizes:
   - Name: 
-    Value: 2266
+    Value: 3570
   Exists: 1
+--- !u!114 &3298605585311886607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_4
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_4
+  Guid:
+    Data1: 1699334425
+    Data2: 1243711857
+    Data3: 81249425
+    Data4: -796365310
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3780
+--- !u!114 &3716819186162701136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks18_1
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks18_1
+  Guid:
+    Data1: -401234085
+    Data2: 1100058870
+    Data3: 906021791
+    Data4: -1307397872
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1345
 --- !u!114 &4075992066654470714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -807,6 +1584,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1250
+--- !u!114 &4427256201304430768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_2
+  Guid:
+    Data1: 1134350198
+    Data2: 1182939690
+    Data3: -305563750
+    Data4: 18858620
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2603
 --- !u!114 &4468994108566514526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -915,6 +1719,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7700
+--- !u!114 &5397911682948826158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks15_2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks15_2
+  Guid:
+    Data1: -1282522857
+    Data2: 1127046021
+    Data3: 518923705
+    Data4: 154286574
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5246
+--- !u!114 &5452986999714675218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks8_2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks8_2
+  Guid:
+    Data1: -872484191
+    Data2: 1168936611
+    Data3: 2078940049
+    Data4: -1089668306
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1100
 --- !u!114 &6014378319566370004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -969,6 +1827,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2500
+--- !u!114 &6201164506116573369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks8_1
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks8_1
+  Guid:
+    Data1: -222660447
+    Data2: 1107769951
+    Data3: 955944337
+    Data4: 801523398
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2300
+--- !u!114 &6352515843864663744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_4
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_4
+  Guid:
+    Data1: 182870219
+    Data2: 1109898096
+    Data3: 1883661207
+    Data4: -1635982505
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1882
 --- !u!114 &6691848455710176400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1023,6 +1935,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 800
+--- !u!114 &7108504773639446661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks18_3
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks18_3
+  Guid:
+    Data1: 1274861094
+    Data2: 1166337262
+    Data3: -210189889
+    Data4: 1676908055
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3725
 --- !u!114 &7118773440031144893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1104,6 +2043,87 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 12800
+--- !u!114 &8552515934086321834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_3
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_3
+  Guid:
+    Data1: -923882762
+    Data2: 1233174380
+    Data3: 891724932
+    Data4: -971032340
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3295
+--- !u!114 &8640601659193192049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_1
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_1
+  Guid:
+    Data1: -1515016332
+    Data2: 1210973770
+    Data3: -15713379
+    Data4: -341544331
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2660
+--- !u!114 &8857890499054996121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks16_1
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks16_1
+  Guid:
+    Data1: 2122749519
+    Data2: 1181179418
+    Data3: -1528924232
+    Data4: -818386063
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5209
 --- !u!114 &8920430993632716292
 MonoBehaviour:
   m_ObjectHideFlags: 0

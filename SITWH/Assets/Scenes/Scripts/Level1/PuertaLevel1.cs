@@ -139,11 +139,6 @@ public class PuertaLevel1 : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.Label(new Rect(10, 10, 300, 30), $"TriggerColor activo: {(triggerColor != null ? triggerColor.IsActive().ToString() : "null")}");
-        GUI.Label(new Rect(10, 40, 300, 30), $"TriggerSitio activo: {(triggerSitio != null ? triggerSitio.IsActive().ToString() : "null")}");
-        GUI.Label(new Rect(10, 70, 300, 30), $"Puerta Abierta: {puertaAbierta}");
-
-        if (AmbosTriggersActivos() && !puertaAbierta)
-            GUI.Label(new Rect(10, 100, 300, 30), "¡CONDICIÓN CUMPLIDA! Puerta se abrirá...");
+       
     }
 }
