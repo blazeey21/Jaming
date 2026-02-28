@@ -18,6 +18,32 @@ MonoBehaviour:
     Data2: 1208471087
     Data3: 816976769
     Data4: -347926960
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 800
+--- !u!114 &-7089056778795493647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/nivel 1/abrirpuerta
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/nivel 1/abrirpuerta
+  Guid:
+    Data1: 659100334
+    Data2: 1297215658
+    Data3: 1994869409
+    Data4: 589370291
   Banks:
   - {fileID: -2793596633929853305}
   IsStream: 0
@@ -26,7 +52,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 800
+  Length: 0
 --- !u!114 &-6890861658511573412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,8 +71,7 @@ MonoBehaviour:
     Data2: 1317611904
     Data3: 1720174254
     Data4: 422571248
-  Banks:
-  - {fileID: -2793596633929853305}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -54,6 +79,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 500
+--- !u!114 &-6238868492191558507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/nivel 1/crepitarfuego
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/nivel 1/crepitarfuego
+  Guid:
+    Data1: 20523700
+    Data2: 1337681720
+    Data3: -783231577
+    Data4: 1455284650
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 31000
 --- !u!114 &-6140803864445682484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,8 +124,7 @@ MonoBehaviour:
     Data2: 1329867572
     Data3: 1348342448
     Data4: -1042937848
-  Banks:
-  - {fileID: -2793596633929853305}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -99,6 +150,32 @@ MonoBehaviour:
     Data2: 1283633708
     Data3: -1418956119
     Data4: -530662935
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1250
+--- !u!114 &-5716400300997911420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/nivel 2/pasosbaldosa
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/nivel 2/pasosbaldosa
+  Guid:
+    Data1: 1115739974
+    Data2: 1137003771
+    Data3: 715842216
+    Data4: 599462117
   Banks:
   - {fileID: -2793596633929853305}
   IsStream: 0
@@ -107,7 +184,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1250
+  Length: 624
 --- !u!114 &-2793596633929853305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +200,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639078986101262828
+  lastModified: 639078992993462099
   FileSizes: []
   Exists: 1
 --- !u!114 &-2559424726281071645
@@ -144,11 +221,64 @@ MonoBehaviour:
     Data2: 1297215658
     Data3: 1994869409
     Data4: 589370291
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1623964949081553474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/nivel 3/pasosmoq
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/nivel 3/pasosmoq
+  Guid:
+    Data1: -1968334749
+    Data2: 1317611904
+    Data3: 1720174254
+    Data4: 422571248
   Banks:
   - {fileID: -2793596633929853305}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
+--- !u!114 &-360386435988368120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/nivel 1/crefuego
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/nivel 1/crefuego
+  Guid:
+    Data1: -710671656
+    Data2: 1140962068
+    Data3: -1668433787
+    Data4: 1405768955
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -184,16 +314,139 @@ MonoBehaviour:
   - {fileID: 7782918577363216920}
   - {fileID: 6456782122926065118}
   - {fileID: 2926820350772169807}
+  - {fileID: 4694551632010656885}
+  - {fileID: 6168771811606904647}
+  - {fileID: -5716400300997911420}
+  - {fileID: 8314551798232615504}
+  - {fileID: -1623964949081553474}
+  - {fileID: 6848575684247410481}
+  - {fileID: 4075992066654470714}
+  - {fileID: -7089056778795493647}
+  - {fileID: -6238868492191558507}
+  - {fileID: 637566890006261411}
+  - {fileID: 1154742931544130283}
+  - {fileID: -360386435988368120}
+  - {fileID: 1347085996038101609}
+  - {fileID: 4758391171620173433}
+  - {fileID: 743619289768019608}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2793596633929853305}
   StringsBanks:
   - {fileID: 2854216806268686269}
   cacheVersion: 131858
-  cacheTime: 639078986101262828
+  cacheTime: 639078993048491043
   SerializableEventsDict:
   - key: event:/nigga
     index: 0
+--- !u!114 &637566890006261411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/nivel 2/alarmafallo
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/nivel 2/alarmafallo
+  Guid:
+    Data1: -2014382133
+    Data2: 1097782099
+    Data3: 1572496545
+    Data4: 1052661962
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 900
+--- !u!114 &743619289768019608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/nivel 2/pasarnum
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/nivel 2/pasarnum
+  Guid:
+    Data1: 995156461
+    Data2: 1303618659
+    Data3: 800651184
+    Data4: -582683829
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 720
+--- !u!114 &1154742931544130283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 3/Trump/t_01
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 3/Trump/t_01
+  Guid:
+    Data1: -147487282
+    Data2: 1178110421
+    Data3: -2060867138
+    Data4: 472313078
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4000
+--- !u!114 &1347085996038101609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/nivel 2/abrirreja
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/nivel 2/abrirreja
+  Guid:
+    Data1: -2096671784
+    Data2: 1121284157
+    Data3: 1939881621
+    Data4: 825843844
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3200
 --- !u!114 &1461360642703332723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,7 +489,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/nigga.bank
   Name: nigga
   StudioPath: bank:/nigga
-  lastModified: 639072915580156863
+  lastModified: 639072670528981400
   FileSizes: []
   Exists: 1
 --- !u!114 &2218807443487583031
@@ -257,8 +510,7 @@ MonoBehaviour:
     Data2: 1090509562
     Data3: 1441393564
     Data4: -805565005
-  Banks:
-  - {fileID: -2793596633929853305}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -284,8 +536,7 @@ MonoBehaviour:
     Data2: 1097782099
     Data3: 1572496545
     Data4: 1052661962
-  Banks:
-  - {fileID: -2793596633929853305}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -308,10 +559,10 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639078986101262828
+  lastModified: 639078993048491043
   FileSizes:
   - Name: 
-    Value: 1384
+    Value: 1520
   Exists: 1
 --- !u!114 &2926820350772169807
 MonoBehaviour:
@@ -331,8 +582,7 @@ MonoBehaviour:
     Data2: 1303618659
     Data3: 800651184
     Data4: -582683829
-  Banks:
-  - {fileID: -2793596633929853305}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -358,8 +608,7 @@ MonoBehaviour:
     Data2: 1337681720
     Data3: -783231577
     Data4: 1455284650
-  Banks:
-  - {fileID: -2793596633929853305}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -367,6 +616,87 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 31000
+--- !u!114 &4075992066654470714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/nivel 3/rompermadera
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/nivel 3/rompermadera
+  Guid:
+    Data1: 1018262660
+    Data2: 1283633708
+    Data3: -1418956119
+    Data4: -530662935
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1250
+--- !u!114 &4694551632010656885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/nivel 3/rompercristales
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/nivel 3/rompercristales
+  Guid:
+    Data1: 945984033
+    Data2: 1090509562
+    Data3: 1441393564
+    Data4: -805565005
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1350
+--- !u!114 &4758391171620173433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 3/Trump/trump
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 3/Trump/trump
+  Guid:
+    Data1: -1939846174
+    Data2: 1245293606
+    Data3: -2066886736
+    Data4: -555172354
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7700
 --- !u!114 &5702423585281560157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,6 +723,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &6168771811606904647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/nivel 1/quemarparticulas
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/nivel 1/quemarparticulas
+  Guid:
+    Data1: 1901616966
+    Data2: 1329867572
+    Data3: 1348342448
+    Data4: -1042937848
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2500
 --- !u!114 &6456782122926065118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,6 +768,32 @@ MonoBehaviour:
     Data2: 1121284157
     Data3: 1939881621
     Data4: 825843844
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3200
+--- !u!114 &6848575684247410481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/nivel 1/pasosgrava
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/nivel 1/pasosgrava
+  Guid:
+    Data1: -820511110
+    Data2: 1208471087
+    Data3: 816976769
+    Data4: -347926960
   Banks:
   - {fileID: -2793596633929853305}
   IsStream: 0
@@ -419,7 +802,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 3200
+  Length: 800
 --- !u!114 &7782918577363216920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -438,8 +821,7 @@ MonoBehaviour:
     Data2: 1140962068
     Data3: -1668433787
     Data4: 1405768955
-  Banks:
-  - {fileID: -2793596633929853305}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -447,6 +829,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8314551798232615504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 3/Trump/t
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 3/Trump/t
+  Guid:
+    Data1: 667744343
+    Data2: 1225349241
+    Data3: 1989333916
+    Data4: -1097408047
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 12800
 --- !u!114 &8963067426872845049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,8 +874,7 @@ MonoBehaviour:
     Data2: 1137003771
     Data3: 715842216
     Data4: 599462117
-  Banks:
-  - {fileID: -2793596633929853305}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

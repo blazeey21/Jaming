@@ -6730,8 +6730,32 @@ MonoBehaviour:
         Data2: 1337681720
         Data3: -783231577
         Data4: 1455284650
-      Path: event:/SFX/nivel 1/crepitar fuego
-    distanciaActivacion: 0.39
+      Path: event:/SFX/nivel 1/crepitarfuego
+    distanciaActivacion: 2
+    volumenPorDistancia:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: -1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
     sonando: 0
 --- !u!114 &174206633
 MonoBehaviour:
@@ -40969,7 +40993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
   nonRigidbodyVelocity: 0
-  attenuationObject: {fileID: 0}
+  attenuationObject: {fileID: 174206631}
 --- !u!1 &839301180
 GameObject:
   m_ObjectHideFlags: 0
@@ -40979,6 +41003,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 839301181}
+  - component: {fileID: 839301182}
   m_Layer: 0
   m_Name: Level3
   m_TagString: Untagged
@@ -41072,6 +41097,27 @@ Transform:
   - {fileID: 635756388}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!65 &839301182
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839301180}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &856259909
 GameObject:
   m_ObjectHideFlags: 0
@@ -47781,6 +47827,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 999570302}
+  - component: {fileID: 999570303}
   m_Layer: 0
   m_Name: Level1
   m_TagString: Untagged
@@ -47850,6 +47897,27 @@ Transform:
   - {fileID: 799101452}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!65 &999570303
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999570301}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &1000681434
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58333,7 +58401,6 @@ GameObject:
   - component: {fileID: 1329809055}
   - component: {fileID: 1329809054}
   - component: {fileID: 1329809057}
-  - component: {fileID: 1329809058}
   m_Layer: 0
   m_Name: LuzCadelabro
   m_TagString: Untagged
@@ -58444,7 +58511,7 @@ Transform:
   m_GameObject: {fileID: 1329809053}
   serializedVersion: 2
   m_LocalRotation: {x: -0.10938163, y: -0.8754261, z: 0.40821788, w: -0.23456968}
-  m_LocalPosition: {x: 5.1, y: -3.152, z: -31.293}
+  m_LocalPosition: {x: 5.1, y: -3.15, z: -31.29}
   m_LocalScale: {x: 0.86565, y: 0.86565006, z: 0.8656502}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -58466,25 +58533,6 @@ MonoBehaviour:
   intensidadMax: 0.94
   intervaloMin: 0.2
   intervaloMax: 0.66
---- !u!114 &1329809058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329809053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8519b412688a5314abefb1b9e7d083ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  puertaSFX:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
 --- !u!1 &1339129719
 GameObject:
   m_ObjectHideFlags: 0
@@ -72985,6 +73033,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1712536016}
+  - component: {fileID: 1712536017}
   m_Layer: 0
   m_Name: Level2
   m_TagString: Untagged
@@ -73038,6 +73087,27 @@ Transform:
   - {fileID: 545037440}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!65 &1712536017
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712536015}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1719311610
 GameObject:
   m_ObjectHideFlags: 0

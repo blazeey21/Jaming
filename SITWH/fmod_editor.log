@@ -9,7 +9,7 @@
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 0
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000019DC99E7288 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 00000206AA922498 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -18,6 +18,61 @@
 [LOG] Manager::init                            : done.
 [LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
 [LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
-[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] BankLoader::serializeBank                : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 146)
+[LOG] SoundI::release                          : crepitar fuego (00000206D32DEB98)
+[LOG] SoundI::release                          :     crepitar fuego (0000020578300068)
+[LOG] SoundI::release                          :     crepitar fuego (000002072B8F5848)
+[LOG] SystemI::createSound                     : filename = FMOD/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::getAsyncThread              : index = 0 / 5
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000205B60B3CA8, queue head = 00000206D32DC2B8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000205B60B3CA8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1812416
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36224
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000206D2CBB6C8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='crepitar fuego', format=5, channels=2, frequency=48000, lengthbytes=457760, lengthpcm=1480704, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.190902.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000205B60B3CA8
+[LOG] SoundI::release                          : crepitar fuego (00000205B60B3CA8)
+[LOG] SoundI::release                          :     crepitar fuego (000002067D675098)
+[LOG] SoundI::release                          :     crepitar fuego (000002070D0EFFC8)
+[LOG] SoundI::release                          :  (0000020576B0E1F8)
+[LOG] SoundI::release                          :     pasos g_1 (000002070A1940A8)
+[LOG] SoundI::release                          :  (0000020576B0D858)
+[LOG] SoundI::release                          :     pasos g_10 (000002070A194228)
+[LOG] SoundI::release                          :  (0000020576B0E098)
+[LOG] SoundI::release                          :     pasos g_11 (00000205420B1118)
+[LOG] SoundI::release                          :  (0000020576B0DF38)
+[LOG] SoundI::release                          :     pasos g_12 (000002070A193928)
+[LOG] SoundI::release                          :  (0000020576B0D6F8)
+[LOG] SoundI::release                          :     pasos g_2 (000002070A193628)
+[LOG] SoundI::release                          :  (0000020576B0D438)
+[LOG] SoundI::release                          :     pasos g_3 (000002070A1937A8)
+[LOG] SoundI::release                          :  (0000020576B0DB18)
+[LOG] SoundI::release                          :     pasos g_4 (00000205420B1598)
+[LOG] SoundI::release                          :  (0000020576B0DC78)
+[LOG] SoundI::release                          :     pasos g_5 (00000205420B1418)
+[LOG] SoundI::release                          :  (000002055390E888)
+[LOG] SoundI::release                          :     pasos g_6 (00000205420B1298)
+[LOG] SoundI::release                          :  (0000020576B0DDD8)
+[LOG] SoundI::release                          :     pasos g_7 (000002070A193AA8)
+[LOG] SoundI::release                          :  (000002055390E9E8)
+[LOG] SoundI::release                          :     pasos g_8 (00000205420B1718)
+[LOG] SoundI::release                          :  (0000020576B0D9B8)
+[LOG] SoundI::release                          :     pasos g_9 (000002070A1943A8)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::closeInternal                   : Closed.

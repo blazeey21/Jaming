@@ -11,6 +11,7 @@ public class AudioObjects : MonoBehaviour
         public Transform objeto;
         public EventReference sonidoLoop;
         public float distanciaActivacion = 10f;
+        public AnimationCurve volumenPorDistancia = AnimationCurve.Linear(0, 1, 1, 0);
 
         [HideInInspector] public EventInstance instancia;
         [HideInInspector] public bool sonando;
@@ -26,6 +27,8 @@ public class AudioObjects : MonoBehaviour
             if (a.objeto == null) continue;
 
             float distancia = Vector3.Distance(player.position, a.objeto.position);
+            float t = Mathf.Clamp01(distancia / a.distanciaActivacion);
+            float volumen = a.volumenPorDistancia.Evaluate(t);
 
             if (distancia <= a.distanciaActivacion)
             {
@@ -38,6 +41,7 @@ public class AudioObjects : MonoBehaviour
                 }
 
                 a.instancia.set3DAttributes(RuntimeUtils.To3DAttributes(a.objeto));
+                a.instancia.setVolume(volumen);
             }
             else
             {
