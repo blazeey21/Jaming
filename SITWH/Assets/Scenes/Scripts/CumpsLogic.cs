@@ -15,7 +15,7 @@ public class CrumpsLogic : MonoBehaviour
     void Start()
     {
         if (animator == null) animator = GetComponent<Animator>();
-        health = health - 220;
+        if (health != 100) {  health = 100; }
     
     }
 
