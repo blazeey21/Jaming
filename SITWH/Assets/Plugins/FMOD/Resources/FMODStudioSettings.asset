@@ -464,7 +464,7 @@ MonoBehaviour:
   HasSourceProject: 0
   HasPlatforms: 0
   sourceProjectPath: 
-  sourceBankPath: C:/Users/Lenovo/Documents/GitHub/jaming/SITWH/FMOD
+  sourceBankPath: FMOD/Desktop
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -476,6 +476,7 @@ MonoBehaviour:
   TargetAssetPath: FMODBanks
   TargetBankFolder: 
   EventLinkage: 0
+  SerializeGUIDsOnly: 0
   LoggingLevel: 2
   SpeakerModeSettings: []
   SampleRateSettings: []
@@ -486,9 +487,9 @@ MonoBehaviour:
   RealChannelSettings: []
   Plugins: []
   MasterBanks:
-  - Desktop/Master
+  - Master
   Banks:
-  - Desktop/nigga
+  - nigga
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
@@ -500,9 +501,9 @@ MonoBehaviour:
   EnableErrorCallback: 0
   SharedLibraryUpdateStage: 0
   SharedLibraryTimeSinceStart: 0
-  CurrentVersion: 131635
+  CurrentVersion: 131858
   HideSetupWizard: 1
-  LastEventReferenceScanVersion: 131635
+  LastEventReferenceScanVersion: 131858
   Platforms:
   - {fileID: 378348733650915404}
   - {fileID: -4179192130492799778}
