@@ -16,14 +16,17 @@ public class ElonTv : MonoBehaviour
 {
     public static ElonTv Instance;
 
-    [Header("Camera audio follow")]
     public Transform audioFollowTarget;
-
-    [Header("Audio")]
     public float volume = 1.5f;
 
-    [Header("Dialogues")]
     public ElonLine[] lines;
+
+    [Header("Start sequence")]
+    public string startA;
+    public string startB;
+    public string startC;
+    public string clue1;
+    public string clue2;
 
     Dictionary<string, ElonLine> lookup;
 
@@ -39,14 +42,31 @@ public class ElonTv : MonoBehaviour
             audioFollowTarget = Camera.main.transform;
     }
 
-    public void Play(string id)
+    void Start()
     {
-        if (!lookup.ContainsKey(id)) return;
-        StartCoroutine(PlayRoutine(lookup[id]));
+        StartCoroutine(StartSequence());
     }
 
-    IEnumerator PlayRoutine(ElonLine line)
+    IEnumerator StartSequence()
     {
+        yield return PlayAndWait(startA);
+        yield return PlayAndWait(startB);
+        yield return PlayAndWait(startC);
+        yield return PlayAndWait(clue1);
+        yield return PlayAndWait(clue2);
+    }
+
+    public void Play(string id)
+    {
+        StartCoroutine(PlayAndWait(id));
+    }
+
+    IEnumerator PlayAndWait(string id)
+    {
+        if (!lookup.ContainsKey(id)) yield break;
+
+        var line = lookup[id];
+
         var instance = RuntimeManager.CreateInstance(line.dialogueEvent);
 
         if (audioFollowTarget != null)

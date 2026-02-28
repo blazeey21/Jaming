@@ -40,7 +40,6 @@ public class SingleTrigger : MonoBehaviour
             myCollider1.SetActive(false);
             myCollider2.SetActive(true);
 
-            // 🔊 Reproducir sonido al acertar
             ReproducirSonidoCorrecto();
         }
         else
@@ -62,7 +61,6 @@ public class SingleTrigger : MonoBehaviour
             instancia.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
             instancia.start();
             instancia.release();
-            Debug.Log("Sonido de portal correcto reproducido");
         }
     }
 

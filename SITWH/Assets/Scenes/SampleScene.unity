@@ -79614,6 +79614,30 @@ MonoBehaviour:
       Data3: 1939881621
       Data4: 825843844
     Path: event:/SFX/nivel 2/abrirreja
+  dead1:
+    Guid:
+      Data1: -262335466
+      Data2: 1183691576
+      Data3: -1798379108
+      Data4: -187996529
+    Path: event:/Dialogue/Nivel 1/Dicks/Dick7_1
+  dead2:
+    Guid:
+      Data1: 1024499683
+      Data2: 1314151260
+      Data3: -6433142
+      Data4: -801042497
+    Path: event:/Dialogue/Nivel 1/Dicks/Dicks7_2
+  dead3:
+    Guid:
+      Data1: 466042061
+      Data2: 1111400125
+      Data3: -267973997
+      Data4: -391681891
+    Path: event:/Dialogue/Nivel 1/Dicks/Dicks7_3
+  targetLight: {fileID: 1102414921}
+  lightFinalIntensity: 0.01
+  objectToDisable: {fileID: 1054237290}
 --- !u!65 &1768738915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -119844,6 +119868,30 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  dead1:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  dead2:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  dead3:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  targetLight: {fileID: 0}
+  lightFinalIntensity: 0.2
+  objectToDisable: {fileID: 0}
 --- !u!1 &3553501316558579185
 GameObject:
   m_ObjectHideFlags: 0
@@ -124394,6 +124442,11 @@ MonoBehaviour:
         Data4: -391681891
       Path: event:/Dialogue/Nivel 1/Dicks/Dicks7_3
     subtitle: 'But I''m such a trooooooollllll. '
+  startA: 
+  startB: 
+  startC: 
+  clue1: 
+  clue2: 
 --- !u!4 &8352548717634475400
 Transform:
   m_ObjectHideFlags: 0
