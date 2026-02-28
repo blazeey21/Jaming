@@ -6731,7 +6731,585 @@ MonoBehaviour:
         Data3: -783231577
         Data4: 1455284650
       Path: event:/SFX/nivel 1/crepitarfuego
-    distanciaActivacion: 2
+    distanciaActivacion: 5
+    volumenPorDistancia:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: -1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    sonando: 0
+  - objeto: {fileID: 768953028}
+    sonidoLoop:
+      Guid:
+        Data1: 20523700
+        Data2: 1337681720
+        Data3: -783231577
+        Data4: 1455284650
+      Path: event:/SFX/nivel 1/crepitarfuego
+    distanciaActivacion: 3
+    volumenPorDistancia:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: -1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    sonando: 0
+  - objeto: {fileID: 1719311611}
+    sonidoLoop:
+      Guid:
+        Data1: 20523700
+        Data2: 1337681720
+        Data3: -783231577
+        Data4: 1455284650
+      Path: event:/SFX/nivel 1/crepitarfuego
+    distanciaActivacion: 3
+    volumenPorDistancia:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: -1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    sonando: 0
+  - objeto: {fileID: 1847349497}
+    sonidoLoop:
+      Guid:
+        Data1: 20523700
+        Data2: 1337681720
+        Data3: -783231577
+        Data4: 1455284650
+      Path: event:/SFX/nivel 1/crepitarfuego
+    distanciaActivacion: 3
+    volumenPorDistancia:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: -1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    sonando: 0
+  - objeto: {fileID: 1621285987}
+    sonidoLoop:
+      Guid:
+        Data1: 20523700
+        Data2: 1337681720
+        Data3: -783231577
+        Data4: 1455284650
+      Path: event:/SFX/nivel 1/crepitarfuego
+    distanciaActivacion: 3
+    volumenPorDistancia:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: -1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    sonando: 0
+  - objeto: {fileID: 763013536}
+    sonidoLoop:
+      Guid:
+        Data1: 20523700
+        Data2: 1337681720
+        Data3: -783231577
+        Data4: 1455284650
+      Path: event:/SFX/nivel 1/crepitarfuego
+    distanciaActivacion: 3
+    volumenPorDistancia:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: -1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    sonando: 0
+  - objeto: {fileID: 763013536}
+    sonidoLoop:
+      Guid:
+        Data1: 20523700
+        Data2: 1337681720
+        Data3: -783231577
+        Data4: 1455284650
+      Path: event:/SFX/nivel 1/crepitarfuego
+    distanciaActivacion: 3
+    volumenPorDistancia:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: -1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    sonando: 0
+  - objeto: {fileID: 1075242942}
+    sonidoLoop:
+      Guid:
+        Data1: 20523700
+        Data2: 1337681720
+        Data3: -783231577
+        Data4: 1455284650
+      Path: event:/SFX/nivel 1/crepitarfuego
+    distanciaActivacion: 3
+    volumenPorDistancia:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: -1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    sonando: 0
+  - objeto: {fileID: 1694681096}
+    sonidoLoop:
+      Guid:
+        Data1: 20523700
+        Data2: 1337681720
+        Data3: -783231577
+        Data4: 1455284650
+      Path: event:/SFX/nivel 1/crepitarfuego
+    distanciaActivacion: 3
+    volumenPorDistancia:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: -1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    sonando: 0
+  - objeto: {fileID: 623068883}
+    sonidoLoop:
+      Guid:
+        Data1: 20523700
+        Data2: 1337681720
+        Data3: -783231577
+        Data4: 1455284650
+      Path: event:/SFX/nivel 1/crepitarfuego
+    distanciaActivacion: 3
+    volumenPorDistancia:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: -1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    sonando: 0
+  - objeto: {fileID: 623068883}
+    sonidoLoop:
+      Guid:
+        Data1: 20523700
+        Data2: 1337681720
+        Data3: -783231577
+        Data4: 1455284650
+      Path: event:/SFX/nivel 1/crepitarfuego
+    distanciaActivacion: 3
+    volumenPorDistancia:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: -1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    sonando: 0
+  - objeto: {fileID: 623068883}
+    sonidoLoop:
+      Guid:
+        Data1: 20523700
+        Data2: 1337681720
+        Data3: -783231577
+        Data4: 1455284650
+      Path: event:/SFX/nivel 1/crepitarfuego
+    distanciaActivacion: 3
+    volumenPorDistancia:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: -1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    sonando: 0
+  - objeto: {fileID: 543450653677724984}
+    sonidoLoop:
+      Guid:
+        Data1: 1507855561
+        Data2: 1275460954
+        Data3: -1070983550
+        Data4: 1842860300
+      Path: event:/SFX/nivel 2/susurros
+    distanciaActivacion: 3
+    volumenPorDistancia:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: -1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    sonando: 0
+  - objeto: {fileID: 543450653677724984}
+    sonidoLoop:
+      Guid:
+        Data1: 1507855561
+        Data2: 1275460954
+        Data3: -1070983550
+        Data4: 1842860300
+      Path: event:/SFX/nivel 2/susurros
+    distanciaActivacion: 3
+    volumenPorDistancia:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: -1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    sonando: 0
+  - objeto: {fileID: 543450652325516229}
+    sonidoLoop:
+      Guid:
+        Data1: 1507855561
+        Data2: 1275460954
+        Data3: -1070983550
+        Data4: 1842860300
+      Path: event:/SFX/nivel 2/susurros
+    distanciaActivacion: 3
+    volumenPorDistancia:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: -1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    sonando: 0
+  - objeto: {fileID: 543450652816222281}
+    sonidoLoop:
+      Guid:
+        Data1: 1507855561
+        Data2: 1275460954
+        Data3: -1070983550
+        Data4: 1842860300
+      Path: event:/SFX/nivel 2/susurros
+    distanciaActivacion: 3
+    volumenPorDistancia:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: -1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    sonando: 0
+  - objeto: {fileID: 543450653677724984}
+    sonidoLoop:
+      Guid:
+        Data1: 1507855561
+        Data2: 1275460954
+        Data3: -1070983550
+        Data4: 1842860300
+      Path: event:/SFX/nivel 2/susurros
+    distanciaActivacion: 3
+    volumenPorDistancia:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: -1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    sonando: 0
+  - objeto: {fileID: 543450653677724984}
+    sonidoLoop:
+      Guid:
+        Data1: 1507855561
+        Data2: 1275460954
+        Data3: -1070983550
+        Data4: 1842860300
+      Path: event:/SFX/nivel 2/susurros
+    distanciaActivacion: 3
     volumenPorDistancia:
       serializedVersion: 2
       m_Curve:
@@ -47888,7 +48466,6 @@ Transform:
   - {fileID: 543450652096722025}
   - {fileID: 4933762728625205994}
   - {fileID: 1392127245}
-  - {fileID: 4851597090346028965}
   - {fileID: 1768738912}
   - {fileID: 1120101056}
   - {fileID: 1474515472}
@@ -53526,6 +54103,161 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &1082244407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1082244408}
+  - component: {fileID: 1082244413}
+  - component: {fileID: 1082244412}
+  - component: {fileID: 1082244411}
+  - component: {fileID: 1082244410}
+  - component: {fileID: 1082244409}
+  m_Layer: 3
+  m_Name: CuboJuguete (7)
+  m_TagString: Color
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1082244408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082244407}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.53426474, y: 0.46320763, z: 0.4632075, w: 0.53426474}
+  m_LocalPosition: {x: -1.51, y: -1.61, z: 3.92}
+  m_LocalScale: {x: 2.0602884, y: 2.0602884, z: 2.0602884}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1418615415}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 81.851}
+--- !u!114 &1082244409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082244407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c9efadacd21024aadf50df39647554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LayerObserver
+  capaDestructor: Destructor
+  particulasPrefab: {fileID: 0}
+  offsetSalida: 0.02
+--- !u!65 &1082244410
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082244407}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.12, y: 0.12, z: 0.12}
+  m_Center: {x: 0, y: 0, z: 0.050000012}
+--- !u!54 &1082244411
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082244407}
+  serializedVersion: 5
+  m_Mass: 0.5
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
+--- !u!23 &1082244412
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082244407}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: ea6c4e8cd0945d14289f4fd6beef3da6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1082244413
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082244407}
+  m_Mesh: {fileID: 180201363491517350, guid: f77a92da58f6abb4791038e7790e9dc8, type: 3}
 --- !u!1 &1102414917
 GameObject:
   m_ObjectHideFlags: 0
@@ -64242,6 +64974,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 543450653321393643}
+  - {fileID: 1082244408}
   - {fileID: 718297234}
   - {fileID: 1163230563}
   - {fileID: 1214559094}
@@ -78854,8 +79587,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1768738912}
   - component: {fileID: 1768738913}
+  - component: {fileID: 1768738914}
+  - component: {fileID: 1768738915}
   m_Layer: 0
-  m_Name: PivotPuerta1
+  m_Name: PuertaLevel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78899,6 +79634,50 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1768738914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768738911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70f0a3062cadaf42b2b8b31e65990ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuertaLevel1
+  triggerColor: {fileID: 1154703289}
+  triggerSitio: {fileID: 421034673}
+  delayDestruccion: 1
+  efectoMagiaPrefab: {fileID: 1392127244}
+  fmodEvent:
+    Guid:
+      Data1: -2096671784
+      Data2: 1121284157
+      Data3: 1939881621
+      Data4: 825843844
+    Path: event:/SFX/nivel 2/abrirreja
+--- !u!65 &1768738915
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768738911}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1797844696 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3969833810954821775, guid: 6ccd8ed36787bf645aa5658263f4ce97, type: 3}
@@ -118922,8 +119701,14 @@ MonoBehaviour:
   triggerColor: {fileID: 1154703289}
   triggerSitio: {fileID: 421034673}
   delayDestruccion: 0.5
-  duracionFade: 1.5
   efectoMagiaPrefab: {fileID: 0}
+  fmodEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &3553501316558579185
 GameObject:
   m_ObjectHideFlags: 0
@@ -119870,6 +120655,13 @@ MonoBehaviour:
   activarConProximidad: 1
   rangoInteraccion: 3
   inputAction: {fileID: -3359667613083277608, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
+  sonidoEspecial:
+    Guid:
+      Data1: -2096671784
+      Data2: 1121284157
+      Data3: 1939881621
+      Data4: 825843844
+    Path: event:/SFX/nivel 2/abrirreja
   alCambiarZona:
     m_PersistentCalls:
       m_Calls: []
@@ -120279,21 +121071,6 @@ Transform:
   - {fileID: 7317208165367991150}
   m_Father: {fileID: 7910090762766064303}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4851597090346028965
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5197019236086879519}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.70731115, y: -0.0025383602, z: -0.0076132524, w: -0.70685685}
-  m_LocalPosition: {x: 5.089, y: -6.546, z: -27.254}
-  m_LocalScale: {x: 1, y: 1, z: 0.9299699}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 999570302}
-  m_LocalEulerAnglesHint: {x: -90.413, y: -94.70401, z: -84.47299}
 --- !u!1 &4862790986086109696
 GameObject:
   m_ObjectHideFlags: 0
@@ -120479,26 +121256,6 @@ Transform:
   - {fileID: 3399892831434261224}
   m_Father: {fileID: 6754795053169679217}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5197019236086879519
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4851597090346028965}
-  - component: {fileID: 8429487584847839232}
-  - component: {fileID: 5989639095691457738}
-  - component: {fileID: 8429487584847839234}
-  - component: {fileID: 8429487584847839233}
-  m_Layer: 0
-  m_Name: Puerta1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!1 &5236923276727538517
 GameObject:
   m_ObjectHideFlags: 0
@@ -120969,55 +121726,6 @@ Transform:
   - {fileID: 8700783697703034003}
   m_Father: {fileID: 6515712192421228807}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &5989639095691457738
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5197019236086879519}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: b219069c58d1785449bbe06525e14e74, type: 2}
-  - {fileID: 2100000, guid: 7aa63da2bdcd5bf49b0f1972ab1533b5, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!4 &6000407480386712080
 Transform:
   m_ObjectHideFlags: 0
@@ -123324,52 +124032,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!33 &8429487584847839232
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5197019236086879519}
-  m_Mesh: {fileID: -6958163324436498937, guid: c81e8e4227e295043a0eada1e9fb1659, type: 3}
---- !u!114 &8429487584847839233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5197019236086879519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e70f0a3062cadaf42b2b8b31e65990ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PuertaLevel1
-  triggerColor: {fileID: 1154703289}
-  triggerSitio: {fileID: 421034673}
-  delayDestruccion: 0.5
-  duracionFade: 5
-  efectoMagiaPrefab: {fileID: 1392127244}
---- !u!65 &8429487584847839234
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5197019236086879519}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.8188795, y: 0.25895417, z: 3.2000005}
-  m_Center: {x: 0.00031595895, y: 0.051406726, z: 1.6000003}
 --- !u!4 &8434084191427464717
 Transform:
   m_ObjectHideFlags: 0

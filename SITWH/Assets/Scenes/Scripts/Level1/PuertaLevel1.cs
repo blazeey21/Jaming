@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using FMODUnity;
 
 public class PuertaLevel1 : MonoBehaviour
 {
@@ -7,16 +7,15 @@ public class PuertaLevel1 : MonoBehaviour
     public SingleTrigger triggerSitio;
 
     public float delayDestruccion = 0.5f;
-    public float duracionFade = 1.5f;
-
     public GameObject efectoMagiaPrefab;
+    public EventReference fmodEvent;
 
     private bool puertaAbierta = false;
-    private Renderer[] renderers;
+    private Animator animator;
 
     void Start()
     {
-        renderers = GetComponentsInChildren<Renderer>();
+        animator = GetComponent<Animator>();
 
         if (triggerColor == null)
             triggerColor = GameObject.Find("TriggerColor")?.GetComponent<SingleTrigger>();
@@ -41,51 +40,36 @@ public class PuertaLevel1 : MonoBehaviour
     void AbrirPuerta()
     {
         puertaAbierta = true;
-        Invoke(nameof(IniciarDesaparicion), delayDestruccion);
+        Invoke(nameof(ActivarPuerta), delayDestruccion);
     }
-
-    void IniciarDesaparicion()
+    void ActivarPuerta()
     {
         if (efectoMagiaPrefab != null)
             Instantiate(efectoMagiaPrefab, transform.position, Quaternion.identity);
 
-        StartCoroutine(FadePuerta());
-    }
+        if (animator != null)
+            animator.SetBool("Open", true);
 
-    IEnumerator FadePuerta()
-    {
-        efectoMagiaPrefab.gameObject.SetActive(true);
-
-        float tiempo = 0f;
-     
-
-        while (tiempo < duracionFade)
+        if (!fmodEvent.IsNull)
         {
-            float alpha = Mathf.Lerp(1f, 0f, tiempo / duracionFade);
+            var instancia = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
 
-            foreach (var r in renderers)
-            {
-                foreach (var mat in r.materials)
-                {
-                    if (mat.HasProperty("_Color"))
-                    {
-                        Color c = mat.color;
-                        c.a = alpha;
-                        mat.color = c;
-                    }
-                }
-            }
+            FMOD.ATTRIBUTES_3D attrs = FMODUnity.RuntimeUtils.To3DAttributes(transform);
+            instancia.set3DAttributes(attrs);
 
-            tiempo += Time.deltaTime;
-            yield return null;
+            FMOD.RESULT resultado = instancia.start();
+            if (resultado == FMOD.RESULT.OK)
+                Debug.Log($"Evento FMOD '{fmodEvent.Path}' reproducido correctamente");
+            else
+                Debug.LogWarning($"Error al reproducir evento FMOD: {resultado}");
+
+            instancia.release();
         }
-        yield return new WaitForSeconds(5f);
-        efectoMagiaPrefab.gameObject.SetActive(false);
-        gameObject.SetActive(false);
- 
-
+        else
+        {
+            Debug.LogWarning("fmodEvent está vacío, no se puede reproducir sonido");
+        }
     }
-
     void OnGUI()
     {
         GUI.Label(new Rect(10, 10, 300, 30), $"TriggerColor activo: {(triggerColor != null ? triggerColor.IsActive().ToString() : "null")}");

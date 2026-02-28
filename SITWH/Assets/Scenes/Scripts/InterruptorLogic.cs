@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using FMODUnity;
 
 public class InterruptorZonas : MonoBehaviour
 {
@@ -10,11 +11,15 @@ public class InterruptorZonas : MonoBehaviour
     public Zona zona3;
     public Zona zona4;
     public Zona zona5;
+
     [Header("Activación")]
     public bool activarConClick = true;
     public bool activarConProximidad = true;
     public float rangoInteraccion = 3f;
     public InputActionReference inputAction;
+
+    [Header("Sonidos")]
+    public EventReference sonidoEspecial; // Sonido cuando todas las zonas menos la 5 están activas
 
     public UnityEvent alCambiarZona;
 
@@ -28,7 +33,7 @@ public class InterruptorZonas : MonoBehaviour
     private int zonaActual = 0;
     private int zonaAnterior = 0;
     private Transform jugador;
-    private bool puedeActivar = true; // Para evitar doble activación
+    private bool puedeActivar = true;
 
     void OnEnable()
     {
@@ -50,10 +55,7 @@ public class InterruptorZonas : MonoBehaviour
 
     void OnInputAction(InputAction.CallbackContext ctx)
     {
-        // Ignorar si el dispositivo es ratón o teclado
-        if (ctx.control.device is Mouse || ctx.control.device is Keyboard)
-            return;
-
+        if (ctx.control.device is Mouse || ctx.control.device is Keyboard) return;
         if (!activarConProximidad) return;
         if (jugador == null) return;
 
@@ -88,7 +90,11 @@ public class InterruptorZonas : MonoBehaviour
 
         alCambiarZona.Invoke();
 
-        Invoke(nameof(Reactivar), 0.1f); 
+        // 🔊 Verificar si todas las zonas menos la 5 están activas
+        if (TodasZonasMenosCincoActivas())
+            ReproducirSonidoEspecial();
+
+        Invoke(nameof(Reactivar), 0.1f);
     }
 
     void Reactivar()
@@ -114,6 +120,37 @@ public class InterruptorZonas : MonoBehaviour
         if (objs == null) return;
         foreach (GameObject o in objs)
             if (o != null) o.SetActive(estado);
+    }
+
+    private bool TodasZonasMenosCincoActivas()
+    {
+        bool z1 = EstaZonaActiva(zona1);
+        bool z2 = EstaZonaActiva(zona2);
+        bool z3 = EstaZonaActiva(zona3);
+        bool z4 = EstaZonaActiva(zona4);
+        bool z5 = EstaZonaActiva(zona5);
+
+        return z1 && z2 && z3 && z4 && !z5;
+    }
+
+    private bool EstaZonaActiva(Zona z)
+    {
+        if (z == null || z.activar == null || z.activar.Length == 0) return false;
+        foreach (var go in z.activar)
+            if (go != null && !go.activeInHierarchy) return false;
+        return true;
+    }
+
+    private void ReproducirSonidoEspecial()
+    {
+        if (!sonidoEspecial.IsNull)
+        {
+            var instancia = RuntimeManager.CreateInstance(sonidoEspecial);
+            instancia.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
+            instancia.start();
+            instancia.release();
+            Debug.Log("Sonido especial reproducido porque todas las zonas menos la 5 están activas");
+        }
     }
 
     void OnMouseDown()
