@@ -123,7 +123,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639078902454394534
+  lastModified: 639078986101262828
   FileSizes: []
   Exists: 1
 --- !u!114 &-2559424726281071645
@@ -190,7 +190,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 2854216806268686269}
   cacheVersion: 131858
-  cacheTime: 639078902454394534
+  cacheTime: 639078986101262828
   SerializableEventsDict:
   - key: event:/nigga
     index: 0
@@ -236,7 +236,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/nigga.bank
   Name: nigga
   StudioPath: bank:/nigga
-  lastModified: 639072670528981400
+  lastModified: 639072915580156863
   FileSizes: []
   Exists: 1
 --- !u!114 &2218807443487583031
@@ -308,7 +308,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639078902325795784
+  lastModified: 639078986101262828
   FileSizes:
   - Name: 
     Value: 1384
@@ -385,8 +385,7 @@ MonoBehaviour:
     Data2: 1077466495
     Data3: 1211535783
     Data4: -114812155
-  Banks:
-  - {fileID: 2196368513605516265}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
