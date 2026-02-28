@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7971962508838600034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 1/Dicks/Dicks5_2fail
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 1/Dicks/Dicks5_2fail
+  Guid:
+    Data1: -481814729
+    Data2: 1282721411
+    Data3: 1649542310
+    Data4: -2023898982
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2298
 --- !u!114 &-7089056778795493647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54,6 +81,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 31000
+--- !u!114 &-6107924498820966264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 1/Dicks/Dick6
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 1/Dicks/Dick6
+  Guid:
+    Data1: -632479800
+    Data2: 1109242039
+    Data3: 47771292
+    Data4: -294062445
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2430
 --- !u!114 &-5716400300997911420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,6 +135,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 624
+--- !u!114 &-5287236263397107665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 1/Dicks/Dicks2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 1/Dicks/Dicks2
+  Guid:
+    Data1: -1540223910
+    Data2: 1172366821
+    Data3: -1163023173
+    Data4: -937781517
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6631
 --- !u!114 &-4715216740732792810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +189,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6000
+--- !u!114 &-4396439657802853801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 1/Dicks/Dicks7_3
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 1/Dicks/Dicks7_3
+  Guid:
+    Data1: 466042061
+    Data2: 1111400125
+    Data3: -267973997
+    Data4: -391681891
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1572
 --- !u!114 &-4176333037092246542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +258,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639079013068248651
+  lastModified: 639079041445922470
   FileSizes: []
   Exists: 1
 --- !u!114 &-2325362655018939667
@@ -180,6 +288,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 17650
+--- !u!114 &-1902691449110020077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 1/Dicks/Dicks5
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 1/Dicks/Dicks5
+  Guid:
+    Data1: -1190971564
+    Data2: 1107248671
+    Data3: -347979856
+    Data4: 1791499754
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1176
 --- !u!114 &-1623964949081553474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,13 +434,27 @@ MonoBehaviour:
   - {fileID: -2325362655018939667}
   - {fileID: -4715216740732792810}
   - {fileID: -819826707295892725}
+  - {fileID: 2336278065694270157}
+  - {fileID: 1470110774036599777}
+  - {fileID: 7118773440031144893}
+  - {fileID: -7971962508838600034}
+  - {fileID: 6691848455710176400}
+  - {fileID: -1902691449110020077}
+  - {fileID: 8920430993632716292}
+  - {fileID: -5287236263397107665}
+  - {fileID: 6014378319566370004}
+  - {fileID: 7730657981451899310}
+  - {fileID: -6107924498820966264}
+  - {fileID: -4396439657802853801}
+  - {fileID: 4659600278530681131}
+  - {fileID: 1433201434230425119}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2793596633929853305}
   StringsBanks:
   - {fileID: 2854216806268686269}
   cacheVersion: 131858
-  cacheTime: 639079013130457303
+  cacheTime: 639079041509814677
   SerializableEventsDict:
   - key: event:/SFX/nivel 2/susurros
     index: 0
@@ -349,6 +498,34 @@ MonoBehaviour:
     index: 19
   - key: event:/Dialogue/Nivel 3/Trump/t_04
     index: 20
+  - key: event:/Dialogue/Nivel 1/Dicks/Dick7_1
+    index: 21
+  - key: event:/Dialogue/Nivel 1/Dicks/Dick1_2
+    index: 22
+  - key: event:/Dialogue/Nivel 1/Dicks/Dick3_1
+    index: 23
+  - key: event:/Dialogue/Nivel 1/Dicks/Dicks5_2fail
+    index: 24
+  - key: event:/Dialogue/Nivel 1/Dicks/Dick1
+    index: 25
+  - key: event:/Dialogue/Nivel 1/Dicks/Dicks5
+    index: 26
+  - key: event:/Dialogue/Nivel 1/Dicks/Dicks3_3
+    index: 27
+  - key: event:/Dialogue/Nivel 1/Dicks/Dicks2
+    index: 28
+  - key: event:/Dialogue/Nivel 1/Dicks/Dicks4_HC
+    index: 29
+  - key: event:/Dialogue/Nivel 1/Dicks/Dicks4_2LC
+    index: 30
+  - key: event:/Dialogue/Nivel 1/Dicks/Dick6
+    index: 31
+  - key: event:/Dialogue/Nivel 1/Dicks/Dicks7_3
+    index: 32
+  - key: event:/Dialogue/Nivel 1/Dicks/Dicks7_2
+    index: 33
+  - key: event:/Dialogue/Nivel 1/Dicks/Dicks3_2
+    index: 34
 --- !u!114 &637566890006261411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,6 +634,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3200
+--- !u!114 &1433201434230425119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 1/Dicks/Dicks3_2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 1/Dicks/Dicks3_2
+  Guid:
+    Data1: 1572044279
+    Data2: 1299994345
+    Data3: -2146177911
+    Data4: -1224045591
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5696
 --- !u!114 &1461360642703332723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,6 +688,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 44000
+--- !u!114 &1470110774036599777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 1/Dicks/Dick1_2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 1/Dicks/Dick1_2
+  Guid:
+    Data1: 1599547165
+    Data2: 1282655608
+    Data3: 1691149457
+    Data4: -312222029
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6144
 --- !u!114 &2196368513605516265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,6 +733,33 @@ MonoBehaviour:
   lastModified: 639072670528981400
   FileSizes: []
   Exists: 1
+--- !u!114 &2336278065694270157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 1/Dicks/Dick7_1
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 1/Dicks/Dick7_1
+  Guid:
+    Data1: -262335466
+    Data2: 1183691576
+    Data3: -1798379108
+    Data4: -187996529
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3068
 --- !u!114 &2854216806268686269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -517,10 +775,10 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639079013130457303
+  lastModified: 639079041509814677
   FileSizes:
   - Name: 
-    Value: 1692
+    Value: 2266
   Exists: 1
 --- !u!114 &4075992066654470714
 MonoBehaviour:
@@ -576,6 +834,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 13950
+--- !u!114 &4659600278530681131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 1/Dicks/Dicks7_2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 1/Dicks/Dicks7_2
+  Guid:
+    Data1: 1024499683
+    Data2: 1314151260
+    Data3: -6433142
+    Data4: -801042497
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2644
 --- !u!114 &4694551632010656885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -630,6 +915,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7700
+--- !u!114 &6014378319566370004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 1/Dicks/Dicks4_HC
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 1/Dicks/Dicks4_HC
+  Guid:
+    Data1: -1720708502
+    Data2: 1188449916
+    Data3: -1904022083
+    Data4: 2044853309
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4400
 --- !u!114 &6168771811606904647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -657,6 +969,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2500
+--- !u!114 &6691848455710176400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 1/Dicks/Dick1
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 1/Dicks/Dick1
+  Guid:
+    Data1: -1671348161
+    Data2: 1289002779
+    Data3: -758632269
+    Data4: -771272510
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3598
 --- !u!114 &6848575684247410481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -684,6 +1023,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 800
+--- !u!114 &7118773440031144893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 1/Dicks/Dick3_1
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 1/Dicks/Dick3_1
+  Guid:
+    Data1: -1574816717
+    Data2: 1081995017
+    Data3: 2146296728
+    Data4: 1727518300
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2805
+--- !u!114 &7730657981451899310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 1/Dicks/Dicks4_2LC
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 1/Dicks/Dicks4_2LC
+  Guid:
+    Data1: -1829960563
+    Data2: 1185818513
+    Data3: 632405380
+    Data4: 47584829
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4820
 --- !u!114 &8314551798232615504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -711,3 +1104,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 12800
+--- !u!114 &8920430993632716292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 1/Dicks/Dicks3_3
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 1/Dicks/Dicks3_3
+  Guid:
+    Data1: -381297580
+    Data2: 1079603926
+    Data3: -2018170969
+    Data4: 1138595924
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2563

@@ -1,23 +1,27 @@
 ﻿using UnityEngine;
+using FMODUnity;
 
 public class SingleTrigger : MonoBehaviour
 {
     public string requiredTag;
     public string targetLayer = "Grabbable";
 
+    [Header("Sonido FMOD")]
+    public EventReference sonidoCorrecto;
+
     [SerializeField] private bool isActive = false;
     private int layerValue;
     private Collider myCollider;
     [SerializeField] public GameObject myCollider1;
     [SerializeField] public GameObject myCollider2;
+
     void Start()
     {
         layerValue = LayerMask.NameToLayer(targetLayer);
         myCollider = GetComponent<Collider>();
 
         myCollider.isTrigger = true;
-        isActive = false; // Asegurar que empiece en false
-
+        isActive = false;
     }
 
     void OnTriggerEnter(Collider other)
@@ -28,29 +32,37 @@ public class SingleTrigger : MonoBehaviour
             return;
         }
 
-        Debug.Log($"🎯 {gameObject.name} activado por: {other.name} (Tag: {other.tag})");
-
         if (other.CompareTag(requiredTag))
         {
             isActive = true;
-            Debug.Log($"✅ {gameObject.name}: TAG CORRECTO '{requiredTag}'!");
             Destroy(other.gameObject);
-            
+
             myCollider1.SetActive(false);
             myCollider2.SetActive(true);
 
+            // 🔊 Reproducir sonido al acertar
+            ReproducirSonidoCorrecto();
         }
         else
         {
-            Debug.Log($"❌ {gameObject.name}: Tag incorrecto. Esperaba '{requiredTag}', tiene '{other.tag}'");
-
             Rigidbody rb = other.attachedRigidbody;
-
             if (rb != null)
             {
                 float multiplicador = 6f;
                 rb.linearVelocity *= multiplicador;
             }
+        }
+    }
+
+    private void ReproducirSonidoCorrecto()
+    {
+        if (!sonidoCorrecto.IsNull)
+        {
+            var instancia = RuntimeManager.CreateInstance(sonidoCorrecto);
+            instancia.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
+            instancia.start();
+            instancia.release();
+            Debug.Log("Sonido de portal correcto reproducido");
         }
     }
 

@@ -25054,7 +25054,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   requiredTag: Place
   targetLayer: Grabbable
-  isActive: 1
+  sonidoCorrecto:
+    Guid:
+      Data1: 1901616966
+      Data2: 1329867572
+      Data3: 1348342448
+      Data4: -1042937848
+    Path: event:/SFX/nivel 1/quemarparticulas
+  isActive: 0
   myCollider1: {fileID: 1234739572}
   myCollider2: {fileID: 105244651}
 --- !u!65 &421034674
@@ -55553,7 +55560,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   requiredTag: Color
   targetLayer: Grabbable
-  isActive: 1
+  sonidoCorrecto:
+    Guid:
+      Data1: 1901616966
+      Data2: 1329867572
+      Data3: 1348342448
+      Data4: -1042937848
+    Path: event:/SFX/nivel 1/quemarparticulas
+  isActive: 0
   myCollider1: {fileID: 2004365030}
   myCollider2: {fileID: 1927317383}
 --- !u!1 &1160707822
