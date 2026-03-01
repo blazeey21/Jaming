@@ -11,6 +11,7 @@ public class ElonLine
     public EventReference dialogueEvent;
     public string subtitle;
     public bool showSubtitle;
+    public float subtitleDuration;
 }
 
 public class ElonTv : MonoBehaviour
@@ -20,14 +21,12 @@ public class ElonTv : MonoBehaviour
     public Transform audioFollowTarget;
     public float volume = 1.5f;
 
-    [Header("Behaviour")]
     public bool playStartSequence = true;
     public bool subtitlesEnabled = true;
     public float globalCooldown = 0.1f;
 
     public ElonLine[] lines;
 
-    [Header("Start sequence")]
     public string startA;
     public string startB;
     public string startC;
@@ -80,7 +79,6 @@ public class ElonTv : MonoBehaviour
     IEnumerator PlayAndWait(string id)
     {
         if (!lookup.ContainsKey(id)) yield break;
-
         if (Time.time - lastPlayTime < globalCooldown) yield break;
         if (id == lastPlayedId) yield break;
 
@@ -102,16 +100,18 @@ public class ElonTv : MonoBehaviour
         instance.start();
         instance.release();
 
-        if (subtitlesEnabled && line.showSubtitle && SubtitleManager.Instance != null && !string.IsNullOrEmpty(line.subtitle))
-            SubtitleManager.Instance.Show(line.subtitle, lengthMs / 1000f);
+        float durationFromAudio = Mathf.Max(0.1f, lengthMs / 1000f);
+        float finalDuration = line.subtitleDuration > 0 ? line.subtitleDuration : durationFromAudio;
 
-        yield return new WaitForSecondsRealtime(lengthMs / 1000f);
+        if (subtitlesEnabled && line.showSubtitle && SubtitleManager.Instance != null && !string.IsNullOrEmpty(line.subtitle))
+            SubtitleManager.Instance.Show(line.subtitle, finalDuration);
+
+        yield return new WaitForSecondsRealtime(finalDuration);
     }
 
     public IEnumerator PlayAndReturnRoutine(string id)
     {
         if (!lookup.ContainsKey(id)) yield break;
-
         if (Time.time - lastPlayTime < globalCooldown) yield break;
         if (id == lastPlayedId) yield break;
 
@@ -133,9 +133,12 @@ public class ElonTv : MonoBehaviour
         instance.start();
         instance.release();
 
-        if (subtitlesEnabled && line.showSubtitle && SubtitleManager.Instance != null && !string.IsNullOrEmpty(line.subtitle))
-            SubtitleManager.Instance.Show(line.subtitle, lengthMs / 1000f);
+        float durationFromAudio = Mathf.Max(0.1f, lengthMs / 1000f);
+        float finalDuration = line.subtitleDuration > 0 ? line.subtitleDuration : durationFromAudio;
 
-        yield return new WaitForSecondsRealtime(lengthMs / 1000f);
+        if (subtitlesEnabled && line.showSubtitle && SubtitleManager.Instance != null && !string.IsNullOrEmpty(line.subtitle))
+            SubtitleManager.Instance.Show(line.subtitle, finalDuration);
+
+        yield return new WaitForSecondsRealtime(finalDuration);
     }
 }

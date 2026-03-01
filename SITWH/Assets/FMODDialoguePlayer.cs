@@ -9,6 +9,8 @@ public class FMODDialoguePlayer : MonoBehaviour
         EventInstance instance = RuntimeManager.CreateInstance(dialogueEvent);
         instance.start();
         instance.release();
-        SubtitleManager.Instance.Show(subtitle, duration);
+
+        if (SubtitleManager.Instance != null && !string.IsNullOrEmpty(subtitle))
+            SubtitleManager.Instance.Show(subtitle, duration);
     }
 }

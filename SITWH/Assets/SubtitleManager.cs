@@ -3,11 +3,11 @@ using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 
+[DefaultExecutionOrder(-100)]
 public class SubtitleManager : MonoBehaviour
 {
     public static SubtitleManager Instance;
 
-    [Header("UI")]
     public GameObject panel;
     public TextMeshProUGUI subtitleText;
 
@@ -40,6 +40,8 @@ public class SubtitleManager : MonoBehaviour
 
     public void Show(string text, float duration)
     {
+        if (panel == null || subtitleText == null) return;
+
         queue.Enqueue(new SubtitleData(text, duration));
 
         if (!isPlaying)
@@ -75,8 +77,11 @@ public class SubtitleManager : MonoBehaviour
         if (playRoutine != null)
             StopCoroutine(playRoutine);
 
-        subtitleText.gameObject.SetActive(false);
-        panel.SetActive(false);
+        if (subtitleText != null)
+            subtitleText.gameObject.SetActive(false);
+
+        if (panel != null)
+            panel.SetActive(false);
 
         isPlaying = false;
     }
