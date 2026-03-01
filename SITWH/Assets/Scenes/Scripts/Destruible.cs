@@ -10,8 +10,10 @@ public class Destruible : MonoBehaviour
     [SerializeField] private float timeToDestroy = 0.5f;
     [SerializeField] private float floorCheckDelay = 3f;
     [SerializeField] private GameObject prefabDeParticulas;
-    [Header("FMOD event before destroy")]
-    public EventReference fmodEvent; // evento que se reproduce antes de destruir
+
+    [Header("FMOD audio")]
+    public EventReference fmodEvent; 
+    public EventReference audioDespuesDeRomper; 
 
     private bool hasBeenGrabbed = false;
     private bool isCheckingFloor = false;
@@ -113,7 +115,9 @@ public class Destruible : MonoBehaviour
 
     private IEnumerator HandleDestructionWithFMOD()
     {
-        // Si hay evento FMOD asignado, reproducirlo y esperar a que termine
+        // ----------------------------
+        // 1. SONIDO DE ROMPERSE
+        // ----------------------------
         if (!fmodEvent.IsNull)
         {
             var instance = RuntimeManager.CreateInstance(fmodEvent);
@@ -128,7 +132,25 @@ public class Destruible : MonoBehaviour
             yield return new WaitForSeconds(lengthMs / 1000f);
         }
 
-        // Destruir o desactivar objeto
+        // ----------------------------
+        // 2. ESPERAR 3 SEGUNDOS
+        // ----------------------------
+        yield return new WaitForSeconds(3f);
+
+        // ----------------------------
+        // 3. AUDIO EXTRA
+        // ----------------------------
+        if (!audioDespuesDeRomper.IsNull)
+        {
+            var instance = RuntimeManager.CreateInstance(audioDespuesDeRomper);
+            instance.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
+            instance.start();
+            instance.release();
+        }
+
+        // ----------------------------
+        // 4. DESTRUIR O DESACTIVAR
+        // ----------------------------
         if (destroyOnFloorTouch)
             Destroy(gameObject, timeToDestroy);
         else

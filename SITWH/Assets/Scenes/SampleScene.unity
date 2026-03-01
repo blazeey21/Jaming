@@ -375,11 +375,18 @@ MonoBehaviour:
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: -1042797983
+      Data2: 1082634353
+      Data3: -1319791703
+      Data4: 89223486
+    Path: event:/Dialogue/Nivel 3/Trump/t_03
 --- !u!54 &64132064
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -996,6 +1003,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 667744343
+      Data2: 1225349241
+      Data3: 1989333916
+      Data4: -1097408047
+    Path: event:/Dialogue/Nivel 3/Trump/t
 --- !u!1 &105244651
 GameObject:
   m_ObjectHideFlags: 0
@@ -6057,6 +6071,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 977470110
+      Data2: 1185415281
+      Data3: -549725553
+      Data4: -1293119385
+    Path: event:/Dialogue/Nivel 3/Trump/t_02
 --- !u!1 &120307437
 GameObject:
   m_ObjectHideFlags: 0
@@ -6534,6 +6555,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &158667563
 GameObject:
   m_ObjectHideFlags: 0
@@ -7361,6 +7389,40 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     sonando: 0
+  - objeto: {fileID: 543450653677724984}
+    sonidoLoop:
+      Guid:
+        Data1: 1507855561
+        Data2: 1275460954
+        Data3: -1070983550
+        Data4: 1842860300
+      Path: event:/SFX/nivel 2/susurros
+    distanciaActivacion: 3
+    volumenPorDistancia:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: -1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    sonando: 0
 --- !u!114 &174206633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7469,6 +7531,13 @@ MonoBehaviour:
   floorCheckDelay: 3
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  audioDespuesDeRomper:
     Guid:
       Data1: 0
       Data2: 0
@@ -24695,6 +24764,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 977470110
+      Data2: 1185415281
+      Data3: -549725553
+      Data4: -1293119385
+    Path: event:/Dialogue/Nivel 3/Trump/t_02
 --- !u!1 &401291054
 GameObject:
   m_ObjectHideFlags: 0
@@ -25292,6 +25368,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 977470110
+      Data2: 1185415281
+      Data3: -549725553
+      Data4: -1293119385
+    Path: event:/Dialogue/Nivel 3/Trump/t_02
 --- !u!1 &438742558
 GameObject:
   m_ObjectHideFlags: 0
@@ -26767,6 +26850,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 977470110
+      Data2: 1185415281
+      Data3: -549725553
+      Data4: -1293119385
+    Path: event:/Dialogue/Nivel 3/Trump/t_02
 --- !u!1 &545037439
 GameObject:
   m_ObjectHideFlags: 0
@@ -27564,6 +27654,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!54 &598211346
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28204,6 +28301,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &640282771
 GameObject:
   m_ObjectHideFlags: 0
@@ -28371,6 +28475,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 977470110
+      Data2: 1185415281
+      Data3: -549725553
+      Data4: -1293119385
+    Path: event:/Dialogue/Nivel 3/Trump/t_02
 --- !u!114 &646473456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28564,6 +28675,13 @@ MonoBehaviour:
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  audioDespuesDeRomper:
     Guid:
       Data1: 0
       Data2: 0
@@ -35064,6 +35182,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 667744343
+      Data2: 1225349241
+      Data3: 1989333916
+      Data4: -1097408047
+    Path: event:/Dialogue/Nivel 3/Trump/t
 --- !u!1 &750368424
 GameObject:
   m_ObjectHideFlags: 0
@@ -41797,8 +41922,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.5040048, y: 1, z: 1.5924797}
+  m_Center: {x: -0.25200254, y: 0, z: 1.887043}
 --- !u!1 &856259909
 GameObject:
   m_ObjectHideFlags: 0
@@ -47256,6 +47381,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!54 &884088501
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -47778,6 +47910,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!54 &953476411
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -48257,6 +48396,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 977470110
+      Data2: 1185415281
+      Data3: -549725553
+      Data4: -1293119385
+    Path: event:/Dialogue/Nivel 3/Trump/t_02
 --- !u!1 &988697136
 GameObject:
   m_ObjectHideFlags: 0
@@ -54820,6 +54966,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 977470110
+      Data2: 1185415281
+      Data3: -549725553
+      Data4: -1293119385
+    Path: event:/Dialogue/Nivel 3/Trump/t_02
 --- !u!1 &1115448850
 GameObject:
   m_ObjectHideFlags: 0
@@ -55256,6 +55409,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 977470110
+      Data2: 1185415281
+      Data3: -549725553
+      Data4: -1293119385
+    Path: event:/Dialogue/Nivel 3/Trump/t_02
 --- !u!1 &1152825338
 GameObject:
   m_ObjectHideFlags: 0
@@ -56531,6 +56691,13 @@ MonoBehaviour:
       Data3: 1441393564
       Data4: -805565005
     Path: event:/SFX/nivel 3/rompercristales
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!54 &1197229239
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -57311,6 +57478,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!54 &1220292614
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -57718,6 +57892,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 977470110
+      Data2: 1185415281
+      Data3: -549725553
+      Data4: -1293119385
+    Path: event:/Dialogue/Nivel 3/Trump/t_02
 --- !u!1 &1234739572
 GameObject:
   m_ObjectHideFlags: 0
@@ -58022,11 +58203,18 @@ MonoBehaviour:
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 667744343
+      Data2: 1225349241
+      Data3: 1989333916
+      Data4: -1097408047
+    Path: event:/Dialogue/Nivel 3/Trump/t
 --- !u!54 &1254464072
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -64540,6 +64728,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!54 &1402584659
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -65258,6 +65453,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!54 &1423955355
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -71019,11 +71221,18 @@ MonoBehaviour:
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: -1042797983
+      Data2: 1082634353
+      Data3: -1319791703
+      Data4: 89223486
+    Path: event:/Dialogue/Nivel 3/Trump/t_03
 --- !u!54 &1495238078
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -71429,6 +71638,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 977470110
+      Data2: 1185415281
+      Data3: -549725553
+      Data4: -1293119385
+    Path: event:/Dialogue/Nivel 3/Trump/t_02
 --- !u!1 &1508050214
 GameObject:
   m_ObjectHideFlags: 0
@@ -72000,11 +72216,18 @@ MonoBehaviour:
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 667744343
+      Data2: 1225349241
+      Data3: 1989333916
+      Data4: -1097408047
+    Path: event:/Dialogue/Nivel 3/Trump/t
 --- !u!54 &1562293827
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -80504,6 +80727,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!54 &1829055189
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -80959,6 +81189,13 @@ MonoBehaviour:
       Data3: 1441393564
       Data4: -805565005
     Path: event:/SFX/nivel 3/rompercristales
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!54 &1850301785
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -81438,6 +81675,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!23 &1882981956
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -87458,6 +87702,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 667744343
+      Data2: 1225349241
+      Data3: 1989333916
+      Data4: -1097408047
+    Path: event:/Dialogue/Nivel 3/Trump/t
 --- !u!1 &1983221616
 GameObject:
   m_ObjectHideFlags: 0
@@ -87625,6 +87876,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 977470110
+      Data2: 1185415281
+      Data3: -549725553
+      Data4: -1293119385
+    Path: event:/Dialogue/Nivel 3/Trump/t_02
 --- !u!1 &1985204373
 GameObject:
   m_ObjectHideFlags: 0
@@ -94077,11 +94335,18 @@ MonoBehaviour:
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: -1042797983
+      Data2: 1082634353
+      Data3: -1319791703
+      Data4: 89223486
+    Path: event:/Dialogue/Nivel 3/Trump/t_03
 --- !u!54 &2093155275
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -94275,6 +94540,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!65 &2102723231
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -94408,6 +94680,13 @@ MonoBehaviour:
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  audioDespuesDeRomper:
     Guid:
       Data1: 0
       Data2: 0
@@ -94840,6 +95119,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 977470110
+      Data2: 1185415281
+      Data3: -549725553
+      Data4: -1293119385
+    Path: event:/Dialogue/Nivel 3/Trump/t_02
 --- !u!1 &2122564534
 GameObject:
   m_ObjectHideFlags: 0
@@ -101860,6 +102146,7 @@ GameObject:
   - component: {fileID: 5866666019861991556}
   - component: {fileID: 5866666019861991558}
   - component: {fileID: 5866666019861991557}
+  - component: {fileID: 5866666019861991559}
   m_Layer: 0
   m_Name: crumps
   m_TagString: Crumps
@@ -107520,6 +107807,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 977470110
+      Data2: 1185415281
+      Data3: -549725553
+      Data4: -1293119385
+    Path: event:/Dialogue/Nivel 3/Trump/t_02
 --- !u!4 &2530948635226413736
 Transform:
   m_ObjectHideFlags: 0
@@ -117877,6 +118171,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!54 &3469287836583144750
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -118007,6 +118308,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!33 &3469287836627419453
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -118083,6 +118391,13 @@ MonoBehaviour:
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  audioDespuesDeRomper:
     Guid:
       Data1: 0
       Data2: 0
@@ -118365,6 +118680,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!54 &3469287836986833664
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -118442,11 +118764,18 @@ MonoBehaviour:
   prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
   fmodEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 945984033
+      Data2: 1090509562
+      Data3: 1441393564
+      Data4: -805565005
+    Path: event:/SFX/nivel 3/rompercristales
+  audioDespuesDeRomper:
+    Guid:
+      Data1: -1842266484
+      Data2: 1338044830
+      Data3: 503407746
+      Data4: 1104283061
+    Path: event:/Dialogue/Nivel 3/Trump/t_06
 --- !u!54 &3469287837027036881
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -118523,6 +118852,13 @@ MonoBehaviour:
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  audioDespuesDeRomper:
     Guid:
       Data1: 0
       Data2: 0
@@ -118690,6 +119026,13 @@ MonoBehaviour:
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
   fmodEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  audioDespuesDeRomper:
     Guid:
       Data1: 0
       Data2: 0
@@ -118928,6 +119271,13 @@ MonoBehaviour:
       Data3: 1441393564
       Data4: -805565005
     Path: event:/SFX/nivel 3/rompercristales
+  audioDespuesDeRomper:
+    Guid:
+      Data1: -1939846174
+      Data2: 1245293606
+      Data3: -2066886736
+      Data4: -555172354
+    Path: event:/Dialogue/Nivel 3/Trump/trump
 --- !u!33 &3469287837484924834
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -119113,6 +119463,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!33 &3469287837557900423
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -119142,11 +119499,18 @@ MonoBehaviour:
   prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
   fmodEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 945984033
+      Data2: 1090509562
+      Data3: 1441393564
+      Data4: -805565005
+    Path: event:/SFX/nivel 3/rompercristales
+  audioDespuesDeRomper:
+    Guid:
+      Data1: -1842266484
+      Data2: 1338044830
+      Data3: 503407746
+      Data4: 1104283061
+    Path: event:/Dialogue/Nivel 3/Trump/t_06
 --- !u!54 &3469287837557900425
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -119314,6 +119678,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!33 &3469287837776597628
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -119390,6 +119761,13 @@ MonoBehaviour:
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
   fmodEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  audioDespuesDeRomper:
     Guid:
       Data1: 0
       Data2: 0
@@ -119478,11 +119856,18 @@ MonoBehaviour:
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 945984033
+      Data2: 1090509562
+      Data3: 1441393564
+      Data4: -805565005
+    Path: event:/SFX/nivel 3/rompercristales
+  audioDespuesDeRomper:
+    Guid:
+      Data1: -1842266484
+      Data2: 1338044830
+      Data3: 503407746
+      Data4: 1104283061
+    Path: event:/Dialogue/Nivel 3/Trump/t_06
 --- !u!54 &3469287838007118558
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -119575,6 +119960,13 @@ MonoBehaviour:
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  audioDespuesDeRomper:
     Guid:
       Data1: 0
       Data2: 0
@@ -119687,11 +120079,18 @@ MonoBehaviour:
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 667744343
+      Data2: 1225349241
+      Data3: 1989333916
+      Data4: -1097408047
+    Path: event:/Dialogue/Nivel 3/Trump/t
 --- !u!54 &3469287838066894654
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -119769,11 +120168,18 @@ MonoBehaviour:
   prefabDeParticulas: {fileID: 1944277455376878916, guid: c9b30df22cf247641a2135ab5c55643c, type: 3}
   fmodEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: -1042797983
+      Data2: 1082634353
+      Data3: -1319791703
+      Data4: 89223486
+    Path: event:/Dialogue/Nivel 3/Trump/t_03
 --- !u!54 &3469287838069996161
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -120015,6 +120421,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!54 &3469287838346732964
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -120161,6 +120574,13 @@ MonoBehaviour:
       Data3: -1418956119
       Data4: -530662935
     Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!33 &3469287838446952729
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -120283,6 +120703,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  audioDespuesDeRomper:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!33 &3469287838482731716
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -120359,6 +120786,13 @@ MonoBehaviour:
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
+    Guid:
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
     Guid:
       Data1: 0
       Data2: 0
@@ -120708,6 +121142,13 @@ MonoBehaviour:
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  audioDespuesDeRomper:
     Guid:
       Data1: 0
       Data2: 0
@@ -122543,6 +122984,18 @@ MonoBehaviour:
     m_Bits: 8
   health: 100
   healthChangeAmount: 20
+--- !u!114 &5866666019861991559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147987976260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bf7c9a8aa9c5144087e94e2fabcb045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!4 &5901452233819707517
 Transform:
   m_ObjectHideFlags: 0
@@ -123825,6 +124278,13 @@ MonoBehaviour:
       Data3: 1441393564
       Data4: -805565005
     Path: event:/SFX/nivel 3/rompercristales
+  audioDespuesDeRomper:
+    Guid:
+      Data1: -1939846174
+      Data2: 1245293606
+      Data3: -2066886736
+      Data4: -555172354
+    Path: event:/Dialogue/Nivel 3/Trump/trump
 --- !u!4 &7358631408628429614
 Transform:
   m_ObjectHideFlags: 0
@@ -125419,6 +125879,73 @@ MonoBehaviour:
         Data4: 1676908055
       Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks18_3
     subtitle: 'Behind that door is the one responsible for the master plan. '
+  - id: Nobel
+    dialogueEvent:
+      Guid:
+        Data1: -128388794
+        Data2: 1318868765
+        Data3: -980923006
+        Data4: 1728570576
+      Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks14
+    subtitle: Hey, I stole that!
+  - id: CD
+    dialogueEvent:
+      Guid:
+        Data1: 667744343
+        Data2: 1225349241
+        Data3: 1989333916
+        Data4: -1097408047
+      Path: event:/Dialogue/Nivel 3/Trump/t
+    subtitle: Hey, that was a gift from my special someone!
+  - id: Epsti
+    dialogueEvent:
+      Guid:
+        Data1: -1282522857
+        Data2: 1127046021
+        Data3: 518923705
+        Data4: 154286574
+      Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks15_2
+    subtitle: Honestly, I'm trying to destroy them, but there are too many. So...
+      thanks, that was amazing
+  - id: Nocares
+    dialogueEvent:
+      Guid:
+        Data1: 977470110
+        Data2: 1185415281
+        Data3: -549725553
+        Data4: -1293119385
+      Path: event:/Dialogue/Nivel 3/Trump/t_02
+    subtitle: Bah, I don't care about that.
+  - id: kombat
+    dialogueEvent:
+      Guid:
+        Data1: -349892186
+        Data2: 1131334561
+        Data3: -1328881734
+        Data4: 458386729
+      Path: event:/Dialogue/Nivel 3/Trump/t_04
+    subtitle: "My evidence! My proof for Congress! Without that, how am I supposed
+      to prove that red pixels corrupt children that i\u2019ve been fucking"
+  - id: JOEY
+    dialogueEvent:
+      Guid:
+        Data1: -1939846174
+        Data2: 1245293606
+        Data3: -2066886736
+        Data4: -555172354
+      Path: event:/Dialogue/Nivel 3/Trump/trump
+    subtitle: My masterpiece! Hours of Joe Lieberman shouting 'think of the children'!
+      That was art!
+  - id: Trap
+    dialogueEvent:
+      Guid:
+        Data1: -1842266484
+        Data2: 1338044830
+        Data3: 503407746
+        Data4: 1104283061
+      Path: event:/Dialogue/Nivel 3/Trump/t_06
+    subtitle: No! That's the original copy we used to cause the panic! Now how am
+      I supposed to blame the digital vampires?
   startA: 
   startB: 
   startC: 
@@ -126243,6 +126770,13 @@ MonoBehaviour:
       Data3: 1441393564
       Data4: -805565005
     Path: event:/SFX/nivel 3/rompercristales
+  audioDespuesDeRomper:
+    Guid:
+      Data1: -1939846174
+      Data2: 1245293606
+      Data3: -2066886736
+      Data4: -555172354
+    Path: event:/Dialogue/Nivel 3/Trump/trump
 --- !u!1 &9019515342565458194
 GameObject:
   m_ObjectHideFlags: 0
