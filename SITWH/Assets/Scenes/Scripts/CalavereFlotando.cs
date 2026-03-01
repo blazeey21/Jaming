@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class CalavereFlotando : MonoBehaviour
 {
@@ -17,6 +18,11 @@ public class CalavereFlotando : MonoBehaviour
     public float offsetSalida = 0.02f;
     public string capaDestructor = "Destructor";
 
+    [Header("Frases al inicio")]
+    public string frase1;
+    public string frase2;
+    public string frase3;
+
     private Transform jugador;
     private float yInicial;
 
@@ -25,6 +31,8 @@ public class CalavereFlotando : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null) jugador = player.transform;
         yInicial = transform.position.y;
+
+        StartCoroutine(SecuenciaFrases());
     }
 
     void Update()
@@ -34,6 +42,7 @@ public class CalavereFlotando : MonoBehaviour
         Vector3 posicionActual = transform.position;
         Vector3 direccionHorizontal = jugador.position - posicionActual;
         direccionHorizontal.y = 0;
+
         if (direccionHorizontal.magnitude > 0.01f)
         {
             direccionHorizontal.Normalize();
@@ -51,7 +60,6 @@ public class CalavereFlotando : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer(capaDestructor))
         {
-  
             Vector3 spawnPoint = GetSurfacePoint(transform.position, other);
             Instantiate(particulasPrefab, spawnPoint, Quaternion.identity);
 
@@ -65,5 +73,28 @@ public class CalavereFlotando : MonoBehaviour
         Vector3 direction = (closest - targetCollider.bounds.center).normalized;
         if (direction == Vector3.zero) direction = Vector3.up;
         return closest + direction * offsetSalida;
+    }
+
+    // ------------------- SECUENCIA DE FRASES -------------------
+
+    IEnumerator SecuenciaFrases()
+    {
+        if (!string.IsNullOrEmpty(frase1))
+            yield return StartCoroutine(PlayAndWait(frase1));
+
+        if (!string.IsNullOrEmpty(frase2))
+            yield return StartCoroutine(PlayAndWait(frase2));
+
+        if (!string.IsNullOrEmpty(frase3))
+            yield return StartCoroutine(PlayAndWait(frase3));
+    }
+
+    IEnumerator PlayAndWait(string id)
+    {
+        if (ElonTv.Instance == null) yield break;
+
+        yield return ElonTv.Instance.StartCoroutine(
+            ElonTv.Instance.PlayAndReturnRoutine(id)
+        );
     }
 }

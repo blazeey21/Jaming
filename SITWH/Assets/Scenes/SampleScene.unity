@@ -496,6 +496,9 @@ MonoBehaviour:
   particulasPrefab: {fileID: 1967559791}
   offsetSalida: 0.02
   capaDestructor: Destructor
+  frase1: Bones2
+  frase2: Bones3
+  frase3: 
 --- !u!114 &64438998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6515,6 +6518,9 @@ MonoBehaviour:
   particulasPrefab: {fileID: 1967559791}
   offsetSalida: 0.02
   capaDestructor: Destructor
+  frase1: 
+  frase2: 
+  frase3: 
 --- !u!114 &171437590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28254,6 +28260,9 @@ MonoBehaviour:
   particulasPrefab: {fileID: 1967559791}
   offsetSalida: 0.02
   capaDestructor: Destructor
+  frase1: Bones1
+  frase2: Bones2
+  frase3: Bones3
 --- !u!114 &646473457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46815,6 +46824,9 @@ MonoBehaviour:
   particulasPrefab: {fileID: 1967559791}
   offsetSalida: 0.02
   capaDestructor: Destructor
+  frase1: 
+  frase2: 
+  frase3: 
 --- !u!114 &883806117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48485,6 +48497,9 @@ MonoBehaviour:
   particulasPrefab: {fileID: 1967559791}
   offsetSalida: 0.02
   capaDestructor: Destructor
+  frase1: Bones2
+  frase2: Bones3
+  frase3: 
 --- !u!114 &1000681436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117877,8 +117892,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8787ada4489ae046a4262841827a912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  player: {fileID: 0}
-  triggerCollider: {fileID: 0}
+  player: {fileID: 1412512090}
+  triggerCollider: {fileID: 3469287836904340811}
   hallDialogues:
   - Pasi1
   - Pasi2
