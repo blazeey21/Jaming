@@ -672,6 +672,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2252
+--- !u!114 &-2993864660189983468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Nivel 3/Trump/t_00
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialogue/Nivel 3/Trump/t_00
+  Guid:
+    Data1: -2118111382
+    Data2: 1168186721
+    Data3: -1678574175
+    Data4: 1905688001
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3672
 --- !u!114 &-2793596633929853305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -687,7 +714,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639079522103033168
+  lastModified: 639079600279647089
   FileSizes: []
   Exists: 1
 --- !u!114 &-2590481804851507045
@@ -1163,13 +1190,14 @@ MonoBehaviour:
   - {fileID: -7416070939275412559}
   - {fileID: -1227711005416863786}
   - {fileID: 4672886542136377886}
+  - {fileID: -2993864660189983468}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2793596633929853305}
   StringsBanks:
   - {fileID: 2854216806268686269}
   cacheVersion: 131858
-  cacheTime: 639079522103199603
+  cacheTime: 639079600279647089
   SerializableEventsDict:
   - key: event:/SFX/nivel 2/susurros
     index: 0
@@ -1666,7 +1694,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/nigga.bank
   Name: nigga
   StudioPath: bank:/nigga
-  lastModified: 639072963044881443
+  lastModified: 639072670528981400
   FileSizes: []
   Exists: 1
 --- !u!114 &2336278065694270157
@@ -1711,10 +1739,10 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639079522103199603
+  lastModified: 639079600203575009
   FileSizes:
   - Name: 
-    Value: 4046
+    Value: 4078
   Exists: 1
 --- !u!114 &3298605585311886607
 MonoBehaviour:
