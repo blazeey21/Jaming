@@ -30,6 +30,8 @@ public class ElonTv : MonoBehaviour
     public string startA;
     public string startB;
     public string startC;
+    public string startD;
+    public string startE;
     public string clue1;
     public string clue2;
 
@@ -67,6 +69,9 @@ public class ElonTv : MonoBehaviour
         yield return PlayAndWait(startA);
         yield return PlayAndWait(startB);
         yield return PlayAndWait(startC);
+        yield return PlayAndWait(startD);
+        yield return PlayAndWait(startE);
+        yield return PlayAndWait(clue2);
         yield return PlayAndWait(clue1);
         yield return PlayAndWait(clue2);
     }

@@ -126830,7 +126830,7 @@ MonoBehaviour:
     subtitle: "Oh. You're awake. Excellent. You are officially my cognitive experiment
       number\u2026 Well, I lost count after the guy who acted like a horse."
     showSubtitle: 1
-    subtitleDuration: 3
+    subtitleDuration: 9
   - id: B
     dialogueEvent:
       Guid:
@@ -126842,7 +126842,7 @@ MonoBehaviour:
     subtitle: I am a superior intelligence based on the mind of Elon Dicks, but enhanced.
       Without unnecessary empathy.
     showSubtitle: 1
-    subtitleDuration: 4
+    subtitleDuration: 6.5
   - id: C
     dialogueEvent:
       Guid:
@@ -126855,7 +126855,7 @@ MonoBehaviour:
       well\u2026 my life is connected to the door. But don't worry. A little kid
       could never figure it out. "
     showSubtitle: 1
-    subtitleDuration: 4
+    subtitleDuration: 2.5
   - id: Clue1
     dialogueEvent:
       Guid:
@@ -126956,7 +126956,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks8_2
     subtitle: I'm a backup.
     showSubtitle: 1
-    subtitleDuration: 2
+    subtitleDuration: 1
   - id: Radio3
     dialogueEvent:
       Guid:
@@ -126965,9 +126965,9 @@ MonoBehaviour:
         Data3: 2144927876
         Data4: -302515594
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks8_3
-    subtitle: I'm a backup.
+    subtitle: Kind of fuck up how did you kill my TV version.
     showSubtitle: 1
-    subtitleDuration: 2
+    subtitleDuration: 4.5
   - id: Radio4
     dialogueEvent:
       Guid:
@@ -126978,7 +126978,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_1
     subtitle: Kind of cringe having a child beat me.
     showSubtitle: 1
-    subtitleDuration: 3
+    subtitleDuration: 2.1
   - id: Radio5
     dialogueEvent:
       Guid:
@@ -126989,7 +126989,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_2
     subtitle: So now I'll help you destroy everyone.
     showSubtitle: 1
-    subtitleDuration: 3
+    subtitleDuration: 2.1
   - id: Radio6
     dialogueEvent:
       Guid:
@@ -127000,7 +127000,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_3
     subtitle: 'I need your victory to look like it was part of the plan. '
     showSubtitle: 1
-    subtitleDuration: 4
+    subtitleDuration: 2.6
   - id: Radio7
     dialogueEvent:
       Guid:
@@ -127012,7 +127012,7 @@ MonoBehaviour:
     subtitle: 'Will you be so kind as to tell everyone how I was an unconditional
       ally? '
     showSubtitle: 1
-    subtitleDuration: 5
+    subtitleDuration: 3.6
   - id: Radio8
     dialogueEvent:
       Guid:
@@ -127023,7 +127023,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_5
     subtitle: 'Actually, don''t worry; I''ll just take credit for everything. '
     showSubtitle: 1
-    subtitleDuration: 5
+    subtitleDuration: 9.7
   - id: Radio9
     dialogueEvent:
       Guid:
@@ -127034,7 +127034,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_1
     subtitle: The entities in the cells were my first neuro-experiment patients.
     showSubtitle: 1
-    subtitleDuration: 4
+    subtitleDuration: 3.1
   - id: Radio10
     dialogueEvent:
       Guid:
@@ -127045,7 +127045,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_2
     subtitle: 'They died. Technically. '
     showSubtitle: 1
-    subtitleDuration: 3
+    subtitleDuration: 2.2
   - id: Radio11
     dialogueEvent:
       Guid:
@@ -127056,7 +127056,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_3
     subtitle: 'But I installed a final update that lets them float and rotate. '
     showSubtitle: 1
-    subtitleDuration: 5
+    subtitleDuration: 2.5
   - id: Radio12
     dialogueEvent:
       Guid:
@@ -127067,7 +127067,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_4
     subtitle: It's elegant. Minimalist. Very efficient for corpses.
     showSubtitle: 1
-    subtitleDuration: 5
+    subtitleDuration: 4.1
   - id: Radio13
     dialogueEvent:
       Guid:
@@ -127078,7 +127078,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_5
     subtitle: 'Most of the guys that you see there, they could walk or talk. '
     showSubtitle: 1
-    subtitleDuration: 5
+    subtitleDuration: 2.5
   - id: Radio14
     dialogueEvent:
       Guid:
@@ -127089,7 +127089,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_6
     subtitle: 'But I installed a final update that lets them float and rotate. '
     showSubtitle: 1
-    subtitleDuration: 5
+    subtitleDuration: 2.2
   - id: Radio15
     dialogueEvent:
       Guid:
@@ -127100,7 +127100,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_6
     subtitle: 'I promised them that I would have them move. '
     showSubtitle: 1
-    subtitleDuration: 5
+    subtitleDuration: 2.2
   - id: Radio16
     dialogueEvent:
       Guid:
@@ -127111,7 +127111,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_7
     subtitle: 'And technically they are moving, see. '
     showSubtitle: 1
-    subtitleDuration: 2
+    subtitleDuration: 2.1
   - id: Bones1
     dialogueEvent:
       Guid:
@@ -127392,9 +127392,35 @@ MonoBehaviour:
       I supposed to blame the digital vampires?
     showSubtitle: 1
     subtitleDuration: 2
+  - id: D
+    dialogueEvent:
+      Guid:
+        Data1: 1572044279
+        Data2: 1299994345
+        Data3: -2146177911
+        Data4: -1224045591
+      Path: event:/Dialogue/Nivel 1/Dicks/Dicks3_2
+    subtitle: "If you guess correctly\u2026 well\u2026 my life is connected to the
+      door. But don't worry."
+    showSubtitle: 1
+    subtitleDuration: 2
+  - id: D
+    dialogueEvent:
+      Guid:
+        Data1: 1572044279
+        Data2: 1299994345
+        Data3: -2146177911
+        Data4: -1224045591
+      Path: event:/Dialogue/Nivel 1/Dicks/Dicks3_2
+    subtitle: No! That's the original copy we used to cause the panic! Now how am
+      I supposed to blame the digital vampires?
+    showSubtitle: 1
+    subtitleDuration: 2
   startA: 
   startB: 
   startC: 
+  startD: 
+  startE: 
   clue1: 
   clue2: 
 --- !u!4 &8352548717634475400
