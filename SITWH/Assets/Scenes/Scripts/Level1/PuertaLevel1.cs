@@ -16,12 +16,16 @@ public class PuertaLevel1 : MonoBehaviour
     public EventReference A;
     public EventReference B;
     public EventReference C;
-    public EventReference Pista1;    
+    public EventReference Pista1;
     public EventReference pista2;
+
     [Header("Dead sequence")]
     public EventReference dead1;
     public EventReference dead2;
     public EventReference dead3;
+
+    [Header("Radio sequence after death (5s delay)")]
+    public EventReference[] radioSequence; // Radio1 hasta Radio16
 
     [Header("Light control")]
     public Light targetLight;
@@ -42,18 +46,16 @@ public class PuertaLevel1 : MonoBehaviour
 
         if (triggerSitio == null)
             triggerSitio = GameObject.Find("TriggerSitio")?.GetComponent<SingleTrigger>();
-       
-            StartCoroutine(SecuenciaInicio());
-        
 
+        StartCoroutine(SecuenciaInicio());
     }
+
     IEnumerator PlayAndWait(EventReference ev)
     {
         if (ev.IsNull) yield break;
 
         var instance = FMODUnity.RuntimeManager.CreateInstance(ev);
-
-        instance.getDescription(out FMOD.Studio.EventDescription desc);
+        instance.getDescription(out EventDescription desc);
         desc.getLength(out int lengthMs);
 
         instance.start();
@@ -61,6 +63,7 @@ public class PuertaLevel1 : MonoBehaviour
 
         yield return new WaitForSeconds(lengthMs / 1000f);
     }
+
     IEnumerator SecuenciaInicio()
     {
         yield return PlayAndWait(A);
@@ -113,7 +116,21 @@ public class PuertaLevel1 : MonoBehaviour
         Play(dead3);
         yield return new WaitForSeconds(d3);
 
+      
+
         ActivarPuerta();
+        StartCoroutine(SecuenciaRadio());
+    }
+
+    IEnumerator SecuenciaRadio()
+    {
+        yield return new WaitForSeconds(5f); // espera exacta tras dead3
+
+        for (int i = 0; i < radioSequence.Length; i++)
+        {
+            yield return PlayAndWait(radioSequence[i]);
+            yield return new WaitForSeconds(1f);
+        }
     }
 
     void ActivarPuerta()
@@ -172,9 +189,5 @@ public class PuertaLevel1 : MonoBehaviour
 
         l.intensity = to;
         l.enabled = false;
-    }
-    void OnGUI()
-    {
-       
     }
 }
