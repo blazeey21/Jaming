@@ -6,7 +6,7 @@ using Unity.Cinemachine;
 public class Hallmessage : MonoBehaviour
 {
     [Header("Player")]
-    public Transform player;
+    public GameObject player; // mejor usar GameObject para poder activar/desactivar
 
     [Header("Dialogue Sequence IDs")]
     public string[] hallDialogues;
@@ -26,7 +26,7 @@ public class Hallmessage : MonoBehaviour
     {
         if (activado) return;
 
-        if (player != null && other.transform == player)
+        if (player != null && other.transform == player.transform)
         {
             activado = true;
             StartCoroutine(SecuenciaHallSimultanea());
@@ -35,6 +35,9 @@ public class Hallmessage : MonoBehaviour
 
     IEnumerator SecuenciaHallSimultanea()
     {
+        // Desactivamos al player mientras dura la cinemática y los diálogos
+        player.SetActive(false);
+
         // Guardamos prioridades originales
         int oldPriorityCine = vCamCinematica.Priority;
         int oldPriorityJugador = vCamJugador.Priority;
@@ -43,10 +46,9 @@ public class Hallmessage : MonoBehaviour
         if (vCamCinematica != null && vCamJugador != null)
         {
             vCamCinematica.Priority = (int)priorityCinematica;
-            
         }
 
-        // Lanzamos la cinemática y los diálogos **en paralelo**
+        // Lanzamos la cinemática y los diálogos en paralelo
         Coroutine cinem = null;
         if (director != null)
         {
@@ -65,6 +67,9 @@ public class Hallmessage : MonoBehaviour
             vCamCinematica.Priority = oldPriorityCine;
             vCamJugador.Priority = oldPriorityJugador;
         }
+
+        // Reactivamos al player
+        player.SetActive(true);
     }
 
     IEnumerator PlayCinematica()

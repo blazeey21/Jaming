@@ -80911,7 +80911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1768738912
 Transform:
   m_ObjectHideFlags: 0
@@ -108365,8 +108365,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174537151710945793}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.70710677, y: -0.0000003371748, z: -0.7071068, w: -0.00000033717478}
-  m_LocalPosition: {x: -2.4516194, y: 3.5099998, z: -5.471094}
+  m_LocalRotation: {x: 0.70710737, y: -0.00000033717455, z: -0.7071063, w: 0.00000033717507}
+  m_LocalPosition: {x: 1.94, y: 3.51, z: -15.838}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -119672,7 +119672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8787ada4489ae046a4262841827a912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  player: {fileID: 1412512090}
+  player: {fileID: 1412512083}
   hallDialogues:
   - Pasi1
   - Pasi2
@@ -122870,8 +122870,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3648470433127712443}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.707107, y: -0.00000033717467, z: -0.7071066, w: 0.0000003371749}
-  m_LocalPosition: {x: 1.9193807, y: 3.5149999, z: -15.845095}
+  m_LocalRotation: {x: 0.70710695, y: 0.00000033717473, z: 0.7071067, w: 0.00000033717492}
+  m_LocalPosition: {x: -2.45, y: 3.52, z: -5.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -127052,7 +127052,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks14
     subtitle: 'Behind that door is the one responsible for the master plan. '
     showSubtitle: 1
-    subtitleDuration: 2
+    subtitleDuration: 5
   - id: Pasi2
     dialogueEvent:
       Guid:
@@ -127063,7 +127063,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks15_1
     subtitle: 'He has a fragile ego. Ridiculously fragile. '
     showSubtitle: 1
-    subtitleDuration: 2
+    subtitleDuration: 5
   - id: Pasi3
     dialogueEvent:
       Guid:
@@ -127075,7 +127075,7 @@ MonoBehaviour:
     subtitle: "If you destroy his favorite objects or defeat him directly\u2026 he'll
       collapse emotionally. "
     showSubtitle: 1
-    subtitleDuration: 2
+    subtitleDuration: 5
   - id: Pasi4
     dialogueEvent:
       Guid:
@@ -127086,7 +127086,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks16_2
     subtitle: 'A fabricated incident. '
     showSubtitle: 1
-    subtitleDuration: 0
+    subtitleDuration: 5
   - id: Pasi5
     dialogueEvent:
       Guid:
@@ -127097,7 +127097,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks16_3
     subtitle: 'A war started by digital drama. '
     showSubtitle: 1
-    subtitleDuration: 0
+    subtitleDuration: 3
   - id: Pasi6
     dialogueEvent:
       Guid:
@@ -127108,7 +127108,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks17
     subtitle: "The project is called\u2026 SAORI. "
     showSubtitle: 1
-    subtitleDuration: 2
+    subtitleDuration: 4
   - id: Pasi7
     dialogueEvent:
       Guid:
@@ -127119,7 +127119,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks18_1
     subtitle: 'Defeat the boss. '
     showSubtitle: 1
-    subtitleDuration: 2
+    subtitleDuration: 3
   - id: Pasi8
     dialogueEvent:
       Guid:
@@ -127130,7 +127130,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Diks18_2
     subtitle: 'Break the game. '
     showSubtitle: 1
-    subtitleDuration: 1
+    subtitleDuration: 3
   - id: Pasi1
     dialogueEvent:
       Guid:
@@ -127141,7 +127141,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks18_3
     subtitle: 'Behind that door is the one responsible for the master plan. '
     showSubtitle: 1
-    subtitleDuration: 3
+    subtitleDuration: 4
   - id: Nobel
     dialogueEvent:
       Guid:
