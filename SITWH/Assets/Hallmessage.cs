@@ -43,6 +43,7 @@ public class Hallmessage : MonoBehaviour
         if (vCamCinematica != null && vCamJugador != null)
         {
             vCamCinematica.Priority = (int)priorityCinematica;
+            vCamCinematica.enabled = true;
         }
 
         // Lanzamos la cinemática y los diálogos **en paralelo**

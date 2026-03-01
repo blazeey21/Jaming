@@ -714,7 +714,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639079600279647089
+  lastModified: 639079619660163830
   FileSizes: []
   Exists: 1
 --- !u!114 &-2590481804851507045
@@ -1197,7 +1197,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 2854216806268686269}
   cacheVersion: 131858
-  cacheTime: 639079600279647089
+  cacheTime: 639079619660289995
   SerializableEventsDict:
   - key: event:/SFX/nivel 2/susurros
     index: 0
@@ -1694,7 +1694,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/nigga.bank
   Name: nigga
   StudioPath: bank:/nigga
-  lastModified: 639072670528981400
+  lastModified: 639072963044881443
   FileSizes: []
   Exists: 1
 --- !u!114 &2336278065694270157
@@ -1739,7 +1739,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639079600203575009
+  lastModified: 639079619660289995
   FileSizes:
   - Name: 
     Value: 4078

@@ -19675,16 +19675,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 349183695}
-  - component: {fileID: 349183694}
-  - component: {fileID: 349183693}
   - component: {fileID: 349183692}
+  - component: {fileID: 349183696}
   m_Layer: 0
   m_Name: Cerradura
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!136 &349183692
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -19700,7 +19699,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -19708,62 +19707,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!23 &349183693
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 349183690}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &349183694
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 349183690}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &349183695
 Transform:
   m_ObjectHideFlags: 0
@@ -19779,6 +19722,93 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1712536016}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &349183696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349183690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58cd0201224f854a846680dec672a23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  elementosUI:
+  - {fileID: 1498846749}
+  Puertanivel2: {fileID: 919132148368333153}
+  panelNumeros: {fileID: 1498846749}
+  textPista: {fileID: 2054271189}
+  textRespuesta: {fileID: 873813777}
+  textNumeros:
+  - {fileID: 1625040}
+  - {fileID: 1929374626}
+  - {fileID: 1229654306}
+  - {fileID: 607046043}
+  numeroCorrecto: 01000000090000000900000003000000
+  respuestasNegativas:
+  - El verda
+  player: {fileID: 1412512085}
+  closeAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Close
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 9673d5d9-3b50-4077-a563-80ee2a975630
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 872973058333042130, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
+  moveNumberAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Move Number
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: a7a65694-4531-41b7-a9bb-2732aba7d948
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -3242194364823860324, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
+  incrementAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Increment
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: db4389cf-38bc-4cb7-8871-b1207d11c962
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -6688128970087736017, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
+  decrementAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Decrement
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 06f0c8f8-3188-460e-9d68-f17e73f422ca
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 6408931058515802057, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
+  validarAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Validar
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: d8214ca4-95f3-4c5a-a954-fd371b9adcd6
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 6805858867419907508, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
 --- !u!1 &352304446
 GameObject:
   m_ObjectHideFlags: 0
@@ -72186,7 +72216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1496363247
 Animator:
   serializedVersion: 7
@@ -103827,8 +103857,7 @@ GameObject:
   - component: {fileID: 543450652649344121}
   - component: {fileID: 3469287836632564700}
   - component: {fileID: 1711813856059307798}
-  - component: {fileID: 3469287836632564702}
-  - component: {fileID: 3469287836632564701}
+  - component: {fileID: 3469287836632564703}
   m_Layer: 0
   m_Name: Candado
   m_TagString: Untagged
@@ -119481,7 +119510,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148998215363}
   m_Mesh: {fileID: -2693125584258879929, guid: bc4aa99955686b9489d6c99902026de0, type: 3}
---- !u!65 &3469287836632564701
+--- !u!65 &3469287836632564703
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119500,94 +119529,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5677682, y: 0.2398194, z: 0.20290288}
-  m_Center: {x: 0.03398594, y: 0.104910694, z: 0.047469087}
---- !u!114 &3469287836632564702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132148998215363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d58cd0201224f854a846680dec672a23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  elementosUI: []
-  Puertanivel2: {fileID: 919132148368333153}
-  panelNumeros: {fileID: 1498846749}
-  textPista: {fileID: 2054271189}
-  textRespuesta: {fileID: 873813777}
-  textNumeros:
-  - {fileID: 1625040}
-  - {fileID: 1929374626}
-  - {fileID: 1229654306}
-  - {fileID: 607046043}
-  numeroCorrecto: 01000000090000000900000003000000
-  respuestasNegativas:
-  - El verda
-  player: {fileID: 1412512085}
-  closeAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Close
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 9673d5d9-3b50-4077-a563-80ee2a975630
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 872973058333042130, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
-  moveNumberAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Move Number
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: a7a65694-4531-41b7-a9bb-2732aba7d948
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -3242194364823860324, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
-  incrementAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Increment
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: db4389cf-38bc-4cb7-8871-b1207d11c962
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -6688128970087736017, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
-  decrementAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Decrement
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 06f0c8f8-3188-460e-9d68-f17e73f422ca
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 6408931058515802057, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
-  validarAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Validar
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: d8214ca4-95f3-4c5a-a954-fd371b9adcd6
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 6805858867419907508, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
+  m_Size: {x: 0.68685037, y: 0.47682634, z: 0.9350973}
+  m_Center: {x: 0.031932183, y: 0.22341423, z: 0.2730473}
 --- !u!33 &3469287836698063532
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -119759,8 +119702,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.968865, y: 6.805743, z: 4.9777536}
-  m_Center: {x: 0.016516563, y: -0.402871, z: 2.4888763}
+  m_Size: {x: 2.968865, y: 5.473754, z: 4.9777536}
+  m_Center: {x: 0.016516563, y: 0.26312363, z: 2.4888763}
 --- !u!33 &3469287836951011654
 MeshFilter:
   m_ObjectHideFlags: 0
