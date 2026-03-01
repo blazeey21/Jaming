@@ -4,15 +4,20 @@ public class EndGame : MonoBehaviour
 {
     void Update()
     {
-        // Si se presiona cualquier tecla
-        if (Input.anyKeyDown)
+        foreach (KeyCode key in System.Enum.GetValues(typeof(KeyCode)))
         {
-            Application.Quit();
+            // Solo teclas del teclado (evitamos mouse)
+            if (key.ToString().StartsWith("Mouse"))
+                continue;
+
+            if (Input.GetKeyDown(key))
+            {
+                Application.Quit();
 
 #if UNITY_EDITOR
-            // Esto permite que funcione también dentro del Editor
-            UnityEditor.EditorApplication.isPlaying = false;
+                UnityEditor.EditorApplication.isPlaying = false;
 #endif
+            }
         }
     }
 }
