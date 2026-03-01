@@ -14,7 +14,6 @@ public class ManagerLevel2 : MonoBehaviour
     public string[] respuestasNegativas;
     [SerializeField] private PlayerLogic player;
 
-
     [SerializeField] private InputActionProperty closeAction;
     [SerializeField] private InputActionProperty moveNumberAction;
     [SerializeField] private InputActionProperty incrementAction;
@@ -126,7 +125,6 @@ public class ManagerLevel2 : MonoBehaviour
         player.CanMove = false;
         Time.timeScale = 0f;
 
-
         foreach (GameObject elemento in elementosUI)
         {
             if (elemento != null)
@@ -143,7 +141,6 @@ public class ManagerLevel2 : MonoBehaviour
         player.CanMove = true;
         Time.timeScale = 1f;
         panelActivo = false;
-        Time.timeScale = 1f;
 
         foreach (GameObject elemento in elementosUI)
         {
@@ -152,10 +149,7 @@ public class ManagerLevel2 : MonoBehaviour
         }
 
         if (panelNumeros != null) panelNumeros.SetActive(false);
-
     }
-    
-
 
     private void DesactivarElementosUI()
     {
@@ -264,7 +258,11 @@ public class ManagerLevel2 : MonoBehaviour
 
             if (Puertanivel2 != null)
             {
-                Puertanivel2.SetActive(false);
+                Animator anim = Puertanivel2.GetComponent<Animator>();
+                if (anim != null)
+                {
+                    anim.SetBool("Open", true);
+                }
             }
 
             foreach (TMP_Text num in textNumeros)
@@ -276,8 +274,6 @@ public class ManagerLevel2 : MonoBehaviour
             {
                 collider.enabled = false;
             }
-
-
         }
         else
         {
@@ -295,7 +291,7 @@ public class ManagerLevel2 : MonoBehaviour
             }
         }
     }
-   
+
     public void SetNumeroCorrecto(int[] nuevoCodigo)
     {
         if (nuevoCodigo.Length == 4)

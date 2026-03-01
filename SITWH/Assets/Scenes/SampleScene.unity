@@ -19604,7 +19604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &345232185
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19678,8 +19678,6 @@ GameObject:
   - component: {fileID: 349183694}
   - component: {fileID: 349183693}
   - component: {fileID: 349183692}
-  - component: {fileID: 349183691}
-  - component: {fileID: 349183696}
   m_Layer: 0
   m_Name: Cerradura
   m_TagString: Untagged
@@ -19687,27 +19685,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!65 &349183691
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 349183690}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.226357, y: 1.9999998, z: 2.5067065}
-  m_Center: {x: -0.037681818, y: 0, z: -0.75335443}
 --- !u!136 &349183692
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -19802,92 +19779,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1712536016}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &349183696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 349183690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d58cd0201224f854a846680dec672a23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  elementosUI: []
-  Puertanivel2: {fileID: 0}
-  panelNumeros: {fileID: 1498846749}
-  textPista: {fileID: 2054271189}
-  textRespuesta: {fileID: 873813777}
-  textNumeros:
-  - {fileID: 1625040}
-  - {fileID: 1929374626}
-  - {fileID: 1229654306}
-  - {fileID: 607046043}
-  numeroCorrecto: 01000000090000000900000003000000
-  respuestasNegativas:
-  - El verda
-  player: {fileID: 1412512085}
-  closeAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Close
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 9673d5d9-3b50-4077-a563-80ee2a975630
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 872973058333042130, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
-  moveNumberAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Move Number
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: a7a65694-4531-41b7-a9bb-2732aba7d948
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -3242194364823860324, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
-  incrementAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Increment
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: db4389cf-38bc-4cb7-8871-b1207d11c962
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -6688128970087736017, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
-  decrementAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Decrement
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 06f0c8f8-3188-460e-9d68-f17e73f422ca
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 6408931058515802057, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
-  validarAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Validar
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: d8214ca4-95f3-4c5a-a954-fd371b9adcd6
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 6805858867419907508, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
 --- !u!1 &352304446
 GameObject:
   m_ObjectHideFlags: 0
@@ -103936,6 +103827,8 @@ GameObject:
   - component: {fileID: 543450652649344121}
   - component: {fileID: 3469287836632564700}
   - component: {fileID: 1711813856059307798}
+  - component: {fileID: 3469287836632564702}
+  - component: {fileID: 3469287836632564701}
   m_Layer: 0
   m_Name: Candado
   m_TagString: Untagged
@@ -119588,6 +119481,113 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148998215363}
   m_Mesh: {fileID: -2693125584258879929, guid: bc4aa99955686b9489d6c99902026de0, type: 3}
+--- !u!65 &3469287836632564701
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148998215363}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5677682, y: 0.2398194, z: 0.20290288}
+  m_Center: {x: 0.03398594, y: 0.104910694, z: 0.047469087}
+--- !u!114 &3469287836632564702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148998215363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58cd0201224f854a846680dec672a23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  elementosUI: []
+  Puertanivel2: {fileID: 919132148368333153}
+  panelNumeros: {fileID: 1498846749}
+  textPista: {fileID: 2054271189}
+  textRespuesta: {fileID: 873813777}
+  textNumeros:
+  - {fileID: 1625040}
+  - {fileID: 1929374626}
+  - {fileID: 1229654306}
+  - {fileID: 607046043}
+  numeroCorrecto: 01000000090000000900000003000000
+  respuestasNegativas:
+  - El verda
+  player: {fileID: 1412512085}
+  closeAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Close
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 9673d5d9-3b50-4077-a563-80ee2a975630
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 872973058333042130, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
+  moveNumberAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Move Number
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: a7a65694-4531-41b7-a9bb-2732aba7d948
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -3242194364823860324, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
+  incrementAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Increment
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: db4389cf-38bc-4cb7-8871-b1207d11c962
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -6688128970087736017, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
+  decrementAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Decrement
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 06f0c8f8-3188-460e-9d68-f17e73f422ca
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 6408931058515802057, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
+  validarAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Validar
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: d8214ca4-95f3-4c5a-a954-fd371b9adcd6
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 6805858867419907508, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
 --- !u!33 &3469287836698063532
 MeshFilter:
   m_ObjectHideFlags: 0
