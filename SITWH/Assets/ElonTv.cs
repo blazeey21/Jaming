@@ -38,6 +38,7 @@ public class ElonTv : MonoBehaviour
     Dictionary<string, ElonLine> lookup;
     float lastPlayTime = -999f;
     string lastPlayedId = "";
+    bool isPlaying = false; // Nuevo: indica si hay un diálogo reproduciéndose
 
     void Awake()
     {
@@ -66,9 +67,11 @@ public class ElonTv : MonoBehaviour
     IEnumerator PlayAndWait(string id)
     {
         if (!lookup.ContainsKey(id)) yield break;
+        if (isPlaying) yield break; // No reproducir si ya hay uno en curso
         if (Time.time - lastPlayTime < globalCooldown) yield break;
         if (id == lastPlayedId) yield break;
 
+        isPlaying = true;
         lastPlayTime = Time.time;
         lastPlayedId = id;
 
@@ -96,14 +99,18 @@ public class ElonTv : MonoBehaviour
         instance.release();
 
         yield return new WaitForSecondsRealtime(finalDuration);
+
+        isPlaying = false;
     }
 
     public IEnumerator PlayAndReturnRoutine(string id)
     {
         if (!lookup.ContainsKey(id)) yield break;
+        if (isPlaying) yield break;
         if (Time.time - lastPlayTime < globalCooldown) yield break;
         if (id == lastPlayedId) yield break;
 
+        isPlaying = true;
         lastPlayTime = Time.time;
         lastPlayedId = id;
 
@@ -131,5 +138,7 @@ public class ElonTv : MonoBehaviour
         instance.release();
 
         yield return new WaitForSecondsRealtime(finalDuration);
+
+        isPlaying = false;
     }
 }

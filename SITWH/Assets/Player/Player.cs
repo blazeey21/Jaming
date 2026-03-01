@@ -190,6 +190,33 @@ public partial class @Player: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Increment1"",
+                    ""type"": ""Button"",
+                    ""id"": ""720dbd80-aeb8-4e2c-a805-5681bd154ace"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Decre"",
+                    ""type"": ""Button"",
+                    ""id"": ""0912b501-3f4b-4ddd-9513-be28b3c5e90d"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ValidA"",
+                    ""type"": ""Button"",
+                    ""id"": ""ddbc1821-63ef-4c4f-b0bf-ce471635f104"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -621,6 +648,72 @@ public partial class @Player: IInputActionCollection2, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2b072fda-498a-4501-bba2-b67221a75e81"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Increment1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f98e7054-17af-4352-8753-7fb5181cd6e7"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Increment1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""70814222-258c-401e-96a9-f47bb99a6fbd"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Increment1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b139357d-4e61-4858-aa7e-07c38c490efb"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Decre"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0beba57c-c992-4b49-bd75-dce1395a7881"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Decre"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""09c9c737-c803-4fca-8bde-3fff57efecac"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ValidA"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -662,6 +755,9 @@ public partial class @Player: IInputActionCollection2, IDisposable
         m_Newactionmap_Interact = m_Newactionmap.FindAction("Interact", throwIfNotFound: true);
         m_Newactionmap_Zoom = m_Newactionmap.FindAction("Zoom", throwIfNotFound: true);
         m_Newactionmap_Pause = m_Newactionmap.FindAction("Pause", throwIfNotFound: true);
+        m_Newactionmap_Increment1 = m_Newactionmap.FindAction("Increment1", throwIfNotFound: true);
+        m_Newactionmap_Decre = m_Newactionmap.FindAction("Decre", throwIfNotFound: true);
+        m_Newactionmap_ValidA = m_Newactionmap.FindAction("ValidA", throwIfNotFound: true);
     }
 
     ~@Player()
@@ -753,6 +849,9 @@ public partial class @Player: IInputActionCollection2, IDisposable
     private readonly InputAction m_Newactionmap_Interact;
     private readonly InputAction m_Newactionmap_Zoom;
     private readonly InputAction m_Newactionmap_Pause;
+    private readonly InputAction m_Newactionmap_Increment1;
+    private readonly InputAction m_Newactionmap_Decre;
+    private readonly InputAction m_Newactionmap_ValidA;
     /// <summary>
     /// Provides access to input actions defined in input action map "New action map".
     /// </summary>
@@ -808,6 +907,18 @@ public partial class @Player: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Newactionmap/Pause".
         /// </summary>
         public InputAction @Pause => m_Wrapper.m_Newactionmap_Pause;
+        /// <summary>
+        /// Provides access to the underlying input action "Newactionmap/Increment1".
+        /// </summary>
+        public InputAction @Increment1 => m_Wrapper.m_Newactionmap_Increment1;
+        /// <summary>
+        /// Provides access to the underlying input action "Newactionmap/Decre".
+        /// </summary>
+        public InputAction @Decre => m_Wrapper.m_Newactionmap_Decre;
+        /// <summary>
+        /// Provides access to the underlying input action "Newactionmap/ValidA".
+        /// </summary>
+        public InputAction @ValidA => m_Wrapper.m_Newactionmap_ValidA;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -867,6 +978,15 @@ public partial class @Player: IInputActionCollection2, IDisposable
             @Pause.started += instance.OnPause;
             @Pause.performed += instance.OnPause;
             @Pause.canceled += instance.OnPause;
+            @Increment1.started += instance.OnIncrement1;
+            @Increment1.performed += instance.OnIncrement1;
+            @Increment1.canceled += instance.OnIncrement1;
+            @Decre.started += instance.OnDecre;
+            @Decre.performed += instance.OnDecre;
+            @Decre.canceled += instance.OnDecre;
+            @ValidA.started += instance.OnValidA;
+            @ValidA.performed += instance.OnValidA;
+            @ValidA.canceled += instance.OnValidA;
         }
 
         /// <summary>
@@ -911,6 +1031,15 @@ public partial class @Player: IInputActionCollection2, IDisposable
             @Pause.started -= instance.OnPause;
             @Pause.performed -= instance.OnPause;
             @Pause.canceled -= instance.OnPause;
+            @Increment1.started -= instance.OnIncrement1;
+            @Increment1.performed -= instance.OnIncrement1;
+            @Increment1.canceled -= instance.OnIncrement1;
+            @Decre.started -= instance.OnDecre;
+            @Decre.performed -= instance.OnDecre;
+            @Decre.canceled -= instance.OnDecre;
+            @ValidA.started -= instance.OnValidA;
+            @ValidA.performed -= instance.OnValidA;
+            @ValidA.canceled -= instance.OnValidA;
         }
 
         /// <summary>
@@ -1041,5 +1170,26 @@ public partial class @Player: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnPause(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Increment1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnIncrement1(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Decre" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnDecre(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ValidA" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnValidA(InputAction.CallbackContext context);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class ManagerLevel2 : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class ManagerLevel2 : MonoBehaviour
     [SerializeField] private InputActionProperty incrementAction;
     [SerializeField] private InputActionProperty decrementAction;
     [SerializeField] private InputActionProperty validarAction;
+    [SerializeField] public GameObject Cerra;
 
     private bool isPlayerInTrigger = false;
     private int[] numeroActual = new int[4];
@@ -263,6 +265,9 @@ public class ManagerLevel2 : MonoBehaviour
                 {
                     anim.SetBool("Open", true);
                 }
+                //GetComponent<MeshRenderer>().enabled = false;
+                StartCoroutine(DestruirPanelDespuesDeTiempo());
+
             }
 
             foreach (TMP_Text num in textNumeros)
@@ -274,6 +279,7 @@ public class ManagerLevel2 : MonoBehaviour
             {
                 collider.enabled = false;
             }
+            
         }
         else
         {
@@ -298,6 +304,14 @@ public class ManagerLevel2 : MonoBehaviour
         {
             numeroCorrecto = nuevoCodigo;
         }
+    }
+    private IEnumerator DestruirPanelDespuesDeTiempo()
+    {
+        yield return new WaitForSeconds(2.56f);
+        Cerra.gameObject.SetActive(false);
+
+
+        Destroy(panelNumeros);
     }
 
     public void SetPista(string pista)
