@@ -19736,7 +19736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   elementosUI:
   - {fileID: 1498846749}
-  Puertanivel2: {fileID: 919132148368333153}
+  Puertanivel2: {fileID: 919132149409492037}
   panelNumeros: {fileID: 1498846749}
   textPista: {fileID: 2054271189}
   textRespuesta: {fileID: 873813777}
@@ -36074,8 +36074,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
-    Enabled: 0
-    m_Value: 0
+    Enabled: 1
+    m_Value: 20
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
@@ -65936,6 +65936,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: b7a07e57-f6c0-4406-aaa7-55446a006462
     m_ActionName: 'New action map/Zoom[/Keyboard/ctrl]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 656e3854-bd4c-4a74-99e0-c4f2a807d89d
+    m_ActionName: 'New action map/Pause[/Keyboard/p]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: New action map
@@ -72216,7 +72220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1496363247
 Animator:
   serializedVersion: 7
@@ -72252,7 +72256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
-    Enabled: 0
+    Enabled: 1
     m_Value: 1
   OutputChannel: 1
   StandbyUpdate: 2

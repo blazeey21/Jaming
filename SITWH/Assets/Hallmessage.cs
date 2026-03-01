@@ -43,7 +43,7 @@ public class Hallmessage : MonoBehaviour
         if (vCamCinematica != null && vCamJugador != null)
         {
             vCamCinematica.Priority = (int)priorityCinematica;
-            vCamCinematica.enabled = true;
+            
         }
 
         // Lanzamos la cinemática y los diálogos **en paralelo**
@@ -62,7 +62,7 @@ public class Hallmessage : MonoBehaviour
         // Restauramos prioridades originales
         if (vCamCinematica != null && vCamJugador != null)
         {
-            vCamCinematica.enabled = false;
+            vCamCinematica.Priority = oldPriorityCine;
             vCamJugador.Priority = oldPriorityJugador;
         }
     }
