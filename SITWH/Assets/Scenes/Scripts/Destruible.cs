@@ -33,6 +33,7 @@ public class Destruible : MonoBehaviour
 
         if (floorLayer.value == 0)
             floorLayer = LayerMask.GetMask("Floor");
+        floorContactTime = 0.11f;
     }
 
     void Update()
