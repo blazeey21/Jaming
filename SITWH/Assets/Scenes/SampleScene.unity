@@ -123419,15 +123419,20 @@ MonoBehaviour:
     desactivar:
     - {fileID: 1884645264}
     - {fileID: 1820093883}
+    - {fileID: 2136822389}
+    - {fileID: 654045369}
+    - {fileID: 1930353871}
   zona2:
     activar:
     - {fileID: 468903963}
     - {fileID: 919132148829582067}
-    - {fileID: 654045369}
+    - {fileID: 1930353871}
     desactivar:
     - {fileID: 9062971703716218528}
     - {fileID: 919132148140107858}
     - {fileID: 685130645}
+    - {fileID: 2136822389}
+    - {fileID: 654045369}
   zona3:
     activar:
     - {fileID: 1699177514}
@@ -123438,15 +123443,19 @@ MonoBehaviour:
     - {fileID: 1820093883}
     - {fileID: 919132148829582067}
     - {fileID: 654045369}
+    - {fileID: 1930353871}
+    - {fileID: 685130645}
   zona4:
     activar:
     - {fileID: 2090371759}
     - {fileID: 919132149219229570}
-    - {fileID: 1930353871}
+    - {fileID: 654045369}
     desactivar:
     - {fileID: 672468657}
     - {fileID: 1820093883}
     - {fileID: 919132149326205762}
+    - {fileID: 1930353871}
+    - {fileID: 685130645}
     - {fileID: 2136822389}
   zona5:
     activar:
@@ -123460,6 +123469,9 @@ MonoBehaviour:
     desactivar:
     - {fileID: 562730761}
     - {fileID: 1930353871}
+    - {fileID: 685130645}
+    - {fileID: 2136822389}
+    - {fileID: 654045369}
   activarConClick: 1
   activarConProximidad: 1
   rangoInteraccion: 3
