@@ -8,10 +8,9 @@ public class Pause : MonoBehaviour
     [Header("UI Elements")]
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private Button continueButton;
-    [SerializeField] private Button optionsButton;
     [SerializeField] private Button quitButton;
 
-    [Header("Input Actions (asignar desde editor)")]
+    [Header("Input Actions")]
     [SerializeField] private InputActionReference pauseAction;
     [SerializeField] private InputActionReference navigateUpAction;
     [SerializeField] private InputActionReference navigateDownAction;
@@ -23,7 +22,17 @@ public class Pause : MonoBehaviour
 
     void Awake()
     {
-        buttons = new Button[] { continueButton, optionsButton, quitButton };
+        buttons = new Button[]
+        {
+            continueButton, // 0 arriba
+            quitButton      // 1 abajo
+        };
+    }
+
+    void Update()
+    {
+        if (!isPaused) return;
+        SyncIndexWithEventSystem();
     }
 
     void OnEnable()
@@ -37,7 +46,7 @@ public class Pause : MonoBehaviour
         if (validateAction != null)
         {
             validateAction.action.Enable();
-            validateAction.action.performed += OnValidate;
+            validateAction.action.performed += OnValidate1;
         }
     }
 
@@ -51,7 +60,7 @@ public class Pause : MonoBehaviour
 
         if (validateAction != null)
         {
-            validateAction.action.performed -= OnValidate;
+            validateAction.action.performed -= OnValidate1;
             validateAction.action.Disable();
         }
 
@@ -64,23 +73,19 @@ public class Pause : MonoBehaviour
         ApplyPauseState();
     }
 
-    public void TogglePauseButton()
-    {
-        isPaused = !isPaused;
-        ApplyPauseState();
-    }
-
     private void ApplyPauseState()
     {
         pausePanel.SetActive(isPaused);
         Time.timeScale = isPaused ? 0f : 1f;
+        AudioListener.pause = isPaused;
+
         Cursor.visible = isPaused;
         Cursor.lockState = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
 
         if (isPaused)
         {
             selectedIndex = 0;
-            SelectCurrentButton();
+            ForceSelect();
             SubscribeNavigationActions();
         }
         else
@@ -120,29 +125,47 @@ public class Pause : MonoBehaviour
         }
     }
 
+    private void SyncIndexWithEventSystem()
+    {
+        var current = EventSystem.current.currentSelectedGameObject;
+        if (current == null) return;
+
+        for (int i = 0; i < buttons.Length; i++)
+            if (buttons[i].gameObject == current)
+                selectedIndex = i;
+    }
+
+    private void ForceSelect()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(buttons[selectedIndex].gameObject);
+    }
+
     private void OnNavigateUp(InputAction.CallbackContext ctx)
     {
         if (!isPaused) return;
-        selectedIndex = (selectedIndex + buttons.Length - 1) % buttons.Length;
-        SelectCurrentButton();
+
+        if (selectedIndex > 0)
+        {
+            selectedIndex--;
+            ForceSelect();
+        }
     }
 
     private void OnNavigateDown(InputAction.CallbackContext ctx)
     {
         if (!isPaused) return;
-        selectedIndex = (selectedIndex + 1) % buttons.Length;
-        SelectCurrentButton();
+
+        if (selectedIndex < buttons.Length - 1)
+        {
+            selectedIndex++;
+            ForceSelect();
+        }
     }
 
-    private void SelectCurrentButton()
+    private void OnValidate1(InputAction.CallbackContext ctx)
     {
-        if (buttons != null && buttons.Length > 0 && selectedIndex >= 0 && selectedIndex < buttons.Length)
-            EventSystem.current.SetSelectedGameObject(buttons[selectedIndex].gameObject);
-    }
-
-    private void OnValidate(InputAction.CallbackContext ctx)
-    {
-        if (!isPaused || buttons == null || buttons.Length == 0) return;
+        if (!isPaused) return;
         buttons[selectedIndex].onClick.Invoke();
     }
 
@@ -150,11 +173,6 @@ public class Pause : MonoBehaviour
     {
         isPaused = false;
         ApplyPauseState();
-    }
-
-    public void OpenOptions()
-    {
-        Debug.Log("Abrir panel de opciones");
     }
 
     public void QuitGame()

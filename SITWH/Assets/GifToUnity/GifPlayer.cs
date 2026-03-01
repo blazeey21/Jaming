@@ -1,72 +1,86 @@
-using GifImporter;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 namespace GifImporter
 {
     [ExecuteAlways]
     public class GifPlayer : MonoBehaviour
     {
-        public Gif Gif;
+        public List<Gif> Gifs = new List<Gif>();
+        public float changeGifEverySeconds = 5f;
 
-        private int   _index;
+        private int _gifIndex;
+        private int _frameIndex;
         private float _flip;
-        private Gif   _setGif;
+        private float _nextGifChange;
+        private Gif _currentGif;
 
         private void OnEnable()
         {
-            if (Gif == null) return;
-            var frames = Gif.Frames;
-            if (frames == null || frames.Count == 0) return;
-
-            if (_index > frames.Count - 1)
-            {
-                _index = _index % frames.Count;
-            }
-
-            var frame = frames[_index];
-            Apply(frame);
+            PickRandomGif(true);
+            ApplyCurrentFrame();
         }
 
         private void Update()
         {
-            if (Gif == null) return;
-            var frames = Gif.Frames;
+            if (_currentGif == null) return;
+
+            var frames = _currentGif.Frames;
             if (frames == null || frames.Count == 0) return;
 
-            int index = _index;
-
-            if (Application.isPlaying && _flip < Time.time)
+            if (Application.isPlaying && Time.time >= _nextGifChange)
             {
-                index++;
+                PickRandomGif(false);
+                ApplyCurrentFrame();
+                return;
             }
 
-            if (index > frames.Count - 1)
+            if (Application.isPlaying && Time.time >= _flip)
             {
-                index %= frames.Count;
-            }
-
-            if (index != _index || _setGif != Gif)
-            {
-                _index = index;
-                var frame = frames[_index];
-                Apply(frame);
+                _frameIndex++;
+                if (_frameIndex >= frames.Count) _frameIndex = 0;
+                ApplyCurrentFrame();
             }
         }
 
-        private void Apply(GifFrame frame)
+        private void PickRandomGif(bool forceResetTimer)
         {
+            if (Gifs == null || Gifs.Count == 0) return;
+
+            int newIndex = Random.Range(0, Gifs.Count);
+
+            if (Gifs.Count > 1)
+                while (newIndex == _gifIndex)
+                    newIndex = Random.Range(0, Gifs.Count);
+
+            _gifIndex = newIndex;
+            _currentGif = Gifs[_gifIndex];
+            _frameIndex = 0;
+
+            if (Application.isPlaying || forceResetTimer)
+                _nextGifChange = Time.time + changeGifEverySeconds;
+        }
+
+        private void ApplyCurrentFrame()
+        {
+            if (_currentGif == null) return;
+
+            var frames = _currentGif.Frames;
+            if (frames == null || frames.Count == 0) return;
+
+            if (_frameIndex >= frames.Count) _frameIndex = 0;
+
+            var frame = frames[_frameIndex];
+
             Image image = null;
             if (TryGetComponent<SpriteRenderer>(out var spriteRenderer) || TryGetComponent(out image))
             {
                 _flip = Time.time + frame.DelayInMs * 0.001f;
 
                 if (spriteRenderer != null) spriteRenderer.sprite = frame.Sprite;
-                else if (image != null) image.sprite              = frame.Sprite;
-
-                _setGif = Gif;
+                else if (image != null) image.sprite = frame.Sprite;
             }
         }
     }
 }
-
