@@ -126699,10 +126699,9 @@ MonoBehaviour:
         Data3: -758632269
         Data4: -771272510
       Path: event:/Dialogue/Nivel 1/Dicks/Dick1
-    subtitle: "Oh. You're awake. Excellent. You are officially my cognitive experiment
-      number\u2026 Well, I lost count after the guy who acted like a horse."
+    subtitle: 'Oh. You''re awake. Excellent. '
     showSubtitle: 1
-    subtitleDuration: 5
+    subtitleDuration: 3
   - id: B
     dialogueEvent:
       Guid:
@@ -126711,10 +126710,11 @@ MonoBehaviour:
         Data3: 1691149457
         Data4: -312222029
       Path: event:/Dialogue/Nivel 1/Dicks/Dick1_2
-    subtitle: I am a superior intelligence based on the mind of Elon Dicks, but enhanced.
-      Without unnecessary empathy.
+    subtitle: "You are officially my cognitive experiment number\u2026 Well, I lost
+      count after the guy who acted like a horse.I am a superior intelligence based
+      on the mind of Elon Dicks, but enhanced. Without unnecessary empathy."
     showSubtitle: 1
-    subtitleDuration: 6.5
+    subtitleDuration: 7
   - id: C
     dialogueEvent:
       Guid:
