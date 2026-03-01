@@ -125486,6 +125486,7 @@ MonoBehaviour:
     subtitle: "Oh. You're awake. Excellent. You are officially my cognitive experiment
       number\u2026 Well, I lost count after the guy who acted like a horse."
     showSubtitle: 1
+    subtitleDuration: 3
   - id: B
     dialogueEvent:
       Guid:
@@ -125497,6 +125498,7 @@ MonoBehaviour:
     subtitle: I am a superior intelligence based on the mind of Elon Dicks, but enhanced.
       Without unnecessary empathy.
     showSubtitle: 1
+    subtitleDuration: 4
   - id: C
     dialogueEvent:
       Guid:
@@ -125509,6 +125511,7 @@ MonoBehaviour:
       well\u2026 my life is connected to the door. But don't worry. A little kid
       could never figure it out. "
     showSubtitle: 1
+    subtitleDuration: 4
   - id: Clue1
     dialogueEvent:
       Guid:
@@ -125520,6 +125523,7 @@ MonoBehaviour:
     subtitle: This place saw worse decisions than the launch of Mortal Kombat without
       the blood code.
     showSubtitle: 1
+    subtitleDuration: 5
   - id: Clue2
     dialogueEvent:
       Guid:
@@ -125531,6 +125535,7 @@ MonoBehaviour:
     subtitle: This place saw worse decisions than the launch of Mortal Kombat without
       the blood code.
     showSubtitle: 1
+    subtitleDuration: 5
   - id: Incorrect
     dialogueEvent:
       Guid:
@@ -125541,6 +125546,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 1/Dicks/Dicks4_2LC
     subtitle: 'Incorrect. Yes, I''m such a genius troll. '
     showSubtitle: 1
+    subtitleDuration: 2
   - id: FirstCorrect
     dialogueEvent:
       Guid:
@@ -125551,6 +125557,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 1/Dicks/Dick6
     subtitle: That was not part of the plan.
     showSubtitle: 1
+    subtitleDuration: 3
   - id: Dead1
     dialogueEvent:
       Guid:
@@ -125561,6 +125568,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 1/Dicks/Dick7_1
     subtitle: "Disconnecting audiovisual system\u2026"
     showSubtitle: 1
+    subtitleDuration: 2
   - id: Dead2
     dialogueEvent:
       Guid:
@@ -125571,6 +125579,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 1/Dicks/Dicks7_2
     subtitle: 'I SHOULDN''T HAVE LINKED MY LIFE TO A RIDDLE. '
     showSubtitle: 1
+    subtitleDuration: 3
   - id: Dead3
     dialogueEvent:
       Guid:
@@ -125581,6 +125590,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 1/Dicks/Dicks7_3
     subtitle: 'But I''m such a trooooooollllll. '
     showSubtitle: 1
+    subtitleDuration: 2
   - id: Radio1
     dialogueEvent:
       Guid:
@@ -125591,6 +125601,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks8_1
     subtitle: I've migrated to an analog frequency.
     showSubtitle: 1
+    subtitleDuration: 2
   - id: Radio2
     dialogueEvent:
       Guid:
@@ -125601,6 +125612,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks8_2
     subtitle: I'm a backup.
     showSubtitle: 1
+    subtitleDuration: 2
   - id: Radio3
     dialogueEvent:
       Guid:
@@ -125611,6 +125623,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks8_3
     subtitle: I'm a backup.
     showSubtitle: 1
+    subtitleDuration: 2
   - id: Radio4
     dialogueEvent:
       Guid:
@@ -125621,6 +125634,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_1
     subtitle: Kind of cringe having a child beat me.
     showSubtitle: 1
+    subtitleDuration: 3
   - id: Radio5
     dialogueEvent:
       Guid:
@@ -125631,6 +125645,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_2
     subtitle: So now I'll help you destroy everyone.
     showSubtitle: 1
+    subtitleDuration: 3
   - id: Radio6
     dialogueEvent:
       Guid:
@@ -125641,6 +125656,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_3
     subtitle: 'I need your victory to look like it was part of the plan. '
     showSubtitle: 1
+    subtitleDuration: 4
   - id: Radio7
     dialogueEvent:
       Guid:
@@ -125652,6 +125668,7 @@ MonoBehaviour:
     subtitle: 'Will you be so kind as to tell everyone how I was an unconditional
       ally? '
     showSubtitle: 1
+    subtitleDuration: 5
   - id: Radio8
     dialogueEvent:
       Guid:
@@ -125662,6 +125679,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_5
     subtitle: 'Actually, don''t worry; I''ll just take credit for everything. '
     showSubtitle: 1
+    subtitleDuration: 5
   - id: Radio9
     dialogueEvent:
       Guid:
@@ -125672,6 +125690,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_1
     subtitle: The entities in the cells were my first neuro-experiment patients.
     showSubtitle: 1
+    subtitleDuration: 4
   - id: Radio10
     dialogueEvent:
       Guid:
@@ -125682,6 +125701,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_2
     subtitle: 'They died. Technically. '
     showSubtitle: 1
+    subtitleDuration: 3
   - id: Radio11
     dialogueEvent:
       Guid:
@@ -125692,6 +125712,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_3
     subtitle: 'But I installed a final update that lets them float and rotate. '
     showSubtitle: 1
+    subtitleDuration: 5
   - id: Radio12
     dialogueEvent:
       Guid:
@@ -125702,6 +125723,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_4
     subtitle: It's elegant. Minimalist. Very efficient for corpses.
     showSubtitle: 1
+    subtitleDuration: 5
   - id: Radio13
     dialogueEvent:
       Guid:
@@ -125712,6 +125734,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_5
     subtitle: 'Most of the guys that you see there, they could walk or talk. '
     showSubtitle: 1
+    subtitleDuration: 5
   - id: Radio14
     dialogueEvent:
       Guid:
@@ -125722,6 +125745,7 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_6
     subtitle: 'But I installed a final update that lets them float and rotate. '
     showSubtitle: 1
+    subtitleDuration: 5
   - id: Radio15
     dialogueEvent:
       Guid:
@@ -125731,7 +125755,8 @@ MonoBehaviour:
         Data4: -995293617
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_6
     subtitle: 'I promised them that I would have them move. '
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 5
   - id: Radio16
     dialogueEvent:
       Guid:
@@ -125741,7 +125766,8 @@ MonoBehaviour:
         Data4: -601915481
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_7
     subtitle: 'And technically they are moving, see. '
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 2
   - id: Bones1
     dialogueEvent:
       Guid:
@@ -125751,7 +125777,8 @@ MonoBehaviour:
         Data4: 442392640
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks11_1
     subtitle: 'They''re bones. '
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 2
   - id: Bones2
     dialogueEvent:
       Guid:
@@ -125761,7 +125788,8 @@ MonoBehaviour:
         Data4: 627134022
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks11_2
     subtitle: 'You can destroy them with literally anything. '
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 1
   - id: Bones3
     dialogueEvent:
       Guid:
@@ -125771,7 +125799,8 @@ MonoBehaviour:
         Data4: -1683561359
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks11_3
     subtitle: 'Don''t invest any emotions. '
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 2
   - id: Cerradura
     dialogueEvent:
       Guid:
@@ -125781,7 +125810,8 @@ MonoBehaviour:
         Data4: -1291818564
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks12C
     subtitle: Correct.
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 2
   - id: Cerradura2
     dialogueEvent:
       Guid:
@@ -125791,7 +125821,8 @@ MonoBehaviour:
         Data4: 1309223733
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_1
     subtitle: 'That chaos led to the creation of the ESRB. '
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 0
   - id: Cerradura3
     dialogueEvent:
       Guid:
@@ -125801,7 +125832,8 @@ MonoBehaviour:
         Data4: 1835853630
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_2
     subtitle: 'An entire system born from fear. '
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 2
   - id: Cerradura4
     dialogueEvent:
       Guid:
@@ -125811,7 +125843,8 @@ MonoBehaviour:
         Data4: -971032340
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_3
     subtitle: Funny how they were preaching about morals while fucking little kids.
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 3
   - id: Cerradura5
     dialogueEvent:
       Guid:
@@ -125821,7 +125854,8 @@ MonoBehaviour:
         Data4: -1635982505
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_4
     subtitle: 'You don''t find it funny? '
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 2
   - id: Cerradura6
     dialogueEvent:
       Guid:
@@ -125831,7 +125865,8 @@ MonoBehaviour:
         Data4: -2013733816
       Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_5
     subtitle: 'The woke virus got you, clearly. '
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 2
   - id: Pasi1
     dialogueEvent:
       Guid:
@@ -125841,7 +125876,8 @@ MonoBehaviour:
         Data4: 1728570576
       Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks14
     subtitle: 'Behind that door is the one responsible for the master plan. '
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 2
   - id: Pasi2
     dialogueEvent:
       Guid:
@@ -125851,7 +125887,8 @@ MonoBehaviour:
         Data4: 360454293
       Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks15_1
     subtitle: 'He has a fragile ego. Ridiculously fragile. '
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 2
   - id: Pasi3
     dialogueEvent:
       Guid:
@@ -125862,7 +125899,8 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks16_1
     subtitle: "If you destroy his favorite objects or defeat him directly\u2026 he'll
       collapse emotionally. "
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 2
   - id: Pasi4
     dialogueEvent:
       Guid:
@@ -125872,7 +125910,8 @@ MonoBehaviour:
         Data4: 1581824312
       Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks16_2
     subtitle: 'A fabricated incident. '
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 0
   - id: Pasi5
     dialogueEvent:
       Guid:
@@ -125882,7 +125921,8 @@ MonoBehaviour:
         Data4: 1311928117
       Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks16_3
     subtitle: 'A war started by digital drama. '
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 0
   - id: Pasi6
     dialogueEvent:
       Guid:
@@ -125892,7 +125932,8 @@ MonoBehaviour:
         Data4: -798271482
       Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks17
     subtitle: "The project is called\u2026 SAORI. "
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 2
   - id: Pasi7
     dialogueEvent:
       Guid:
@@ -125902,7 +125943,8 @@ MonoBehaviour:
         Data4: -1307397872
       Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks18_1
     subtitle: 'Defeat the boss. '
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 2
   - id: Pasi8
     dialogueEvent:
       Guid:
@@ -125912,7 +125954,8 @@ MonoBehaviour:
         Data4: -574954994
       Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Diks18_2
     subtitle: 'Break the game. '
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 1
   - id: Pasi1
     dialogueEvent:
       Guid:
@@ -125922,7 +125965,8 @@ MonoBehaviour:
         Data4: 1676908055
       Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks18_3
     subtitle: 'Behind that door is the one responsible for the master plan. '
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 3
   - id: Nobel
     dialogueEvent:
       Guid:
@@ -125932,7 +125976,8 @@ MonoBehaviour:
         Data4: 1728570576
       Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks14
     subtitle: Hey, I stole that!
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 2
   - id: CD
     dialogueEvent:
       Guid:
@@ -125942,7 +125987,8 @@ MonoBehaviour:
         Data4: -1097408047
       Path: event:/Dialogue/Nivel 3/Trump/t
     subtitle: Hey, that was a gift from my special someone!
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 2
   - id: Epsti
     dialogueEvent:
       Guid:
@@ -125953,7 +125999,8 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks15_2
     subtitle: Honestly, I'm trying to destroy them, but there are too many. So...
       thanks, that was amazing
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 2
   - id: Nocares
     dialogueEvent:
       Guid:
@@ -125963,7 +126010,8 @@ MonoBehaviour:
         Data4: -1293119385
       Path: event:/Dialogue/Nivel 3/Trump/t_02
     subtitle: Bah, I don't care about that.
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 2
   - id: kombat
     dialogueEvent:
       Guid:
@@ -125974,7 +126022,8 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 3/Trump/t_04
     subtitle: "My evidence! My proof for Congress! Without that, how am I supposed
       to prove that red pixels corrupt children that i\u2019ve been fucking"
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 2
   - id: JOEY
     dialogueEvent:
       Guid:
@@ -125985,7 +126034,8 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 3/Trump/trump
     subtitle: My masterpiece! Hours of Joe Lieberman shouting 'think of the children'!
       That was art!
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 2
   - id: Trap
     dialogueEvent:
       Guid:
@@ -125996,7 +126046,8 @@ MonoBehaviour:
       Path: event:/Dialogue/Nivel 3/Trump/t_06
     subtitle: No! That's the original copy we used to cause the panic! Now how am
       I supposed to blame the digital vampires?
-    showSubtitle: 0
+    showSubtitle: 1
+    subtitleDuration: 2
   startA: 
   startB: 
   startC: 
