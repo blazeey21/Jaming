@@ -642,16 +642,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.3
+  floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 1018262660
-      Data2: 1283633708
-      Data3: -1418956119
-      Data4: -530662935
-    Path: event:/SFX/nivel 3/rompermadera
+      Data1: 945984033
+      Data2: 1090509562
+      Data3: 1441393564
+      Data4: -805565005
+    Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
       Data1: -1042797983
@@ -1265,8 +1265,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
@@ -6817,16 +6817,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.3
+  floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 1018262660
-      Data2: 1283633708
-      Data3: -1418956119
-      Data4: -530662935
-    Path: event:/SFX/nivel 3/rompermadera
+      Data1: 945984033
+      Data2: 1090509562
+      Data3: 1441393564
+      Data4: -805565005
+    Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
       Data1: 0
@@ -25035,16 +25035,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
+  timeToDestroy: 0.3
+  floorCheckDelay: 0.22
+  prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 1018262660
-      Data2: 1283633708
-      Data3: -1418956119
-      Data4: -530662935
-    Path: event:/SFX/nivel 3/rompermadera
+      Data1: 945984033
+      Data2: 1090509562
+      Data3: 1441393564
+      Data4: -805565005
+    Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
       Data1: 977470110
@@ -25639,16 +25639,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.3
+  floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 1018262660
-      Data2: 1283633708
-      Data3: -1418956119
-      Data4: -530662935
-    Path: event:/SFX/nivel 3/rompermadera
+      Data1: 945984033
+      Data2: 1090509562
+      Data3: 1441393564
+      Data4: -805565005
+    Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
       Data1: 977470110
@@ -28797,16 +28797,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.3
+  floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 1018262660
-      Data2: 1283633708
-      Data3: -1418956119
-      Data4: -530662935
-    Path: event:/SFX/nivel 3/rompermadera
+      Data1: 945984033
+      Data2: 1090509562
+      Data3: 1441393564
+      Data4: -805565005
+    Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
       Data1: 977470110
@@ -29003,16 +29003,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.3
+  floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 945984033
+      Data2: 1090509562
+      Data3: 1441393564
+      Data4: -805565005
+    Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
       Data1: 0
@@ -35504,16 +35504,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.3
+  floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 1018262660
-      Data2: 1283633708
-      Data3: -1418956119
-      Data4: -530662935
-    Path: event:/SFX/nivel 3/rompermadera
+      Data1: 945984033
+      Data2: 1090509562
+      Data3: 1441393564
+      Data4: -805565005
+    Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
       Data1: 667744343
@@ -47706,8 +47706,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
@@ -48772,9 +48772,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
+  prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -54400,7 +54400,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4a04d8266ca9de44f8c25f7f5b56f3a4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: daa62ff0d9aeed744b6592e50890b762, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.32941177}
   m_FlipX: 0
   m_FlipY: 0
@@ -55864,16 +55864,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
+  timeToDestroy: 0.3
+  floorCheckDelay: 0.22
+  prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 1018262660
-      Data2: 1283633708
-      Data3: -1418956119
-      Data4: -530662935
-    Path: event:/SFX/nivel 3/rompermadera
+      Data1: 945984033
+      Data2: 1090509562
+      Data3: 1441393564
+      Data4: -805565005
+    Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
       Data1: 977470110
@@ -57933,8 +57933,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
@@ -58663,16 +58663,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.3
+  floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 1018262660
-      Data2: 1283633708
-      Data3: -1418956119
-      Data4: -530662935
-    Path: event:/SFX/nivel 3/rompermadera
+      Data1: 945984033
+      Data2: 1090509562
+      Data3: 1441393564
+      Data4: -805565005
+    Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
       Data1: 667744343
@@ -65316,8 +65316,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
@@ -72417,9 +72417,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
+  prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -73000,16 +73000,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.3
+  floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 1018262660
-      Data2: 1283633708
-      Data3: -1418956119
-      Data4: -530662935
-    Path: event:/SFX/nivel 3/rompermadera
+      Data1: 945984033
+      Data2: 1090509562
+      Data3: 1441393564
+      Data4: -805565005
+    Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
       Data1: 667744343
@@ -82409,8 +82409,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
@@ -88742,16 +88742,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.3
+  floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 1018262660
-      Data2: 1283633708
-      Data3: -1418956119
-      Data4: -530662935
-    Path: event:/SFX/nivel 3/rompermadera
+      Data1: 945984033
+      Data2: 1090509562
+      Data3: 1441393564
+      Data4: -805565005
+    Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
       Data1: 667744343
@@ -88916,16 +88916,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.3
+  floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 1018262660
-      Data2: 1283633708
-      Data3: -1418956119
-      Data4: -530662935
-    Path: event:/SFX/nivel 3/rompermadera
+      Data1: 945984033
+      Data2: 1090509562
+      Data3: 1441393564
+      Data4: -805565005
+    Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
       Data1: 977470110
@@ -103398,7 +103398,7 @@ GameObject:
   - component: {fileID: 3469287838346732965}
   - component: {fileID: 3469287838346732964}
   - component: {fileID: 3469287838346732963}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Altar
   m_TagString: ObjectosCrumpsBad
   m_Icon: {fileID: 0}
@@ -119488,16 +119488,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 945984033
-      Data2: 1090509562
-      Data3: 1441393564
-      Data4: -805565005
-    Path: event:/SFX/nivel 3/rompercristales
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
       Data1: -1671348161
@@ -119797,16 +119797,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
       Data1: 0
@@ -119975,16 +119975,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 945984033
-      Data2: 1090509562
-      Data3: 1441393564
-      Data4: -805565005
-    Path: event:/SFX/nivel 3/rompercristales
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
       Data1: -2118111382
@@ -120209,16 +120209,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
+  prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: -1968334749
-      Data2: 1317611904
-      Data3: 1720174254
-      Data4: 422571248
-    Path: event:/SFX/nivel 3/pasosmoq
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
       Data1: 0
@@ -120673,8 +120673,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
@@ -120888,16 +120888,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 945984033
-      Data2: 1090509562
-      Data3: 1441393564
-      Data4: -805565005
-    Path: event:/SFX/nivel 3/rompercristales
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
       Data1: -1671348161
@@ -121176,16 +121176,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
       Data1: 0
@@ -121294,16 +121294,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.3
+  floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 1018262660
-      Data2: 1283633708
-      Data3: -1418956119
-      Data4: -530662935
-    Path: event:/SFX/nivel 3/rompermadera
+      Data1: 945984033
+      Data2: 1090509562
+      Data3: 1441393564
+      Data4: -805565005
+    Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
       Data1: 667744343
@@ -121383,16 +121383,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 1944277455376878916, guid: c9b30df22cf247641a2135ab5c55643c, type: 3}
+  timeToDestroy: 0.3
+  floorCheckDelay: 0.22
+  prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 1018262660
-      Data2: 1283633708
-      Data3: -1418956119
-      Data4: -530662935
-    Path: event:/SFX/nivel 3/rompermadera
+      Data1: 945984033
+      Data2: 1090509562
+      Data3: 1441393564
+      Data4: -805565005
+    Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
       Data1: -1042797983
@@ -121631,16 +121631,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.3
+  floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 1018262660
-      Data2: 1283633708
-      Data3: -1418956119
-      Data4: -530662935
-    Path: event:/SFX/nivel 3/rompermadera
+      Data1: 945984033
+      Data2: 1090509562
+      Data3: 1441393564
+      Data4: -805565005
+    Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
       Data1: 0
@@ -121784,8 +121784,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
@@ -121929,16 +121929,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
+  prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 945984033
-      Data2: 1090509562
-      Data3: 1441393564
-      Data4: -805565005
-    Path: event:/SFX/nivel 3/rompercristales
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
       Data1: -1671348161
@@ -122018,8 +122018,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
@@ -122548,16 +122548,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.1
-  floorCheckDelay: 2
-  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
+  prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 945984033
-      Data2: 1090509562
-      Data3: 1441393564
-      Data4: -805565005
-    Path: event:/SFX/nivel 3/rompercristales
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
       Data1: -1842266484
@@ -125737,16 +125737,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 3
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 945984033
-      Data2: 1090509562
-      Data3: 1441393564
-      Data4: -805565005
-    Path: event:/SFX/nivel 3/rompercristales
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
       Data1: -1939846174
@@ -127750,16 +127750,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.1
-  floorCheckDelay: 2
-  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
+  prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 945984033
-      Data2: 1090509562
-      Data3: 1441393564
-      Data4: -805565005
-    Path: event:/SFX/nivel 3/rompercristales
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
       Data1: -1692798168
@@ -128457,16 +128457,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 3
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 945984033
-      Data2: 1090509562
-      Data3: 1441393564
-      Data4: -805565005
-    Path: event:/SFX/nivel 3/rompercristales
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
       Data1: -1939846174
