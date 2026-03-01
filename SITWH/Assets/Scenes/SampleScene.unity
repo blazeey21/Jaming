@@ -19810,6 +19810,13 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 6805858867419907508, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
   Cerra: {fileID: 349183690}
+  ambienceEvent:
+    Guid:
+      Data1: 659100334
+      Data2: 1297215658
+      Data3: 1994869409
+      Data4: 589370291
+    Path: event:/SFX/nivel 1/abrirpuerta
 --- !u!1 &352304446
 GameObject:
   m_ObjectHideFlags: 0
@@ -49067,7 +49074,7 @@ GameObject:
   - component: {fileID: 988697140}
   - component: {fileID: 988697139}
   - component: {fileID: 988697138}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tamb (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81081,6 +81088,13 @@ MonoBehaviour:
   targetLight: {fileID: 1102414921}
   lightFinalIntensity: 0.01
   objectToDisable: {fileID: 1054237290}
+  ambienceEvent:
+    Guid:
+      Data1: 659100334
+      Data2: 1297215658
+      Data3: 1994869409
+      Data4: 589370291
+    Path: event:/SFX/nivel 1/abrirpuerta
 --- !u!65 &1768738915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -96818,8 +96832,8 @@ Transform:
   m_GameObject: {fileID: 739702057301874017}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000011403656, y: -0.7071069, z: -0.7071067, w: 0}
-  m_LocalPosition: {x: 0.064, y: 0, z: 0.384}
-  m_LocalScale: {x: 0.95217454, y: 0.9521747, z: 0.9521747}
+  m_LocalPosition: {x: -0.15, y: -0, z: 0.33}
+  m_LocalScale: {x: 1.0966974, y: 1.0532005, z: 1.0532005}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1768738912}

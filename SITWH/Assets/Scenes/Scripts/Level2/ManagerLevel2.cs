@@ -28,6 +28,7 @@ public class ManagerLevel2 : MonoBehaviour
     private bool panelActivo = false;
     private bool validado = false;
 
+    public FMODUnity.EventReference ambienceEvent;
     private void Start()
     {
         for (int i = 0; i < 4; i++)
@@ -264,6 +265,7 @@ public class ManagerLevel2 : MonoBehaviour
                 if (anim != null)
                 {
                     anim.SetBool("Open", true);
+                    FMODUnity.RuntimeManager.PlayOneShot(ambienceEvent);
                 }
                 //GetComponent<MeshRenderer>().enabled = false;
                 StartCoroutine(DestruirPanelDespuesDeTiempo());

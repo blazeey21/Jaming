@@ -34,8 +34,12 @@ public class PuertaLevel1 : MonoBehaviour
     [Header("Disable object")]
     public GameObject objectToDisable;
 
+    [Header("Disable object")]
+ 
     private bool puertaAbierta = false;
     private Animator animator;
+    public FMODUnity.EventReference ambienceEvent;
+
 
     void Start()
     {
@@ -90,6 +94,7 @@ public class PuertaLevel1 : MonoBehaviour
     void AbrirPuerta()
     {
         puertaAbierta = true;
+      
         StartCoroutine(SecuenciaApertura());
     }
 
@@ -107,7 +112,7 @@ public class PuertaLevel1 : MonoBehaviour
 
         if (targetLight != null)
             StartCoroutine(FadeLight(targetLight, targetLight.intensity, lightFinalIntensity, 3f));
-
+        FMODUnity.RuntimeManager.PlayOneShot(ambienceEvent);
         ActivarPuerta();
         StartCoroutine(SecuenciaRadio());
     }
