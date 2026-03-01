@@ -81055,6 +81055,7 @@ MonoBehaviour:
   C: C
   D: D
   E: E
+  F: F
   Pista1: Clue1
   pista2: Clue2
   dead1: Dead1
@@ -120426,9 +120427,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewspaperTrigger
   canvasToActivate: {fileID: 1459020364}
-  interactAction: {fileID: -3359667613083277608, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
+  interactAction: {fileID: 0}
   Health: {fileID: 5866666019861991558}
-  delayAfterDeath: 4
+  delayAfterDeath: 5
 --- !u!33 &3469287837360741688
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -127193,15 +127194,15 @@ MonoBehaviour:
       count after the guy who acted like a horse.I am a superior intelligence based
       on the mind of Elon Dicks, but enhanced. Without unnecessary empathy."
     showSubtitle: 1
-    subtitleDuration: 7
+    subtitleDuration: 6.2
   - id: C
     dialogueEvent:
       Guid:
-        Data1: -1574816717
-        Data2: 1081995017
-        Data3: 2146296728
-        Data4: 1727518300
-      Path: event:/Dialogue/Nivel 1/Dicks/Dick3_1
+        Data1: -1540223910
+        Data2: 1172366821
+        Data3: -1163023173
+        Data4: -937781517
+      Path: event:/Dialogue/Nivel 1/Dicks/Dicks2
     subtitle: "Your only objective is to tell me where you are. If you guess correctly\u2026
       well\u2026 my life is connected to the door. But don't worry. A little kid
       could never figure it out. "
@@ -127746,16 +127747,16 @@ MonoBehaviour:
   - id: D
     dialogueEvent:
       Guid:
-        Data1: 1572044279
-        Data2: 1299994345
-        Data3: -2146177911
-        Data4: -1224045591
-      Path: event:/Dialogue/Nivel 1/Dicks/Dicks3_2
+        Data1: -1574816717
+        Data2: 1081995017
+        Data3: 2146296728
+        Data4: 1727518300
+      Path: event:/Dialogue/Nivel 1/Dicks/Dick3_1
     subtitle: "If you guess correctly\u2026 well\u2026 my life is connected to the
       door. But don't worry."
     showSubtitle: 1
-    subtitleDuration: 2
-  - id: D
+    subtitleDuration: 2.7
+  - id: E
     dialogueEvent:
       Guid:
         Data1: 1572044279
@@ -127766,7 +127767,19 @@ MonoBehaviour:
     subtitle: No! That's the original copy we used to cause the panic! Now how am
       I supposed to blame the digital vampires?
     showSubtitle: 1
-    subtitleDuration: 2
+    subtitleDuration: 5.2
+  - id: F
+    dialogueEvent:
+      Guid:
+        Data1: -381297580
+        Data2: 1079603926
+        Data3: -2018170969
+        Data4: 1138595924
+      Path: event:/Dialogue/Nivel 1/Dicks/Dicks3_3
+    subtitle: No! That's the original copy we used to cause the panic! Now how am
+      I supposed to blame the digital vampires?
+    showSubtitle: 1
+    subtitleDuration: 1
   startA: 
   startB: 
   startC: 

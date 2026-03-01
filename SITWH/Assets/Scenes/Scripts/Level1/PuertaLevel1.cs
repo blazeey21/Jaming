@@ -15,6 +15,7 @@ public class PuertaLevel1 : MonoBehaviour
     public string C;
     public string D;
     public string E;
+    public string F;
     public string Pista1;
     public string pista2;
 
@@ -66,9 +67,10 @@ public class PuertaLevel1 : MonoBehaviour
         yield return PlayAndWait(C);
         yield return PlayAndWait(D);
         yield return PlayAndWait(E);
-        yield return new WaitForSeconds(4f);
+        yield return PlayAndWait(F);
+        yield return new WaitForSeconds(2f);
         yield return PlayAndWait(Pista1);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         yield return PlayAndWait(pista2);
     }
 
