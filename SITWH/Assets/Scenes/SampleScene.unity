@@ -7804,18 +7804,18 @@ MonoBehaviour:
   prefabDeParticulas: {fileID: 1797844696}
   fmodEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 977470110
+      Data2: 1185415281
+      Data3: -549725553
+      Data4: -1293119385
+    Path: event:/Dialogue/Nivel 3/Trump/t_02
 --- !u!1 &201392782
 GameObject:
   m_ObjectHideFlags: 0
@@ -120445,11 +120445,11 @@ MonoBehaviour:
   prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
   fmodEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1968334749
+      Data2: 1317611904
+      Data3: 1720174254
+      Data4: 422571248
+    Path: event:/SFX/nivel 3/pasosmoq
   audioDespuesDeRomper:
     Guid:
       Data1: 0
