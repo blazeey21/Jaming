@@ -12,6 +12,12 @@ public class PuertaLevel1 : MonoBehaviour
     public GameObject efectoMagiaPrefab;
     public EventReference fmodEvent;
 
+    [Header("Start Sec")]
+    public EventReference A;
+    public EventReference B;
+    public EventReference C;
+    public EventReference Pista1;    
+    public EventReference pista2;
     [Header("Dead sequence")]
     public EventReference dead1;
     public EventReference dead2;
@@ -36,6 +42,32 @@ public class PuertaLevel1 : MonoBehaviour
 
         if (triggerSitio == null)
             triggerSitio = GameObject.Find("TriggerSitio")?.GetComponent<SingleTrigger>();
+       
+            StartCoroutine(SecuenciaInicio());
+        
+
+    }
+    IEnumerator PlayAndWait(EventReference ev)
+    {
+        if (ev.IsNull) yield break;
+
+        var instance = FMODUnity.RuntimeManager.CreateInstance(ev);
+
+        instance.getDescription(out FMOD.Studio.EventDescription desc);
+        desc.getLength(out int lengthMs);
+
+        instance.start();
+        instance.release();
+
+        yield return new WaitForSeconds(lengthMs / 1000f);
+    }
+    IEnumerator SecuenciaInicio()
+    {
+        yield return PlayAndWait(A);
+        yield return PlayAndWait(B);
+        yield return PlayAndWait(C);
+        yield return PlayAndWait(Pista1);
+        yield return PlayAndWait(pista2);
     }
 
     void Update()
@@ -128,15 +160,17 @@ public class PuertaLevel1 : MonoBehaviour
     IEnumerator FadeLight(Light l, float from, float to, float time)
     {
         float t = 0f;
+
         while (t < time)
         {
             t += Time.deltaTime;
             l.intensity = Mathf.Lerp(from, to, t / time);
             yield return null;
         }
-        l.intensity = to;
-    }
 
+        l.intensity = to;
+        l.enabled = false;
+    }
     void OnGUI()
     {
        

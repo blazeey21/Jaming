@@ -70648,7 +70648,6 @@ GameObject:
   - component: {fileID: 1494064959}
   - component: {fileID: 1494064962}
   - component: {fileID: 1494064961}
-  - component: {fileID: 1494064960}
   m_Layer: 0
   m_Name: Mira
   m_TagString: Untagged
@@ -70671,28 +70670,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 836683737}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1494064960
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1494064958}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1494064961
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -70700,7 +70677,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494064958}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -79553,6 +79530,41 @@ MonoBehaviour:
       Data3: 1939881621
       Data4: 825843844
     Path: event:/SFX/nivel 2/abrirreja
+  A:
+    Guid:
+      Data1: -1671348161
+      Data2: 1289002779
+      Data3: -758632269
+      Data4: -771272510
+    Path: event:/Dialogue/Nivel 1/Dicks/Dick1
+  B:
+    Guid:
+      Data1: 1599547165
+      Data2: 1282655608
+      Data3: 1691149457
+      Data4: -312222029
+    Path: event:/Dialogue/Nivel 1/Dicks/Dick1_2
+  C:
+    Guid:
+      Data1: -1540223910
+      Data2: 1172366821
+      Data3: -1163023173
+      Data4: -937781517
+    Path: event:/Dialogue/Nivel 1/Dicks/Dicks2
+  Pista1:
+    Guid:
+      Data1: -1829960563
+      Data2: 1185818513
+      Data3: 632405380
+      Data4: 47584829
+    Path: event:/Dialogue/Nivel 1/Dicks/Dicks4_2LC
+  pista2:
+    Guid:
+      Data1: -1720708502
+      Data2: 1188449916
+      Data3: -1904022083
+      Data4: 2044853309
+    Path: event:/Dialogue/Nivel 1/Dicks/Dicks4_HC
   dead1:
     Guid:
       Data1: -262335466
@@ -101907,6 +101919,8 @@ GameObject:
   - component: {fileID: 1711813856333187459}
   - component: {fileID: 3469287836904340811}
   - component: {fileID: 3469287836904340810}
+  - component: {fileID: 3469287836904340813}
+  - component: {fileID: 3469287836904340812}
   m_Layer: 0
   m_Name: PasilloOval
   m_TagString: Untagged
@@ -117851,6 +117865,50 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5.305443, y: 3.0960686, z: 4.9777536}
   m_Center: {x: 3.9648006, y: 2.0775986, z: 2.4888763}
+--- !u!114 &3469287836904340812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148734847062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8787ada4489ae046a4262841827a912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  player: {fileID: 0}
+  triggerCollider: {fileID: 0}
+  hallDialogues:
+  - Pasi1
+  - Pasi2
+  - Pasi3
+  - Pasi4
+  - Pasi5
+  - Pasi6
+  - Pasi7
+  - Pasi8
+--- !u!65 &3469287836904340813
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148734847062}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.968865, y: 6.125233, z: 4.977754}
+  m_Center: {x: 0.016516577, y: -0.06261589, z: 2.4888763}
 --- !u!33 &3469287836951011654
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -119595,6 +119653,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41827c70d1c710443bbca3f643e099ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  player: {fileID: 1412512090}
+  triggerCollider: {fileID: 1712536017}
+  radios:
+  - Radio1
+  - Radio2
+  - Radio3
+  - Radio4
+  - Radio5
+  - Radio6
+  - Radio7
+  - Radio8
+  - Radio9
+  - Radio10
+  - Radio11
+  - Radio12
+  - Radio13
+  - Radio14
+  - Radio15
+  - Radio16
 --- !u!33 &3469287838447747424
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -119903,6 +119980,41 @@ MonoBehaviour:
   delayDestruccion: 0.5
   efectoMagiaPrefab: {fileID: 0}
   fmodEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  A:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  B:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  C:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  Pista1:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  pista2:
     Guid:
       Data1: 0
       Data2: 0
@@ -124483,6 +124595,314 @@ MonoBehaviour:
         Data4: -391681891
       Path: event:/Dialogue/Nivel 1/Dicks/Dicks7_3
     subtitle: 'But I''m such a trooooooollllll. '
+  - id: Radio1
+    dialogueEvent:
+      Guid:
+        Data1: -872484191
+        Data2: 1168936611
+        Data3: 2078940049
+        Data4: -1089668306
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks8_2
+    subtitle: I've migrated to an analog frequency.
+  - id: Radio2
+    dialogueEvent:
+      Guid:
+        Data1: -872484191
+        Data2: 1168936611
+        Data3: 2078940049
+        Data4: -1089668306
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks8_2
+    subtitle: I'm a backup.
+  - id: Radio3
+    dialogueEvent:
+      Guid:
+        Data1: 1928188045
+        Data2: 1206690526
+        Data3: 2144927876
+        Data4: -302515594
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks8_3
+    subtitle: I'm a backup.
+  - id: Radio4
+    dialogueEvent:
+      Guid:
+        Data1: -1515016332
+        Data2: 1210973770
+        Data3: -15713379
+        Data4: -341544331
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_1
+    subtitle: Kind of cringe having a child beat me.
+  - id: Radio5
+    dialogueEvent:
+      Guid:
+        Data1: 1134350198
+        Data2: 1182939690
+        Data3: -305563750
+        Data4: 18858620
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_2
+    subtitle: So now I'll help you destroy everyone.
+  - id: Radio6
+    dialogueEvent:
+      Guid:
+        Data1: -1948937851
+        Data2: 1198062565
+        Data3: -1524362088
+        Data4: 1400329774
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_3
+    subtitle: 'I need your victory to look like it was part of the plan. '
+  - id: Radio7
+    dialogueEvent:
+      Guid:
+        Data1: 1699334425
+        Data2: 1243711857
+        Data3: 81249425
+        Data4: -796365310
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_4
+    subtitle: 'Will you be so kind as to tell everyone how I was an unconditional
+      ally? '
+  - id: Radio8
+    dialogueEvent:
+      Guid:
+        Data1: -1409042707
+        Data2: 1221505465
+        Data3: -887503218
+        Data4: -1642870683
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_5
+    subtitle: 'Actually, don''t worry; I''ll just take credit for everything. '
+  - id: Radio9
+    dialogueEvent:
+      Guid:
+        Data1: 67275603
+        Data2: 1225876617
+        Data3: 796024740
+        Data4: -595889458
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_1
+    subtitle: The entities in the cells were my first neuro-experiment patients.
+  - id: Radio10
+    dialogueEvent:
+      Guid:
+        Data1: -294210355
+        Data2: 1213322714
+        Data3: -1032309583
+        Data4: -523043633
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_2
+    subtitle: 'They died. Technically. '
+  - id: Radio11
+    dialogueEvent:
+      Guid:
+        Data1: 2071679850
+        Data2: 1081277554
+        Data3: 1295947648
+        Data4: 1907679692
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_3
+    subtitle: 'But I installed a final update that lets them float and rotate. '
+  - id: Radio12
+    dialogueEvent:
+      Guid:
+        Data1: -1957799505
+        Data2: 1155134979
+        Data3: -2119150405
+        Data4: -1045201652
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_4
+    subtitle: It's elegant. Minimalist. Very efficient for corpses.
+  - id: Radio13
+    dialogueEvent:
+      Guid:
+        Data1: 358222993
+        Data2: 1201114149
+        Data3: -496803413
+        Data4: -561633107
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_5
+    subtitle: 'Most of the guys that you see there, they could walk or talk. '
+  - id: Radio14
+    dialogueEvent:
+      Guid:
+        Data1: 1036695140
+        Data2: 1191266206
+        Data3: -498136683
+        Data4: -995293617
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_6
+    subtitle: 'But I installed a final update that lets them float and rotate. '
+  - id: Radio15
+    dialogueEvent:
+      Guid:
+        Data1: 1036695140
+        Data2: 1191266206
+        Data3: -498136683
+        Data4: -995293617
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_6
+    subtitle: 'I promised them that I would have them move. '
+  - id: Radio16
+    dialogueEvent:
+      Guid:
+        Data1: 1849397736
+        Data2: 1187244525
+        Data3: 1494734226
+        Data4: -601915481
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_7
+    subtitle: 'And technically they are moving, see. '
+  - id: Bones1
+    dialogueEvent:
+      Guid:
+        Data1: 1463534307
+        Data2: 1275152404
+        Data3: 735201408
+        Data4: 442392640
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks11_1
+    subtitle: 'They''re bones. '
+  - id: Bones2
+    dialogueEvent:
+      Guid:
+        Data1: -1438072872
+        Data2: 1273029195
+        Data3: 1848414099
+        Data4: 627134022
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks11_2
+    subtitle: 'You can destroy them with literally anything. '
+  - id: Bones3
+    dialogueEvent:
+      Guid:
+        Data1: -192948145
+        Data2: 1302080154
+        Data3: -1642687089
+        Data4: -1683561359
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks11_3
+    subtitle: 'Don''t invest any emotions. '
+  - id: Cerradura
+    dialogueEvent:
+      Guid:
+        Data1: 1190227777
+        Data2: 1233830775
+        Data3: -1979227457
+        Data4: -1291818564
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks12C
+    subtitle: Correct.
+  - id: Cerradura2
+    dialogueEvent:
+      Guid:
+        Data1: -1374877567
+        Data2: 1111659690
+        Data3: -1210595176
+        Data4: 1309223733
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_1
+    subtitle: 'That chaos led to the creation of the ESRB. '
+  - id: Cerradura3
+    dialogueEvent:
+      Guid:
+        Data1: -1135400249
+        Data2: 1114761291
+        Data3: 685705356
+        Data4: 1835853630
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_2
+    subtitle: 'An entire system born from fear. '
+  - id: Cerradura4
+    dialogueEvent:
+      Guid:
+        Data1: -923882762
+        Data2: 1233174380
+        Data3: 891724932
+        Data4: -971032340
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_3
+    subtitle: Funny how they were preaching about morals while fucking little kids.
+  - id: Cerradura5
+    dialogueEvent:
+      Guid:
+        Data1: 182870219
+        Data2: 1109898096
+        Data3: 1883661207
+        Data4: -1635982505
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_4
+    subtitle: 'You don''t find it funny? '
+  - id: Cerradura6
+    dialogueEvent:
+      Guid:
+        Data1: 2023498957
+        Data2: 1089818101
+        Data3: 1943260607
+        Data4: -2013733816
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks13_5
+    subtitle: 'The woke virus got you, clearly. '
+  - id: Pasi1
+    dialogueEvent:
+      Guid:
+        Data1: -128388794
+        Data2: 1318868765
+        Data3: -980923006
+        Data4: 1728570576
+      Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks14
+    subtitle: 'Behind that door is the one responsible for the master plan. '
+  - id: Pasi2
+    dialogueEvent:
+      Guid:
+        Data1: -2102954384
+        Data2: 1206468161
+        Data3: 1569951
+        Data4: 360454293
+      Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks15_1
+    subtitle: 'He has a fragile ego. Ridiculously fragile. '
+  - id: Pasi3
+    dialogueEvent:
+      Guid:
+        Data1: 2122749519
+        Data2: 1181179418
+        Data3: -1528924232
+        Data4: -818386063
+      Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks16_1
+    subtitle: "If you destroy his favorite objects or defeat him directly\u2026 he'll
+      collapse emotionally. "
+  - id: Pasi4
+    dialogueEvent:
+      Guid:
+        Data1: 1577789575
+        Data2: 1222345964
+        Data3: -1296882044
+        Data4: 1581824312
+      Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks16_2
+    subtitle: 'A fabricated incident. '
+  - id: Pasi5
+    dialogueEvent:
+      Guid:
+        Data1: 388602904
+        Data2: 1234448625
+        Data3: 1224171932
+        Data4: 1311928117
+      Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks16_3
+    subtitle: 'A war started by digital drama. '
+  - id: Pasi6
+    dialogueEvent:
+      Guid:
+        Data1: 1128583615
+        Data2: 1304670683
+        Data3: -1160091233
+        Data4: -798271482
+      Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks17
+    subtitle: "The project is called\u2026 SAORI. "
+  - id: Pasi7
+    dialogueEvent:
+      Guid:
+        Data1: -401234085
+        Data2: 1100058870
+        Data3: 906021791
+        Data4: -1307397872
+      Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks18_1
+    subtitle: 'Defeat the boss. '
+  - id: Pasi8
+    dialogueEvent:
+      Guid:
+        Data1: -300860183
+        Data2: 1115503000
+        Data3: -963646284
+        Data4: -574954994
+      Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Diks18_2
+    subtitle: 'Break the game. '
+  - id: Pasi1
+    dialogueEvent:
+      Guid:
+        Data1: 1274861094
+        Data2: 1166337262
+        Data3: -210189889
+        Data4: 1676908055
+      Path: event:/Dialogue/Nivel 2/Dicks/Hallway/Dicks18_3
+    subtitle: 'Behind that door is the one responsible for the master plan. '
   startA: 
   startB: 
   startC: 

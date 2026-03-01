@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class ElonRadip : MonoBehaviour
+public class Hallmessage : MonoBehaviour
 {
     [Header("Player")]
     public Transform player;
@@ -9,28 +9,9 @@ public class ElonRadip : MonoBehaviour
     [Header("Trigger Collider")]
     public Collider triggerCollider;
 
-    [Header("Sequence IDs")]
-    public string[] radios =
-    {
-        "Radio1",
-        "Radio2",
-        "Radio3",
-        "Radio4",
-        "Radio5",
-        "Radio6",
-        "Radio7",
-        "Radio8",
-        "Radio9",
-        "Radio10",
-        "Radio11",
-        "Radio12",
-        "Radio13",
-        "Radio14",
-        "Radio15",
-        "Radio16"
-    };
-
-    bool activado = false;
+    [Header("Dialogue Sequence IDs")]
+    public string[] hallDialogues; 
+    private bool activado = false;
 
     void OnTriggerEnter(Collider other)
     {
@@ -39,13 +20,13 @@ public class ElonRadip : MonoBehaviour
         if (player != null && triggerCollider != null && other == triggerCollider)
         {
             activado = true;
-            StartCoroutine(SecuenciaCerraduras());
+            StartCoroutine(SecuenciaHall());
         }
     }
 
-    IEnumerator SecuenciaCerraduras()
+    IEnumerator SecuenciaHall()
     {
-        foreach (var id in radios)
+        foreach (var id in hallDialogues)
         {
             yield return StartCoroutine(PlayAndWait(id));
         }

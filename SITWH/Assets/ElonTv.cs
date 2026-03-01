@@ -88,4 +88,28 @@ public class ElonTv : MonoBehaviour
 
         yield return new WaitForSeconds(lengthMs / 1000f);
     }
+    public IEnumerator PlayAndReturnRoutine(string id)
+    {
+        if (!lookup.ContainsKey(id)) yield break;
+
+        var line = lookup[id];
+
+        var instance = FMODUnity.RuntimeManager.CreateInstance(line.dialogueEvent);
+
+        if (audioFollowTarget != null)
+            instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(audioFollowTarget));
+
+        instance.setVolume(volume);
+
+        instance.getDescription(out FMOD.Studio.EventDescription desc);
+        desc.getLength(out int lengthMs);
+
+        instance.start();
+        instance.release();
+
+        if (SubtitleManager.Instance != null)
+            SubtitleManager.Instance.Show(line.subtitle, lengthMs / 1000f);
+
+        yield return new WaitForSeconds(lengthMs / 1000f);
+    }
 }
