@@ -1,83 +1,34 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
-using System.Collections.Generic;
 
 public class SubtitleManager : MonoBehaviour
 {
     public static SubtitleManager Instance;
-
-    [Header("UI")]
     public GameObject panel;
     public TextMeshProUGUI subtitleText;
-
-    Queue<SubtitleData> queue = new Queue<SubtitleData>();
-    Coroutine playRoutine;
-    bool isPlaying = false;
-
-    struct SubtitleData
-    {
-        public string text;
-        public float duration;
-
-        public SubtitleData(string t, float d)
-        {
-            text = t;
-            duration = d;
-        }
-    }
+    Coroutine routine;
 
     void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
         Instance = this;
     }
 
-    public void Show(string text, float duration)
+    public void ShowWhileAudio(string text, AudioSource source)
     {
-        queue.Enqueue(new SubtitleData(text, duration));
-
-        if (!isPlaying)
-            playRoutine = StartCoroutine(ProcessQueue());
+        if (routine != null) StopCoroutine(routine);
+        routine = StartCoroutine(ShowRoutine(text, source));
     }
 
-    IEnumerator ProcessQueue()
+    IEnumerator ShowRoutine(string text, AudioSource source)
     {
-        isPlaying = true;
-
         panel.SetActive(true);
+        subtitleText.text = text;
+        subtitleText.gameObject.SetActive(true);
 
-        while (queue.Count > 0)
-        {
-            var sub = queue.Dequeue();
-
-            subtitleText.text = sub.text;
-            subtitleText.gameObject.SetActive(true);
-
-            yield return new WaitForSecondsRealtime(sub.duration);
-        }
+        yield return new WaitWhile(() => source != null && source.isPlaying);
 
         subtitleText.gameObject.SetActive(false);
         panel.SetActive(false);
-
-        isPlaying = false;
-    }
-
-    public void Clear()
-    {
-        queue.Clear();
-
-        if (playRoutine != null)
-            StopCoroutine(playRoutine);
-
-        subtitleText.gameObject.SetActive(false);
-        panel.SetActive(false);
-
-        isPlaying = false;
     }
 }
