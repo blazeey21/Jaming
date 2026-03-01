@@ -9,6 +9,7 @@ public class NewspaperTrigger : MonoBehaviour
     [SerializeField] public  CrumpsLogic Health; // Referencia a tu script de vida
     [SerializeField] private float delayAfterDeath = 2f; // Segundos antes de permitir interacción
 
+    public FMODUnity.EventReference ambienceEvent;
     private bool canInteract = false;
 
     private void OnEnable()
@@ -49,6 +50,7 @@ public class NewspaperTrigger : MonoBehaviour
         if (canInteract && canvasToActivate != null)
         {
             canvasToActivate.SetActive(true);
+            FMODUnity.RuntimeManager.PlayOneShot(ambienceEvent);
         }
     }
 }

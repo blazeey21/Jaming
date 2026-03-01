@@ -120427,9 +120427,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewspaperTrigger
   canvasToActivate: {fileID: 1459020364}
-  interactAction: {fileID: 0}
+  interactAction: {fileID: -3359667613083277608, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
   Health: {fileID: 5866666019861991558}
   delayAfterDeath: 5
+  ambienceEvent:
+    Guid:
+      Data1: 822738645
+      Data2: 1161319467
+      Data3: -1386712153
+      Data4: 1626366290
+    Path: event:/SFX/nivel 3/news
 --- !u!33 &3469287837360741688
 MeshFilter:
   m_ObjectHideFlags: 0
