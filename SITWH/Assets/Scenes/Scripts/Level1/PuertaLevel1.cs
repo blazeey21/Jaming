@@ -66,7 +66,9 @@ public class PuertaLevel1 : MonoBehaviour
         yield return PlayAndWait(A);
         yield return PlayAndWait(B);
         yield return PlayAndWait(C);
+        yield return new WaitForSeconds(4f);
         yield return PlayAndWait(Pista1);
+        yield return new WaitForSeconds(3f);
         yield return PlayAndWait(pista2);
     }
 

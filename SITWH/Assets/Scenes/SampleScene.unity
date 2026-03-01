@@ -73727,8 +73727,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 20.237103, y: 9.26295, z: 30.209795}
+  m_Center: {x: 1.3788891, y: 2.0472326, z: -6.008828}
 --- !u!1 &1719311610
 GameObject:
   m_ObjectHideFlags: 0
@@ -117893,7 +117893,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   player: {fileID: 1412512090}
-  triggerCollider: {fileID: 3469287836904340811}
   hallDialogues:
   - Pasi1
   - Pasi2
@@ -117922,8 +117921,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.968865, y: 6.125233, z: 4.977754}
-  m_Center: {x: 0.016516577, y: -0.06261589, z: 2.4888763}
+  m_Size: {x: 2.968865, y: 6.805743, z: 4.9777536}
+  m_Center: {x: 0.016516563, y: -0.402871, z: 2.4888763}
 --- !u!33 &3469287836951011654
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -119668,7 +119667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41827c70d1c710443bbca3f643e099ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  player: {fileID: 1412512090}
+  playerTag: Player
   triggerCollider: {fileID: 1712536017}
   radios:
   - Radio1
@@ -124613,11 +124612,11 @@ MonoBehaviour:
   - id: Radio1
     dialogueEvent:
       Guid:
-        Data1: -872484191
-        Data2: 1168936611
-        Data3: 2078940049
-        Data4: -1089668306
-      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks8_2
+        Data1: -222660447
+        Data2: 1107769951
+        Data3: 955944337
+        Data4: 801523398
+      Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks8_1
     subtitle: I've migrated to an analog frequency.
   - id: Radio2
     dialogueEvent:

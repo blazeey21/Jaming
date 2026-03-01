@@ -3,40 +3,26 @@ using System.Collections;
 
 public class ElonRadip : MonoBehaviour
 {
-    [Header("Player")]
-    public Transform player;
+    [Header("Player Tag")]
+    public string playerTag = "Player";
 
     [Header("Trigger Collider")]
-    public Collider triggerCollider;
+    public Collider triggerCollider; // Collider que activa la secuencia
 
     [Header("Sequence IDs")]
     public string[] radios =
     {
-        "Radio1",
-        "Radio2",
-        "Radio3",
-        "Radio4",
-        "Radio5",
-        "Radio6",
-        "Radio7",
-        "Radio8",
-        "Radio9",
-        "Radio10",
-        "Radio11",
-        "Radio12",
-        "Radio13",
-        "Radio14",
-        "Radio15",
-        "Radio16"
+        "Radio1","Radio2","Radio3","Radio4","Radio5","Radio6","Radio7","Radio8",
+        "Radio9","Radio10","Radio11","Radio12","Radio13","Radio14","Radio15","Radio16"
     };
 
-    bool activado = false;
+    private bool activado = false;
 
     void OnTriggerEnter(Collider other)
     {
         if (activado) return;
 
-        if (player != null && triggerCollider != null && other == triggerCollider)
+        if (other.CompareTag(playerTag) && triggerCollider != null && triggerCollider.bounds.Intersects(other.bounds))
         {
             activado = true;
             StartCoroutine(SecuenciaCerraduras());

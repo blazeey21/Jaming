@@ -6,18 +6,16 @@ public class Hallmessage : MonoBehaviour
     [Header("Player")]
     public Transform player;
 
-    [Header("Trigger Collider")]
-    public Collider triggerCollider;
-
     [Header("Dialogue Sequence IDs")]
-    public string[] hallDialogues; 
+    public string[] hallDialogues;
+
     private bool activado = false;
 
     void OnTriggerEnter(Collider other)
     {
         if (activado) return;
 
-        if (player != null && triggerCollider != null && other == triggerCollider)
+        if (player != null && other.transform == player)
         {
             activado = true;
             StartCoroutine(SecuenciaHall());

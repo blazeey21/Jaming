@@ -9,13 +9,188 @@
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 0
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000002846A74C6C8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000002846A74D3D8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
+[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] BankLoader::serializeBank                : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 146)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3928736
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 93600
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000BC8A77F148
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC4349DA60
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC4349DA20
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC4349DB40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC4349DC00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002824A8C60B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 4
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='dicks_1_2', format=5, channels=2, frequency=48000, lengthbytes=66784, lengthpcm=294912, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.896655.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3928736
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 93600
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000BC8A77F148
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC4349DA60
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC4349DA20
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC4349DB40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC4349DC00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000028426E44B08
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 4
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='dicks_2', format=5, channels=2, frequency=48000, lengthbytes=66144, lengthpcm=318327, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.880771.
+[LOG] SystemI::createSound                     : filename = FMOD/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::getAsyncThread              : index = 0 / 5
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000028498AB8DB8, queue head = 000002844F96FC48, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000028498AB8DB8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     filename = FMOD/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3928736
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 93600
+[LOG] AsyncThread::getAsyncThread              :     index = 0 / 5
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000028498AB93F8, queue head = 000002844F96FC48, queue count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000282F48BBDE8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = FMOD/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::getAsyncThread              :     index = 0 / 5
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000028498AB8A98, queue head = 000002844F96FC48, queue count = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='crepitar fuego', format=5, channels=2, frequency=48000, lengthbytes=457760, lengthpcm=1480704, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.190902.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000028498AB8DB8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000028498AB93F8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3928736
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 93600
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000282F48BC368
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='crepitar fuego', format=5, channels=2, frequency=48000, lengthbytes=457760, lengthpcm=1480704, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.190902.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000028498AB93F8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000028498AB8A98
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3928736
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 93600
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000282F48BAEC8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='crepitar fuego', format=5, channels=2, frequency=48000, lengthbytes=457760, lengthpcm=1480704, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.190902.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000028498AB8A98
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000002824A909828, queue head = 000002844F96FC48, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002824A909828
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002824A909828
+[LOG] SystemI::createSound                     : filename = FMOD/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::getAsyncThread              : index = 0 / 5
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000002850E20CD18, queue head = 000002844F96FC48, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002850E20CD18
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3928736
+[LOG] SystemI::createSound                     :     filename = FMOD/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 93600
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] AsyncThread::getAsyncThread              :     index = 0 / 5
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000282F4E3ABC8
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 000002850E20CB88, queue head = 000002844F96FC48, queue count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='crepitar fuego', format=5, channels=2, frequency=48000, lengthbytes=457760, lengthpcm=1480704, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.190902.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002850E20CD18
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002850E20CB88
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3928736
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 93600
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000282F4E3AD28
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='crepitar fuego', format=5, channels=2, frequency=48000, lengthbytes=457760, lengthpcm=1480704, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.190902.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002850E20CB88
+[LOG] SoundI::release                          : crepitar fuego (000002850E20CD18)
+[LOG] SoundI::release                          :     crepitar fuego (00000284B54AFDF8)
+[LOG] SoundI::release                          :     crepitar fuego (000002845B7D0868)
+[LOG] SoundI::release                          : crepitar fuego (000002850E20CB88)
+[LOG] SoundI::release                          :     crepitar fuego (00000284B54B00F8)
+[LOG] SoundI::release                          :     crepitar fuego (000002845B7D0B88)
+[LOG] SoundI::release                          : crepitar fuego (0000028498AB8A98)
+[LOG] SoundI::release                          :     crepitar fuego (0000028400A6FFA8)
+[LOG] SoundI::release                          :     crepitar fuego (000002824A908568)
+[LOG] SoundI::release                          : crepitar fuego (0000028498AB93F8)
+[LOG] SoundI::release                          :     crepitar fuego (0000028400A70A28)
+[LOG] SoundI::release                          :     crepitar fuego (000002824A908EC8)
+[LOG] SoundI::release                          : crepitar fuego (0000028498AB8DB8)
+[LOG] SoundI::release                          :     crepitar fuego (0000028400A70BA8)
+[LOG] SoundI::release                          :     crepitar fuego (000002824A909828)
+[LOG] SoundI::release                          : crepitar fuego (000002844F96F968)
+[LOG] SoundI::release                          :     crepitar fuego (000002845B551AC8)
+[LOG] SoundI::release                          :     crepitar fuego (0000028455D528E8)
+[LOG] SystemI::createSound                     : filename = FMOD/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::getAsyncThread              : index = 0 / 5
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000002845B7D06D8, queue head = 000002844F96FC48, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002845B7D06D8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3928736
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 93600
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002824F2A10C8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='crepitar fuego', format=5, channels=2, frequency=48000, lengthbytes=457760, lengthpcm=1480704, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.190902.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002845B7D06D8
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000028253D98E68, queue head = 000002844F96FC48, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000028253D98E68
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000028253D98E68
+[LOG] SoundI::release                          : crepitar fuego (000002845B7D06D8)
+[LOG] SoundI::release                          :     crepitar fuego (0000028400A6FFA8)
+[LOG] SoundI::release                          :     crepitar fuego (0000028253D98E68)
+[LOG] SoundI::release                          :  (00000282473A9018)
+[LOG] SoundI::release                          :     dicks_1 (0000028400A705A8)
+[LOG] SoundI::release                          :  (00000283D40D0808)
+[LOG] SoundI::release                          :     dicks_1_2 (00000284F5B14418)
+[LOG] SoundI::release                          :  (00000282F48BB1A8)
+[LOG] SoundI::release                          :     dicks_2 (00000284F5B14D18)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::closeInternal                   : Closed.
 [LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
 [LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
