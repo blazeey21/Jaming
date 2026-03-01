@@ -29271,7 +29271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &654045371
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30068,7 +30068,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &685130647
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -71703,6 +71703,7 @@ GameObject:
   - component: {fileID: 1459020365}
   - component: {fileID: 1459020367}
   - component: {fileID: 1459020366}
+  - component: {fileID: 1459020368}
   m_Layer: 5
   m_Name: Endgame
   m_TagString: Untagged
@@ -71768,6 +71769,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459020364}
   m_CullTransparentMesh: 1
+--- !u!114 &1459020368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459020364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2fbeb2a8e2e41d409704996b0369b8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EndGame
 --- !u!1 &1474515468
 GameObject:
   m_ObjectHideFlags: 0
@@ -88509,7 +88522,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1930353873
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -96617,7 +96630,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &2136822391
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -120883,11 +120896,11 @@ MonoBehaviour:
     Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 977470110
+      Data2: 1185415281
+      Data3: -549725553
+      Data4: -1293119385
+    Path: event:/Dialogue/Nivel 3/Trump/t_02
 --- !u!33 &3469287837557900423
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -121994,11 +122007,11 @@ MonoBehaviour:
     Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -147487282
+      Data2: 1178110421
+      Data3: -2060867138
+      Data4: 472313078
+    Path: event:/Dialogue/Nivel 3/Trump/t_01
 --- !u!33 &3469287838446952729
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -123402,6 +123415,7 @@ MonoBehaviour:
     activar:
     - {fileID: 1891694369}
     - {fileID: 919132148140107858}
+    - {fileID: 685130645}
     desactivar:
     - {fileID: 1884645264}
     - {fileID: 1820093883}
@@ -123409,28 +123423,31 @@ MonoBehaviour:
     activar:
     - {fileID: 468903963}
     - {fileID: 919132148829582067}
-    - {fileID: 919132148389202303}
+    - {fileID: 654045369}
     desactivar:
     - {fileID: 9062971703716218528}
     - {fileID: 919132148140107858}
-    - {fileID: 1820093883}
+    - {fileID: 685130645}
   zona3:
     activar:
     - {fileID: 1699177514}
     - {fileID: 919132149326205762}
+    - {fileID: 2136822389}
     desactivar:
     - {fileID: 2038919882}
     - {fileID: 1820093883}
     - {fileID: 919132148829582067}
-    - {fileID: 919132148389202303}
+    - {fileID: 654045369}
   zona4:
     activar:
     - {fileID: 2090371759}
     - {fileID: 919132149219229570}
+    - {fileID: 1930353871}
     desactivar:
     - {fileID: 672468657}
     - {fileID: 1820093883}
     - {fileID: 919132149326205762}
+    - {fileID: 2136822389}
   zona5:
     activar:
     - {fileID: 1533199063}
@@ -123442,6 +123459,7 @@ MonoBehaviour:
     - {fileID: 1533199063}
     desactivar:
     - {fileID: 562730761}
+    - {fileID: 1930353871}
   activarConClick: 1
   activarConProximidad: 1
   rangoInteraccion: 3

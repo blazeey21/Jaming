@@ -9,15 +9,109 @@
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 0
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001B704F94238 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000020829AAEB48 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
-[WRN] OutputWASAPI::mixerThread                : Starvation detected in WASAPI output buffer!
 [LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
 [LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
 [LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] BankLoader::serializeBank                : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 146)
+[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] BankLoader::serializeBank                : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 146)
+[LOG] Manager::finishLoadBank                  : Bank with guid {7e1fe6ac-4c0c-4a7a-b08b-e9612aa6b28f} has already been loaded
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4189632
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 110848
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000056062FF368
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFF49C7DA60
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFF49C7DA20
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFF49C7DB40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFF49C7DC00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000207C58FED68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 4
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='romper madera_1', format=5, channels=2, frequency=48000, lengthbytes=9760, lengthpcm=34816, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.315319.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4189632
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 110848
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000056062FF368
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFF49C7DA60
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFF49C7DA20
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFF49C7DB40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFF49C7DC00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000207C58FED68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 4
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='romper madera_6', format=5, channels=2, frequency=48000, lengthbytes=14432, lengthpcm=58880, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.392857.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4189632
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 110848
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000056062FF368
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFF49C7DA60
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFF49C7DA20
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFF49C7DB40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFF49C7DC00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000207C58FED68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 4
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='romper madera_2', format=5, channels=2, frequency=48000, lengthbytes=8928, lengthpcm=31232, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.335431.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4189632
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 110848
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000056062FF368
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFF49C7DA60
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFF49C7DA20
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFF49C7DB40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFF49C7DC00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000207C58FED68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 4
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='romper madera_3', format=5, channels=2, frequency=48000, lengthbytes=13120, lengthpcm=49664, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.367090.
+[LOG] SoundI::release                          :  (000002085B3EACA8)
+[LOG] SoundI::release                          :     romper madera_1 (00000208009A84B8)
+[LOG] SoundI::release                          :  (000002085B3E93E8)
+[LOG] SoundI::release                          :     romper madera_2 (00000208009A87B8)
+[LOG] SoundI::release                          :  (000002085B3E9548)
+[LOG] SoundI::release                          :     romper madera_3 (00000208009A8938)
+[LOG] SoundI::release                          :  (000002085B3E9288)
+[LOG] SoundI::release                          :     romper madera_6 (00000208009A8638)
+[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] BankLoader::serializeBank                : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 146)
+[LOG] Manager::finishLoadBank                  : Bank with guid {7e1fe6ac-4c0c-4a7a-b08b-e9612aa6b28f} has already been loaded
+[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] BankLoader::serializeBank                : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 146)
+[LOG] Manager::finishLoadBank                  : Bank with guid {7e1fe6ac-4c0c-4a7a-b08b-e9612aa6b28f} has already been loaded
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] SystemI::closeInternal                   : Closed.

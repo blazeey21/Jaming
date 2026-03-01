@@ -23,6 +23,7 @@ public class InterruptorZonas : MonoBehaviour
 
     public UnityEvent alCambiarZona;
 
+
     [System.Serializable]
     public class Zona
     {
