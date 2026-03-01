@@ -81043,160 +81043,32 @@ MonoBehaviour:
   triggerSitio: {fileID: 421034673}
   delayDestruccion: 1
   efectoMagiaPrefab: {fileID: 1392127244}
-  fmodEvent:
-    Guid:
-      Data1: 659100334
-      Data2: 1297215658
-      Data3: 1994869409
-      Data4: 589370291
-    Path: event:/SFX/nivel 1/abrirpuerta
-  A:
-    Guid:
-      Data1: -1671348161
-      Data2: 1289002779
-      Data3: -758632269
-      Data4: -771272510
-    Path: event:/Dialogue/Nivel 1/Dicks/Dick1
-  B:
-    Guid:
-      Data1: 1599547165
-      Data2: 1282655608
-      Data3: 1691149457
-      Data4: -312222029
-    Path: event:/Dialogue/Nivel 1/Dicks/Dick1_2
-  C:
-    Guid:
-      Data1: -1540223910
-      Data2: 1172366821
-      Data3: -1163023173
-      Data4: -937781517
-    Path: event:/Dialogue/Nivel 1/Dicks/Dicks2
-  Pista1:
-    Guid:
-      Data1: -1829960563
-      Data2: 1185818513
-      Data3: 632405380
-      Data4: 47584829
-    Path: event:/Dialogue/Nivel 1/Dicks/Dicks4_2LC
-  pista2:
-    Guid:
-      Data1: -1720708502
-      Data2: 1188449916
-      Data3: -1904022083
-      Data4: 2044853309
-    Path: event:/Dialogue/Nivel 1/Dicks/Dicks4_HC
-  dead1:
-    Guid:
-      Data1: -262335466
-      Data2: 1183691576
-      Data3: -1798379108
-      Data4: -187996529
-    Path: event:/Dialogue/Nivel 1/Dicks/Dick7_1
-  dead2:
-    Guid:
-      Data1: 1024499683
-      Data2: 1314151260
-      Data3: -6433142
-      Data4: -801042497
-    Path: event:/Dialogue/Nivel 1/Dicks/Dicks7_2
-  dead3:
-    Guid:
-      Data1: 466042061
-      Data2: 1111400125
-      Data3: -267973997
-      Data4: -391681891
-    Path: event:/Dialogue/Nivel 1/Dicks/Dicks7_3
+  A: A
+  B: B
+  C: C
+  D: D
+  E: E
+  Pista1: Clue1
+  pista2: Clue2
+  dead1: Dead1
+  dead2: Dead2
+  dead3: Dead3
   radioSequence:
-  - Guid:
-      Data1: -222660447
-      Data2: 1107769951
-      Data3: 955944337
-      Data4: 801523398
-    Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks8_1
-  - Guid:
-      Data1: -872484191
-      Data2: 1168936611
-      Data3: 2078940049
-      Data4: -1089668306
-    Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks8_2
-  - Guid:
-      Data1: 1928188045
-      Data2: 1206690526
-      Data3: 2144927876
-      Data4: -302515594
-    Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks8_3
-  - Guid:
-      Data1: -1515016332
-      Data2: 1210973770
-      Data3: -15713379
-      Data4: -341544331
-    Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_1
-  - Guid:
-      Data1: 1134350198
-      Data2: 1182939690
-      Data3: -305563750
-      Data4: 18858620
-    Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_2
-  - Guid:
-      Data1: -1948937851
-      Data2: 1198062565
-      Data3: -1524362088
-      Data4: 1400329774
-    Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_3
-  - Guid:
-      Data1: 1699334425
-      Data2: 1243711857
-      Data3: 81249425
-      Data4: -796365310
-    Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_4
-  - Guid:
-      Data1: -1409042707
-      Data2: 1221505465
-      Data3: -887503218
-      Data4: -1642870683
-    Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks9_5
-  - Guid:
-      Data1: 67275603
-      Data2: 1225876617
-      Data3: 796024740
-      Data4: -595889458
-    Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_1
-  - Guid:
-      Data1: -294210355
-      Data2: 1213322714
-      Data3: -1032309583
-      Data4: -523043633
-    Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_2
-  - Guid:
-      Data1: 2071679850
-      Data2: 1081277554
-      Data3: 1295947648
-      Data4: 1907679692
-    Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_3
-  - Guid:
-      Data1: -1957799505
-      Data2: 1155134979
-      Data3: -2119150405
-      Data4: -1045201652
-    Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_4
-  - Guid:
-      Data1: 358222993
-      Data2: 1201114149
-      Data3: -496803413
-      Data4: -561633107
-    Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_5
-  - Guid:
-      Data1: 1036695140
-      Data2: 1191266206
-      Data3: -498136683
-      Data4: -995293617
-    Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_6
-  - Guid:
-      Data1: 1849397736
-      Data2: 1187244525
-      Data3: 1494734226
-      Data4: -601915481
-    Path: event:/Dialogue/Nivel 2/Dicks/Mazmorra/Dicks10_7
+  - Radio1
+  - Radio2
+  - Radio3
+  - Radio4
+  - Radio5
+  - Radio6
+  - Radio7
+  - Radio8
+  - Radio9
+  - Radio10
+  - Radio11
+  - Radio12
+  - Radio13
+  - Raadio14
+  - Radio15
   targetLight: {fileID: 1102414921}
   lightFinalIntensity: 0.01
   objectToDisable: {fileID: 1054237290}
@@ -126830,7 +126702,7 @@ MonoBehaviour:
     subtitle: "Oh. You're awake. Excellent. You are officially my cognitive experiment
       number\u2026 Well, I lost count after the guy who acted like a horse."
     showSubtitle: 1
-    subtitleDuration: 9
+    subtitleDuration: 5
   - id: B
     dialogueEvent:
       Guid:

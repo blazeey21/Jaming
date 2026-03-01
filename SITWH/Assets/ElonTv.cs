@@ -66,14 +66,14 @@ public class ElonTv : MonoBehaviour
 
     IEnumerator StartSequence()
     {
-        yield return PlayAndWait(startA);
-        yield return PlayAndWait(startB);
-        yield return PlayAndWait(startC);
-        yield return PlayAndWait(startD);
-        yield return PlayAndWait(startE);
-        yield return PlayAndWait(clue2);
-        yield return PlayAndWait(clue1);
-        yield return PlayAndWait(clue2);
+        yield return PlayAndReturnRoutine(startA);
+        yield return PlayAndReturnRoutine(startB);
+        yield return PlayAndReturnRoutine(startC);
+        yield return PlayAndReturnRoutine(startD);
+        yield return PlayAndReturnRoutine(startE);
+        yield return PlayAndReturnRoutine(clue2);
+        yield return PlayAndReturnRoutine(clue1);
+
     }
 
     public void Play(string id)
@@ -132,17 +132,27 @@ public class ElonTv : MonoBehaviour
 
         instance.setVolume(volume);
 
+        instance.start();
+
+     
+        yield return null;
+
         instance.getDescription(out EventDescription desc);
         desc.getLength(out int lengthMs);
 
-        instance.start();
         instance.release();
 
-        float durationFromAudio = Mathf.Max(0.1f, lengthMs / 1000f);
+        float durationFromAudio = lengthMs > 0 ? lengthMs / 1000f : 2f; 
         float finalDuration = line.subtitleDuration > 0 ? line.subtitleDuration : durationFromAudio;
 
+
+        if (finalDuration < 1f)
+            finalDuration = 2f;
+
         if (subtitlesEnabled && line.showSubtitle && SubtitleManager.Instance != null && !string.IsNullOrEmpty(line.subtitle))
+        {
             SubtitleManager.Instance.Show(line.subtitle, finalDuration);
+        }
 
         yield return new WaitForSecondsRealtime(finalDuration);
     }

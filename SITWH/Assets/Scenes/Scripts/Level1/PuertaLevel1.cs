@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using FMODUnity;
-using FMOD.Studio;
 using System.Collections;
 
 public class PuertaLevel1 : MonoBehaviour
@@ -10,22 +8,23 @@ public class PuertaLevel1 : MonoBehaviour
 
     public float delayDestruccion = 0.5f;
     public GameObject efectoMagiaPrefab;
-    public EventReference fmodEvent;
 
-    [Header("Start Sec")]
-    public EventReference A;
-    public EventReference B;
-    public EventReference C;
-    public EventReference Pista1;
-    public EventReference pista2;
+    [Header("Start Sec (IDs de TVelon)")]
+    public string A;
+    public string B;
+    public string C;
+    public string D;
+    public string E;
+    public string Pista1;
+    public string pista2;
 
     [Header("Dead sequence")]
-    public EventReference dead1;
-    public EventReference dead2;
-    public EventReference dead3;
+    public string dead1;
+    public string dead2;
+    public string dead3;
 
-    [Header("Radio sequence after death (5s delay)")]
-    public EventReference[] radioSequence; // Radio1 hasta Radio16
+    [Header("Radio sequence after death")]
+    public string[] radioSequence;
 
     [Header("Light control")]
     public Light targetLight;
@@ -50,18 +49,14 @@ public class PuertaLevel1 : MonoBehaviour
         StartCoroutine(SecuenciaInicio());
     }
 
-    IEnumerator PlayAndWait(EventReference ev)
+    IEnumerator PlayAndWait(string id)
     {
-        if (ev.IsNull) yield break;
+        if (string.IsNullOrEmpty(id)) yield break;
+        if (ElonTv.Instance == null) yield break;
 
-        var instance = FMODUnity.RuntimeManager.CreateInstance(ev);
-        instance.getDescription(out EventDescription desc);
-        desc.getLength(out int lengthMs);
-
-        instance.start();
-        instance.release();
-
-        yield return new WaitForSeconds(lengthMs / 1000f);
+        yield return ElonTv.Instance.StartCoroutine(
+            ElonTv.Instance.PlayAndReturnRoutine(id)
+        );
     }
 
     IEnumerator SecuenciaInicio()
@@ -69,6 +64,8 @@ public class PuertaLevel1 : MonoBehaviour
         yield return PlayAndWait(A);
         yield return PlayAndWait(B);
         yield return PlayAndWait(C);
+        yield return PlayAndWait(D);
+        yield return PlayAndWait(E);
         yield return new WaitForSeconds(4f);
         yield return PlayAndWait(Pista1);
         yield return new WaitForSeconds(3f);
@@ -98,25 +95,16 @@ public class PuertaLevel1 : MonoBehaviour
     {
         yield return new WaitForSeconds(delayDestruccion);
 
-        float d1 = PlayAndGetDuration(dead1);
-        yield return new WaitForSeconds(d1);
-
-        float d2 = GetDuration(dead2);
-        float d3 = GetDuration(dead3);
+        yield return PlayAndWait(dead1);
 
         if (objectToDisable != null)
             objectToDisable.SetActive(false);
 
+        yield return PlayAndWait(dead2);
+        yield return PlayAndWait(dead3);
+
         if (targetLight != null)
-            StartCoroutine(FadeLight(targetLight, targetLight.intensity, lightFinalIntensity, d2 + d3));
-
-        Play(dead2);
-        yield return new WaitForSeconds(d2);
-
-        Play(dead3);
-        yield return new WaitForSeconds(d3);
-
-      
+            StartCoroutine(FadeLight(targetLight, targetLight.intensity, lightFinalIntensity, 3f));
 
         ActivarPuerta();
         StartCoroutine(SecuenciaRadio());
@@ -124,7 +112,7 @@ public class PuertaLevel1 : MonoBehaviour
 
     IEnumerator SecuenciaRadio()
     {
-        yield return new WaitForSeconds(5f); // espera exacta tras dead3
+        yield return new WaitForSeconds(5f);
 
         for (int i = 0; i < radioSequence.Length; i++)
         {
@@ -140,40 +128,6 @@ public class PuertaLevel1 : MonoBehaviour
 
         if (animator != null)
             animator.SetBool("Open", true);
-
-        if (!fmodEvent.IsNull)
-        {
-            var instancia = RuntimeManager.CreateInstance(fmodEvent);
-            instancia.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
-            instancia.start();
-            instancia.release();
-        }
-    }
-
-    float PlayAndGetDuration(EventReference ev)
-    {
-        float duration = GetDuration(ev);
-        Play(ev);
-        return duration;
-    }
-
-    void Play(EventReference ev)
-    {
-        if (ev.IsNull) return;
-        var instance = RuntimeManager.CreateInstance(ev);
-        instance.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
-        instance.start();
-        instance.release();
-    }
-
-    float GetDuration(EventReference ev)
-    {
-        if (ev.IsNull) return 0f;
-        var instance = RuntimeManager.CreateInstance(ev);
-        instance.getDescription(out EventDescription desc);
-        desc.getLength(out int lengthMs);
-        instance.release();
-        return lengthMs / 1000f;
     }
 
     IEnumerator FadeLight(Light l, float from, float to, float time)
