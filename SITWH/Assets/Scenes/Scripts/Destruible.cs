@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using FMODUnity;
+using FMOD.Studio;
 
 public class Destruible : MonoBehaviour
 {
@@ -8,6 +10,8 @@ public class Destruible : MonoBehaviour
     [SerializeField] private float timeToDestroy = 0.5f;
     [SerializeField] private float floorCheckDelay = 3f;
     [SerializeField] private GameObject prefabDeParticulas;
+    [Header("FMOD event before destroy")]
+    public EventReference fmodEvent; // evento que se reproduce antes de destruir
 
     private bool hasBeenGrabbed = false;
     private bool isCheckingFloor = false;
@@ -40,7 +44,7 @@ public class Destruible : MonoBehaviour
                 if (floorContactTime >= floorCheckDelay)
                 {
                     NotifyCrumps();
-                    HandleDestruction();
+                    StartCoroutine(HandleDestructionWithFMOD());
                     isCheckingFloor = false;
                 }
             }
@@ -57,7 +61,6 @@ public class Destruible : MonoBehaviour
 
         if (CompareTag("ObjectosCrumpsGood"))
             crumps.OnGoodObjectDestroyed(transform.position);
-
         else if (CompareTag("ObjectosCrumpsBad"))
             crumps.OnBadObjectDestroyed(transform.position);
     }
@@ -108,8 +111,24 @@ public class Destruible : MonoBehaviour
         return hits >= 3;
     }
 
-    private void HandleDestruction()
+    private IEnumerator HandleDestructionWithFMOD()
     {
+        // Si hay evento FMOD asignado, reproducirlo y esperar a que termine
+        if (!fmodEvent.IsNull)
+        {
+            var instance = RuntimeManager.CreateInstance(fmodEvent);
+            instance.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
+            instance.start();
+
+            instance.getDescription(out EventDescription desc);
+            desc.getLength(out int lengthMs);
+
+            instance.release();
+
+            yield return new WaitForSeconds(lengthMs / 1000f);
+        }
+
+        // Destruir o desactivar objeto
         if (destroyOnFloorTouch)
             Destroy(gameObject, timeToDestroy);
         else
@@ -140,6 +159,7 @@ public class Destruible : MonoBehaviour
         if (hasBeenGrabbed && !isCheckingFloor && IsLayerInMask(collision.gameObject.layer, floorLayer))
             StartCoroutine(StartFloorCheckAfterDelay(0.5f));
     }
+
     int GetParticleCountBySize()
     {
         if (objectCollider == null) return 1;

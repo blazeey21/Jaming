@@ -135,6 +135,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2458
+--- !u!114 &-7416070939275412559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/nivel 1/apagartv
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/nivel 1/apagartv
+  Guid:
+    Data1: -1767574109
+    Data2: 1228502055
+    Data3: 848532879
+    Data4: -1580826257
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 469
 --- !u!114 &-7089056778795493647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,7 +188,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1600
 --- !u!114 &-6882578828774463871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -636,7 +663,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639079267405195206
+  lastModified: 639079306045807395
   FileSizes: []
   Exists: 1
 --- !u!114 &-2590481804851507045
@@ -1081,13 +1108,15 @@ MonoBehaviour:
   - {fileID: -5562661695168091108}
   - {fileID: 4727744467655675337}
   - {fileID: 536478666678545240}
+  - {fileID: 5943971416768160466}
+  - {fileID: -7416070939275412559}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2793596633929853305}
   StringsBanks:
   - {fileID: 2854216806268686269}
   cacheVersion: 131858
-  cacheTime: 639079267469796460
+  cacheTime: 639079306045807395
   SerializableEventsDict:
   - key: event:/SFX/nivel 2/susurros
     index: 0
@@ -1237,6 +1266,10 @@ MonoBehaviour:
     index: 72
   - key: event:/Dialogue/Nivel 3/Dicks/Dicks20_2
     index: 73
+  - key: event:/SFX/nivel 1/ruidoTV
+    index: 74
+  - key: event:/SFX/nivel 1/apagartv
+    index: 75
 --- !u!114 &63524966801804226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1621,10 +1654,10 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639079267469796460
+  lastModified: 639079300840330141
   FileSizes:
   - Name: 
-    Value: 3806
+    Value: 3894
   Exists: 1
 --- !u!114 &3298605585311886607
 MonoBehaviour:
@@ -1923,6 +1956,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1100
+--- !u!114 &5943971416768160466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/nivel 1/ruidoTV
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/nivel 1/ruidoTV
+  Guid:
+    Data1: 1189263134
+    Data2: 1239318731
+    Data3: 1242368134
+    Data4: 987398199
+  Banks:
+  - {fileID: -2793596633929853305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5205
 --- !u!114 &6014378319566370004
 MonoBehaviour:
   m_ObjectHideFlags: 0

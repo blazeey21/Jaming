@@ -90,8 +90,7 @@ public class InterruptorZonas : MonoBehaviour
 
         alCambiarZona.Invoke();
 
-        // 🔊 Verificar si todas las zonas menos la 5 están activas
-        if (TodasZonasMenosCincoActivas())
+       
             ReproducirSonidoEspecial();
 
         Invoke(nameof(Reactivar), 0.1f);
