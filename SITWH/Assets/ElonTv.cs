@@ -10,6 +10,7 @@ public class ElonLine
     public string id;
     public EventReference dialogueEvent;
     public string subtitle;
+    public bool showSubtitle;
 }
 
 public class ElonTv : MonoBehaviour
@@ -18,6 +19,11 @@ public class ElonTv : MonoBehaviour
 
     public Transform audioFollowTarget;
     public float volume = 1.5f;
+
+    [Header("Behaviour")]
+    public bool playStartSequence = true;
+    public bool subtitlesEnabled = true;
+    public float globalCooldown = 0.1f;
 
     public ElonLine[] lines;
 
@@ -29,14 +35,23 @@ public class ElonTv : MonoBehaviour
     public string clue2;
 
     Dictionary<string, ElonLine> lookup;
+    float lastPlayTime = -999f;
+    string lastPlayedId = "";
 
     void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
 
         lookup = new Dictionary<string, ElonLine>();
         foreach (var l in lines)
-            lookup[l.id] = l;
+            if (!lookup.ContainsKey(l.id))
+                lookup.Add(l.id, l);
 
         if (audioFollowTarget == null && Camera.main != null)
             audioFollowTarget = Camera.main.transform;
@@ -44,7 +59,8 @@ public class ElonTv : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(StartSequence());
+        if (playStartSequence)
+            StartCoroutine(StartSequence());
     }
 
     IEnumerator StartSequence()
@@ -65,6 +81,12 @@ public class ElonTv : MonoBehaviour
     {
         if (!lookup.ContainsKey(id)) yield break;
 
+        if (Time.time - lastPlayTime < globalCooldown) yield break;
+        if (id == lastPlayedId) yield break;
+
+        lastPlayTime = Time.time;
+        lastPlayedId = id;
+
         var line = lookup[id];
 
         var instance = RuntimeManager.CreateInstance(line.dialogueEvent);
@@ -74,42 +96,46 @@ public class ElonTv : MonoBehaviour
 
         instance.setVolume(volume);
 
-        EventDescription desc;
-        instance.getDescription(out desc);
-
-        int lengthMs = 0;
-        desc.getLength(out lengthMs);
-
-        instance.start();
-        instance.release();
-
-        if (SubtitleManager.Instance != null)
-            SubtitleManager.Instance.Show(line.subtitle, lengthMs / 1000f);
-
-        yield return new WaitForSeconds(lengthMs / 1000f);
-    }
-    public IEnumerator PlayAndReturnRoutine(string id)
-    {
-        if (!lookup.ContainsKey(id)) yield break;
-
-        var line = lookup[id];
-
-        var instance = FMODUnity.RuntimeManager.CreateInstance(line.dialogueEvent);
-
-        if (audioFollowTarget != null)
-            instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(audioFollowTarget));
-
-        instance.setVolume(volume);
-
-        instance.getDescription(out FMOD.Studio.EventDescription desc);
+        instance.getDescription(out EventDescription desc);
         desc.getLength(out int lengthMs);
 
         instance.start();
         instance.release();
 
-        if (SubtitleManager.Instance != null)
+        if (subtitlesEnabled && line.showSubtitle && SubtitleManager.Instance != null && !string.IsNullOrEmpty(line.subtitle))
             SubtitleManager.Instance.Show(line.subtitle, lengthMs / 1000f);
 
-        yield return new WaitForSeconds(lengthMs / 1000f);
+        yield return new WaitForSecondsRealtime(lengthMs / 1000f);
+    }
+
+    public IEnumerator PlayAndReturnRoutine(string id)
+    {
+        if (!lookup.ContainsKey(id)) yield break;
+
+        if (Time.time - lastPlayTime < globalCooldown) yield break;
+        if (id == lastPlayedId) yield break;
+
+        lastPlayTime = Time.time;
+        lastPlayedId = id;
+
+        var line = lookup[id];
+
+        var instance = RuntimeManager.CreateInstance(line.dialogueEvent);
+
+        if (audioFollowTarget != null)
+            instance.set3DAttributes(RuntimeUtils.To3DAttributes(audioFollowTarget));
+
+        instance.setVolume(volume);
+
+        instance.getDescription(out EventDescription desc);
+        desc.getLength(out int lengthMs);
+
+        instance.start();
+        instance.release();
+
+        if (subtitlesEnabled && line.showSubtitle && SubtitleManager.Instance != null && !string.IsNullOrEmpty(line.subtitle))
+            SubtitleManager.Instance.Show(line.subtitle, lengthMs / 1000f);
+
+        yield return new WaitForSecondsRealtime(lengthMs / 1000f);
     }
 }
