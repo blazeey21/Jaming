@@ -2,18 +2,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
-    public GameObject pausePanel;
-    public Button continueButton;
-    public Button optionsButton;
-    public Button quitButton;
+    [Header("UI Elements")]
+    [SerializeField] private GameObject pausePanel;
+    [SerializeField] private Button continueButton;
+    [SerializeField] private Button optionsButton;
+    [SerializeField] private Button quitButton;
 
-    public InputActionReference pauseAction;
-    public InputActionReference navigateUpAction;
-    public InputActionReference navigateDownAction;
+    [Header("Input Actions (asignar desde editor)")]
+    [SerializeField] private InputActionReference pauseAction;
+    [SerializeField] private InputActionReference navigateUpAction;
+    [SerializeField] private InputActionReference navigateDownAction;
+    [SerializeField] private InputActionReference validateAction;
 
     private bool isPaused = false;
     private int selectedIndex = 0;
@@ -31,6 +33,12 @@ public class Pause : MonoBehaviour
             pauseAction.action.Enable();
             pauseAction.action.performed += TogglePause;
         }
+
+        if (validateAction != null)
+        {
+            validateAction.action.Enable();
+            validateAction.action.performed += OnValidate;
+        }
     }
 
     void OnDisable()
@@ -40,6 +48,13 @@ public class Pause : MonoBehaviour
             pauseAction.action.performed -= TogglePause;
             pauseAction.action.Disable();
         }
+
+        if (validateAction != null)
+        {
+            validateAction.action.performed -= OnValidate;
+            validateAction.action.Disable();
+        }
+
         UnsubscribeNavigationActions();
     }
 
@@ -59,7 +74,8 @@ public class Pause : MonoBehaviour
     {
         pausePanel.SetActive(isPaused);
         Time.timeScale = isPaused ? 0f : 1f;
-        SetCursorState(isPaused);
+        Cursor.visible = isPaused;
+        Cursor.lockState = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
 
         if (isPaused)
         {
@@ -74,20 +90,6 @@ public class Pause : MonoBehaviour
         }
     }
 
-    private void SetCursorState(bool paused)
-    {
-        if (paused)
-        {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-        }
-        else
-        {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-    }
-
     private void SubscribeNavigationActions()
     {
         if (navigateUpAction != null)
@@ -95,6 +97,7 @@ public class Pause : MonoBehaviour
             navigateUpAction.action.Enable();
             navigateUpAction.action.performed += OnNavigateUp;
         }
+
         if (navigateDownAction != null)
         {
             navigateDownAction.action.Enable();
@@ -109,6 +112,7 @@ public class Pause : MonoBehaviour
             navigateUpAction.action.performed -= OnNavigateUp;
             navigateUpAction.action.Disable();
         }
+
         if (navigateDownAction != null)
         {
             navigateDownAction.action.performed -= OnNavigateDown;
@@ -119,37 +123,27 @@ public class Pause : MonoBehaviour
     private void OnNavigateUp(InputAction.CallbackContext ctx)
     {
         if (!isPaused) return;
-
-        if (selectedIndex == 0) // Continue
-            selectedIndex = 2; // Va a Exit
-        else if (selectedIndex == 1) // Controls
-            selectedIndex = 0; // Va a Continue
-        else if (selectedIndex == 2) // Exit
-            selectedIndex = 1; // Va a Controls
-
+        selectedIndex = (selectedIndex + buttons.Length - 1) % buttons.Length;
         SelectCurrentButton();
     }
 
     private void OnNavigateDown(InputAction.CallbackContext ctx)
     {
         if (!isPaused) return;
-
-        if (selectedIndex == 0) // Continue
-            selectedIndex = 1; // Va a Controls
-        else if (selectedIndex == 1) // Controls
-            selectedIndex = 2; // Va a Exit
-        else if (selectedIndex == 2) // Exit
-            selectedIndex = 0; // Va a Continue
-
+        selectedIndex = (selectedIndex + 1) % buttons.Length;
         SelectCurrentButton();
     }
 
     private void SelectCurrentButton()
     {
         if (buttons != null && buttons.Length > 0 && selectedIndex >= 0 && selectedIndex < buttons.Length)
-        {
             EventSystem.current.SetSelectedGameObject(buttons[selectedIndex].gameObject);
-        }
+    }
+
+    private void OnValidate(InputAction.CallbackContext ctx)
+    {
+        if (!isPaused || buttons == null || buttons.Length == 0) return;
+        buttons[selectedIndex].onClick.Invoke();
     }
 
     public void ContinueGame()

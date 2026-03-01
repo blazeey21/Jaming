@@ -48214,8 +48214,9 @@ MonoBehaviour:
   optionsButton: {fileID: 792458581}
   quitButton: {fileID: 1924629024}
   pauseAction: {fileID: 4456473651449208710, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
-  navigateUpAction: {fileID: 0}
-  navigateDownAction: {fileID: 0}
+  navigateUpAction: {fileID: -3041239477896199762, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
+  navigateDownAction: {fileID: -7628950608699568856, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
+  validateAction: {fileID: 3157262657981988821, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
 --- !u!4 &922536401
 Transform:
   m_ObjectHideFlags: 0
@@ -127210,9 +127211,8 @@ MonoBehaviour:
         Data3: -1163023173
         Data4: -937781517
       Path: event:/Dialogue/Nivel 1/Dicks/Dicks2
-    subtitle: "Your only objective is to tell me where you are. If you guess correctly\u2026
-      well\u2026 my life is connected to the door. But don't worry. A little kid
-      could never figure it out. "
+    subtitle: I am a superior intelligence based on the mind of Elon Dicks, but enhanced.
+      Without unnecessary empathy.
     showSubtitle: 1
     subtitleDuration: 2.5
   - id: Clue1
@@ -127783,8 +127783,7 @@ MonoBehaviour:
         Data3: -2018170969
         Data4: 1138595924
       Path: event:/Dialogue/Nivel 1/Dicks/Dicks3_3
-    subtitle: No! That's the original copy we used to cause the panic! Now how am
-      I supposed to blame the digital vampires?
+    subtitle: A little kid like you could never figure it out.
     showSubtitle: 1
     subtitleDuration: 1
   startA: 

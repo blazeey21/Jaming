@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using FMODUnity;
 using FMOD.Studio;
+using System.Collections.Generic;
 
 public class Destruible : MonoBehaviour
 {
@@ -12,8 +13,8 @@ public class Destruible : MonoBehaviour
     [SerializeField] private GameObject prefabDeParticulas;
 
     [Header("FMOD audio")]
-    public EventReference fmodEvent; 
-    public EventReference audioDespuesDeRomper; 
+    public EventReference fmodEvent;
+    public EventReference audioDespuesDeRomper;
 
     private bool hasBeenGrabbed = false;
     private bool isCheckingFloor = false;
@@ -22,6 +23,10 @@ public class Destruible : MonoBehaviour
     private Collider objectCollider;
 
     CrumpsLogic crumps;
+
+    // Gestión de cola de audio
+    private static bool isAudioPlaying = false;
+    private static Queue<System.Func<IEnumerator>> audioQueue = new Queue<System.Func<IEnumerator>>();
 
     void Start()
     {
@@ -33,6 +38,7 @@ public class Destruible : MonoBehaviour
 
         if (floorLayer.value == 0)
             floorLayer = LayerMask.GetMask("Floor");
+
         floorContactTime = 0.11f;
     }
 
@@ -43,11 +49,10 @@ public class Destruible : MonoBehaviour
             if (IsOnFloor())
             {
                 floorContactTime += Time.deltaTime;
-
                 if (floorContactTime >= floorCheckDelay)
                 {
                     NotifyCrumps();
-                    StartCoroutine(HandleDestructionWithFMOD());
+                    EnqueueAudioDestruction();
                     isCheckingFloor = false;
                 }
             }
@@ -104,7 +109,6 @@ public class Destruible : MonoBehaviour
         };
 
         int hits = 0;
-
         foreach (var origin in rayOrigins)
         {
             if (Physics.Raycast(origin, Vector3.down, raycastDistance, floorLayer))
@@ -114,11 +118,27 @@ public class Destruible : MonoBehaviour
         return hits >= 3;
     }
 
+    private void EnqueueAudioDestruction()
+    {
+        audioQueue.Enqueue(() => HandleDestructionWithFMOD());
+        if (!isAudioPlaying)
+            StartCoroutine(ProcessAudioQueue());
+    }
+
+    private IEnumerator ProcessAudioQueue()
+    {
+        isAudioPlaying = true;
+        while (audioQueue.Count > 0)
+        {
+            var audioCoroutine = audioQueue.Dequeue();
+            yield return StartCoroutine(audioCoroutine());
+        }
+        isAudioPlaying = false;
+    }
+
     private IEnumerator HandleDestructionWithFMOD()
     {
-        // ----------------------------
-        // 1. SONIDO DE ROMPERSE
-        // ----------------------------
+        // SONIDO DE ROMPERSE
         if (!fmodEvent.IsNull)
         {
             var instance = RuntimeManager.CreateInstance(fmodEvent);
@@ -133,14 +153,10 @@ public class Destruible : MonoBehaviour
             yield return new WaitForSeconds(lengthMs / 1000f);
         }
 
-        // ----------------------------
-        // 2. ESPERAR 3 SEGUNDOS
-        // ----------------------------
+        // ESPERAR 3 SEGUNDOS
         yield return new WaitForSeconds(3f);
 
-        // ----------------------------
-        // 3. AUDIO EXTRA
-        // ----------------------------
+        // AUDIO EXTRA
         if (!audioDespuesDeRomper.IsNull)
         {
             var instance = RuntimeManager.CreateInstance(audioDespuesDeRomper);
@@ -149,9 +165,7 @@ public class Destruible : MonoBehaviour
             instance.release();
         }
 
-        // ----------------------------
-        // 4. DESTRUIR O DESACTIVAR
-        // ----------------------------
+        // DESTRUIR O DESACTIVAR
         if (destroyOnFloorTouch)
             Destroy(gameObject, timeToDestroy);
         else
@@ -168,7 +182,6 @@ public class Destruible : MonoBehaviour
             prefabDeParticulas != null)
         {
             int count = GetParticleCountBySize();
-
             for (int i = 0; i < count; i++)
             {
                 Vector3 spawnPos = collision.contacts.Length > 0
@@ -186,10 +199,8 @@ public class Destruible : MonoBehaviour
     int GetParticleCountBySize()
     {
         if (objectCollider == null) return 1;
-
         Vector3 size = objectCollider.bounds.size;
         float volume = size.x * size.y * size.z;
-
         float normalized = Mathf.Clamp01(volume / 3f);
         return Mathf.Clamp(Mathf.CeilToInt(normalized * 6f), 1, 6);
     }
