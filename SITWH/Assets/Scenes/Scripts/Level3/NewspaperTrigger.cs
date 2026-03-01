@@ -1,16 +1,54 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using System.Collections;
 
 public class NewspaperTrigger : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private GameObject canvasToActivate; // Canvas a activar
+    [SerializeField] private InputActionReference interactAction; // Input Action tipo "Interact"
+    [SerializeField] public  CrumpsLogic Health; // Referencia a tu script de vida
+    [SerializeField] private float delayAfterDeath = 2f; // Segundos antes de permitir interacción
+
+    private bool canInteract = false;
+
+    private void OnEnable()
     {
-        
+        if (interactAction != null)
+        {
+            interactAction.action.performed += OnInteract;
+            interactAction.action.Enable();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        if (interactAction != null)
+        {
+            interactAction.action.performed -= OnInteract;
+            interactAction.action.Disable();
+        }
+    }
+
+    private void Update()
+    {
+        // Comprobamos si la vida llegó a 0 y aún no empezamos la espera
+        if (!canInteract && Health.health<= 0)
+        {
+            StartCoroutine(EnableInteractionAfterDelay());
+        }
+    }
+
+    private IEnumerator EnableInteractionAfterDelay()
+    {
+        yield return new WaitForSeconds(delayAfterDeath);
+        canInteract = true; // Ya se puede interactuar
+    }
+
+    private void OnInteract(InputAction.CallbackContext context)
+    {
+        if (canInteract && canvasToActivate != null)
+        {
+            canvasToActivate.SetActive(true);
+        }
     }
 }
