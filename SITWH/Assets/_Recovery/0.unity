@@ -119013,8 +119013,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SaoriTrigger
   crumpsLogic: {fileID: 5866666019861991558}
   floatSpeed: 0.03
-  rotationSpeed: 50
-  maxHeight: 2
+  rotationSpeed: 30
+  maxHeight: 0.217
 --- !u!33 &3469287837360741688
 MeshFilter:
   m_ObjectHideFlags: 0
