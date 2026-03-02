@@ -309,7 +309,7 @@ public class ManagerLevel2 : MonoBehaviour
     }
     private IEnumerator DestruirPanelDespuesDeTiempo()
     {
-        yield return new WaitForSeconds(2.56f);
+        yield return new WaitForSeconds(0.56f);
         Cerra.gameObject.SetActive(false);
 
 

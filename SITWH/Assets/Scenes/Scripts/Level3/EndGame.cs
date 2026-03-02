@@ -1,40 +1,30 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 using System.Collections;
 
 public class EndGame : MonoBehaviour
 {
-    bool a=false;
+    bool a = false;
 
     private void Start()
     {
-        W();
+        StartCoroutine(W());
     }
+
     void Update()
     {
-        if (a)
+        if (a && Input.anyKeyDown)
         {
-            foreach (KeyCode key in System.Enum.GetValues(typeof(KeyCode)))
-            {
-                // Solo teclas del teclado (evitamos mouse)
-                if (key.ToString().StartsWith("Mouse"))
-                    continue;
-
-                if (Input.GetKeyDown(key))
-                {
-                    Application.Quit();
+            Application.Quit();
 
 #if UNITY_EDITOR
-                    UnityEditor.EditorApplication.isPlaying = false;
+            UnityEditor.EditorApplication.isPlaying = false;
 #endif
-                }
-            }
         }
     }
+
     private IEnumerator W()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(4f);
         a = true;
-       
     }
 }
