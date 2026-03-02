@@ -95394,7 +95394,7 @@ MonoBehaviour:
   jugador: {fileID: 1412512083}
   objeto1: {fileID: 352304446}
   objeto2: {fileID: 1494064958}
-  duracionFade: 8
+  duracionFade: 12
 --- !u!4 &2081383049
 Transform:
   m_ObjectHideFlags: 0
