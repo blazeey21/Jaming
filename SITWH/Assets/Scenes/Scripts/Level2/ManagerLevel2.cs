@@ -257,7 +257,7 @@ public class ManagerLevel2 : MonoBehaviour
         if (esCorrecto)
         {
             validado = true;
-            if (textRespuesta != null) textRespuesta.text = "✓";
+            if (textRespuesta != null) textRespuesta.text = "GoodBoy";
 
             if (Puertanivel2 != null)
             {

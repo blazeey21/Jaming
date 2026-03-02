@@ -463,6 +463,60 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &699799841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 699799843}
+  - component: {fileID: 699799842}
+  m_Layer: 0
+  m_Name: audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &699799842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699799841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fcaa730856841d43888294d2b0e7d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  evento:
+    Guid:
+      Data1: 1189263134
+      Data2: 1239318731
+      Data3: 1242368134
+      Data4: 987398199
+    Path: event:/SFX/nivel 1/ruidoTV
+  minVolume: 0.5
+  maxVolume: 1
+  speed: 1
+--- !u!4 &699799843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699799841}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.87387, y: -0, z: -38.78729}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &718517755
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,7 +979,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c3f106a78e1aa142b294d8d1a41114b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: GifForUnity::GifImporter.GifPlayer
-  Gif: {fileID: 11400000, guid: eaaf6615e8ac1fd48bae0dcaf0908a8b, type: 2}
+  Gifs: []
+  changeGifEverySeconds: 5
 --- !u!1 &2074603531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,3 +1109,4 @@ SceneRoots:
   - {fileID: 326905701}
   - {fileID: 499796306}
   - {fileID: 2090499361}
+  - {fileID: 699799843}

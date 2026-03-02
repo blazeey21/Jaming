@@ -10,14 +10,19 @@ public class SaoriTrigger : MonoBehaviour
     public float rotationSpeed = 30f;
 
     [Header("Altura máxima")]
-    public float maxHeight = 0.217f; // Pon aquí el valor Y límite
+    public float maxHeight = 0.217f; 
 
     private bool isDead = false;
+    [SerializeField] public GameObject llum;
+    [SerializeField] public GameObject llumsgens;
 
     void Update()
     {
         if (crumpsLogic != null && crumpsLogic.health <= 0 && !isDead)
         {
+            llum.gameObject.SetActive(true);
+
+            llumsgens.gameObject.SetActive(false);
             isDead = true;
             transform.Rotate(90f,0,0);
         }
@@ -30,7 +35,7 @@ public class SaoriTrigger : MonoBehaviour
                 transform.Translate(Vector3.up * floatSpeed * Time.deltaTime, Space.World);
             }
 
-            // Sigue rotando siempre
+           
             transform.Rotate(0f, rotationSpeed * Time.deltaTime,0f );
         }
     }

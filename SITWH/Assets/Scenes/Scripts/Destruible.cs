@@ -11,6 +11,8 @@ public class Destruible : MonoBehaviour
     [SerializeField] private float floorCheckDelay = 3f;
     [SerializeField] private GameObject prefabDeParticulas;
 
+    [SerializeField] private CrumpsLogic crumps;
+
     public EventReference fmodEvent;
     public EventReference audioDespuesDeRomper;
 
@@ -20,15 +22,16 @@ public class Destruible : MonoBehaviour
     private Rigidbody rb;
     private Collider objectCollider;
 
-    CrumpsLogic crumps;
-
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         objectCollider = GetComponent<Collider>();
 
-        GameObject c = GameObject.FindGameObjectWithTag("Crumps");
-        if (c != null) crumps = c.GetComponent<CrumpsLogic>();
+        if (crumps == null)
+        {
+            GameObject c = GameObject.FindGameObjectWithTag("Crumps");
+            if (c != null) crumps = c.GetComponent<CrumpsLogic>();
+        }
 
         if (floorLayer.value == 0)
             floorLayer = LayerMask.GetMask("Floor");
@@ -112,18 +115,13 @@ public class Destruible : MonoBehaviour
 
     private void EnqueueAudioDestruction()
     {
-        AudioQueueManager.Instance.PlaySFX(() => PlayBreakSound());
+        if (crumps != null  && crumps.health <= 0f)
+        {
+            DestroyOrDisable();
+            return;
+        }
+
         AudioQueueManager.Instance.EnqueueVoice(() => PlayVoiceAfterBreak());
-    }
-
-    private IEnumerator PlayBreakSound()
-    {
-        if (fmodEvent.IsNull) yield break;
-
-        var instance = RuntimeManager.CreateInstance(fmodEvent);
-        instance.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
-        instance.start();
-        instance.release();
     }
 
     private IEnumerator PlayVoiceAfterBreak()
@@ -146,6 +144,22 @@ public class Destruible : MonoBehaviour
             instance.release();
         }
 
+        DestroyOrDisable();
+    }
+
+    private void PlayImpactSound(float volume)
+    {
+        if (fmodEvent.IsNull) return;
+
+        var instance = RuntimeManager.CreateInstance(fmodEvent);
+        instance.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
+        instance.setVolume(volume);
+        instance.start();
+        instance.release();
+    }
+
+    private void DestroyOrDisable()
+    {
         if (destroyOnFloorTouch)
             Destroy(gameObject, timeToDestroy);
         else
@@ -158,17 +172,26 @@ public class Destruible : MonoBehaviour
     {
         if (hasBeenGrabbed &&
             IsLayerInMask(collision.gameObject.layer, floorLayer) &&
-            IsOnFloor() &&
-            prefabDeParticulas != null)
+            IsOnFloor())
         {
-            int count = GetParticleCountBySize();
-            for (int i = 0; i < count; i++)
-            {
-                Vector3 spawnPos = collision.contacts.Length > 0
-                    ? collision.contacts[0].point + Random.insideUnitSphere * 0.2f
-                    : transform.position;
+            float impact = collision.relativeVelocity.magnitude;
+            float volume = Mathf.Clamp01(impact / 5f);
+            volume = Mathf.Lerp(0.6f, 1f, volume);
+            volume *= Random.Range(0.85f, 1f);
 
-                Instantiate(prefabDeParticulas, spawnPos, Quaternion.identity);
+            PlayImpactSound(volume);
+
+            if (prefabDeParticulas != null)
+            {
+                int count = GetParticleCountBySize();
+                for (int i = 0; i < count; i++)
+                {
+                    Vector3 spawnPos = collision.contacts.Length > 0
+                        ? collision.contacts[0].point + Random.insideUnitSphere * 0.2f
+                        : transform.position;
+
+                    Instantiate(prefabDeParticulas, spawnPos, Quaternion.identity);
+                }
             }
         }
 

@@ -645,6 +645,7 @@ MonoBehaviour:
   timeToDestroy: 0.3
   floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -1268,6 +1269,7 @@ MonoBehaviour:
   timeToDestroy: 0.2
   floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -6336,6 +6338,7 @@ MonoBehaviour:
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -6820,6 +6823,7 @@ MonoBehaviour:
   timeToDestroy: 0.3
   floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -6829,11 +6833,11 @@ MonoBehaviour:
     Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -147487282
+      Data2: 1178110421
+      Data3: -2060867138
+      Data4: 472313078
+    Path: event:/Dialogue/Nivel 3/Trump/t_01
 --- !u!1 &158667563
 GameObject:
   m_ObjectHideFlags: 0
@@ -7028,6 +7032,7 @@ GameObject:
   - component: {fileID: 174206634}
   - component: {fileID: 174206633}
   - component: {fileID: 174206632}
+  - component: {fileID: 174206635}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -7661,15 +7666,15 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     sonando: 0
-  - objeto: {fileID: 543450653677724984}
+  - objeto: {fileID: 1102414918}
     sonidoLoop:
       Guid:
-        Data1: 1507855561
-        Data2: 1275460954
-        Data3: -1070983550
-        Data4: 1842860300
-      Path: event:/SFX/nivel 2/susurros
-    distanciaActivacion: 3
+        Data1: 1189263134
+        Data2: 1239318731
+        Data3: 1242368134
+        Data4: 987398199
+      Path: event:/SFX/nivel 1/ruidoTV
+    distanciaActivacion: 4
     volumenPorDistancia:
       serializedVersion: 2
       m_Curve:
@@ -7722,6 +7727,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &174206635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174206631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 778f1f835b8277a43b6f3378b0ab0f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!114 &174713613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7802,6 +7819,7 @@ MonoBehaviour:
   timeToDestroy: 0.22
   floorCheckDelay: 3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 0}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -9138,6 +9156,7 @@ GameObject:
   - component: {fileID: 274932454}
   - component: {fileID: 274932456}
   - component: {fileID: 274932455}
+  - component: {fileID: 274932457}
   m_Layer: 0
   m_Name: Columna (4)
   m_TagString: Untagged
@@ -9216,6 +9235,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274932453}
   m_Mesh: {fileID: 8720653040151070463, guid: 6ac96d75d21e6c341bee0f1cc46aa2ca, type: 3}
+--- !u!65 &274932457
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274932453}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.78057516, y: 0.6827985, z: 3.8849452}
+  m_Center: {x: -0.000001907128, y: -0.0074039847, z: 1.9230076}
 --- !u!1 &289257412
 GameObject:
   m_ObjectHideFlags: 0
@@ -19746,7 +19786,10 @@ MonoBehaviour:
   - {fileID: 607046043}
   numeroCorrecto: 01000000090000000900000003000000
   respuestasNegativas:
-  - El verda
+  - incorrect dummy
+  - Nop
+  - Are you even trying?
+  - You could be a great politician
   player: {fileID: 1412512085}
   closeAction:
     m_UseReference: 1
@@ -25038,6 +25081,7 @@ MonoBehaviour:
   timeToDestroy: 0.3
   floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -25404,6 +25448,133 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.8657968, y: 3.5015988, z: 4.712001}
   m_Center: {x: 3.8678472, y: 0.5557406, z: 2.1762376}
+--- !u!1 &407705016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 407705017}
+  - component: {fileID: 407705019}
+  - component: {fileID: 407705018}
+  m_Layer: 0
+  m_Name: luzsaori
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &407705017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407705016}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.009, y: 0, z: 0.033}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 543450653562920171}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &407705018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407705016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
+--- !u!108 &407705019
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407705016}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 3.37
+  m_Range: 0.3
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1 &421034671
 GameObject:
   m_ObjectHideFlags: 0
@@ -25642,6 +25813,7 @@ MonoBehaviour:
   timeToDestroy: 0.3
   floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -27174,7 +27346,8 @@ MonoBehaviour:
   destroyOnFloorTouch: 1
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
+  prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -27979,6 +28152,7 @@ MonoBehaviour:
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -28626,6 +28800,7 @@ MonoBehaviour:
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -28635,11 +28810,11 @@ MonoBehaviour:
     Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -147487282
+      Data2: 1178110421
+      Data3: -2060867138
+      Data4: 472313078
+    Path: event:/Dialogue/Nivel 3/Trump/t_01
 --- !u!1 &640282771
 GameObject:
   m_ObjectHideFlags: 0
@@ -28800,6 +28975,7 @@ MonoBehaviour:
   timeToDestroy: 0.3
   floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -29006,6 +29182,7 @@ MonoBehaviour:
   timeToDestroy: 0.3
   floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -29015,11 +29192,11 @@ MonoBehaviour:
     Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -2118111382
+      Data2: 1168186721
+      Data3: -1678574175
+      Data4: 1905688001
+    Path: event:/Dialogue/Nivel 3/Trump/t_00
 --- !u!54 &650509380
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -35507,6 +35684,7 @@ MonoBehaviour:
   timeToDestroy: 0.3
   floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -41963,8 +42141,8 @@ Camera:
   m_GameObject: {fileID: 836683733}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -42211,7 +42389,6 @@ Transform:
   - {fileID: 543450652685357554}
   - {fileID: 543450651650500842}
   - {fileID: 543450652711177880}
-  - {fileID: 2576586086388085592}
   - {fileID: 1491250488751111609}
   - {fileID: 1502856694}
   - {fileID: 542004787}
@@ -42236,6 +42413,8 @@ Transform:
   - {fileID: 543450653462426379}
   - {fileID: 4786621240710316481}
   - {fileID: 2674080917188928224}
+  - {fileID: 1939793141}
+  - {fileID: 2123636282}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!65 &839301182
@@ -42494,7 +42673,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7a6cb3c8d420609438c0436c8f5cc636, type: 2}
   m_sharedMaterial: {fileID: -7570980477634951052, guid: 7a6cb3c8d420609438c0436c8f5cc636, type: 2}
@@ -42521,8 +42700,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -47709,6 +47888,7 @@ MonoBehaviour:
   timeToDestroy: 0.2
   floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -48289,6 +48469,7 @@ MonoBehaviour:
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -48298,11 +48479,11 @@ MonoBehaviour:
     Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -2118111382
+      Data2: 1168186721
+      Data3: -1678574175
+      Data4: 1905688001
+    Path: event:/Dialogue/Nivel 3/Trump/t_00
 --- !u!54 &953476411
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -48775,6 +48956,7 @@ MonoBehaviour:
   timeToDestroy: 0.2
   floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -48784,11 +48966,11 @@ MonoBehaviour:
     Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
-      Data1: 977470110
-      Data2: 1185415281
-      Data3: -549725553
-      Data4: -1293119385
-    Path: event:/Dialogue/Nivel 3/Trump/t_02
+      Data1: -349892186
+      Data2: 1131334561
+      Data3: -1328881734
+      Data4: 458386729
+    Path: event:/Dialogue/Nivel 3/Trump/t_04
 --- !u!1 &988697136
 GameObject:
   m_ObjectHideFlags: 0
@@ -54400,7 +54582,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: daa62ff0d9aeed744b6592e50890b762, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a04d8266ca9de44f8c25f7f5b56f3a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.32941177}
   m_FlipX: 0
   m_FlipY: 0
@@ -55012,7 +55194,7 @@ GameObject:
   - component: {fileID: 1102414920}
   - component: {fileID: 1102414919}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: LUZTV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55423,7 +55605,8 @@ MonoBehaviour:
   destroyOnFloorTouch: 1
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
+  prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -55867,6 +56050,7 @@ MonoBehaviour:
   timeToDestroy: 0.3
   floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -57149,6 +57333,7 @@ MonoBehaviour:
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -57936,6 +58121,7 @@ MonoBehaviour:
   timeToDestroy: 0.2
   floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -58350,6 +58536,7 @@ MonoBehaviour:
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -58666,6 +58853,7 @@ MonoBehaviour:
   timeToDestroy: 0.3
   floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -65319,6 +65507,7 @@ MonoBehaviour:
   timeToDestroy: 0.2
   floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -65471,10 +65660,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3777d1d70465ffe40a9769d968c7541e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  moveSpeed: 5
+  moveSpeed: 3.44
   sprintSpeed: 8
-  acceleration: 10
-  deceleration: 15
+  acceleration: 5
+  deceleration: 10
   gravity: -55
   jumpHeight: 2
   groundMask:
@@ -65676,6 +65865,18 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 656e3854-bd4c-4a74-99e0-c4f2a807d89d
     m_ActionName: 'New action map/Pause[/Keyboard/p]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 720dbd80-aeb8-4e2c-a805-5681bd154ace
+    m_ActionName: 'New action map/Increment1[/Keyboard/w,/Keyboard/upArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0912b501-3f4b-4ddd-9513-be28b3c5e90d
+    m_ActionName: 'New action map/Decre[/Keyboard/s,/Keyboard/downArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ddbc1821-63ef-4c4f-b0bf-ce471635f104
+    m_ActionName: 'New action map/ValidA[/Keyboard/enter]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: New action map
@@ -66048,6 +66249,7 @@ MonoBehaviour:
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -71910,6 +72112,7 @@ MonoBehaviour:
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -71919,11 +72122,11 @@ MonoBehaviour:
     Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
-      Data1: -1042797983
-      Data2: 1082634353
-      Data3: -1319791703
-      Data4: 89223486
-    Path: event:/Dialogue/Nivel 3/Trump/t_03
+      Data1: -2118111382
+      Data2: 1168186721
+      Data3: -1678574175
+      Data4: 1905688001
+    Path: event:/Dialogue/Nivel 3/Trump/t_00
 --- !u!54 &1495238078
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -72420,6 +72623,7 @@ MonoBehaviour:
   timeToDestroy: 0.2
   floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -73003,6 +73207,7 @@ MonoBehaviour:
   timeToDestroy: 0.3
   floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -74303,6 +74508,7 @@ GameObject:
   - component: {fileID: 1645120718}
   - component: {fileID: 1645120720}
   - component: {fileID: 1645120719}
+  - component: {fileID: 1645120721}
   m_Layer: 0
   m_Name: Columna (5)
   m_TagString: Untagged
@@ -74381,6 +74587,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1645120717}
   m_Mesh: {fileID: 8720653040151070463, guid: 6ac96d75d21e6c341bee0f1cc46aa2ca, type: 3}
+--- !u!65 &1645120721
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645120717}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.78057545, y: 0.6827988, z: 3.884946}
+  m_Center: {x: 0.0000015444688, y: -0.0074037416, z: 1.9230082}
 --- !u!1 &1651284136
 GameObject:
   m_ObjectHideFlags: 0
@@ -81389,20 +81616,21 @@ MonoBehaviour:
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -2118111382
+      Data2: 1168186721
+      Data3: -1678574175
+      Data4: 1905688001
+    Path: event:/Dialogue/Nivel 3/Trump/t_00
 --- !u!54 &1829055189
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -81851,6 +82079,7 @@ MonoBehaviour:
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -82412,6 +82641,7 @@ MonoBehaviour:
   timeToDestroy: 0.2
   floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -82828,7 +83058,8 @@ MonoBehaviour:
   destroyOnFloorTouch: 1
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
+  prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -82838,11 +83069,11 @@ MonoBehaviour:
     Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
-      Data1: -1842266484
-      Data2: 1338044830
-      Data3: 503407746
-      Data4: 1104283061
-    Path: event:/Dialogue/Nivel 3/Trump/t_06
+      Data1: -1939846174
+      Data2: 1245293606
+      Data3: -2066886736
+      Data4: -555172354
+    Path: event:/Dialogue/Nivel 3/Trump/trump
 --- !u!54 &1918305695
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -88343,6 +88574,180 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 270.21, z: 0}
+--- !u!1 &1939793140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1939793141}
+  - component: {fileID: 1939793146}
+  - component: {fileID: 1939793145}
+  - component: {fileID: 1939793144}
+  - component: {fileID: 1939793143}
+  - component: {fileID: 1939793142}
+  m_Layer: 3
+  m_Name: NightrapGame (1)
+  m_TagString: ObjectosCrumpsBad
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1939793141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939793140}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.09275484, y: -0.70099676, z: -0.70099694, w: 0.09275484}
+  m_LocalPosition: {x: 0.387, y: -0.688, z: 12.137}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 839301181}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 15.075}
+--- !u!114 &1939793142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939793140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13c85256a8602648a3bb2b53f5f784b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Destruible
+  floorLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  destroyOnFloorTouch: 1
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
+  prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
+  fmodEvent:
+    Guid:
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: -349892186
+      Data2: 1131334561
+      Data3: -1328881734
+      Data4: 458386729
+    Path: event:/Dialogue/Nivel 3/Trump/t_04
+--- !u!54 &1939793143
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939793140}
+  serializedVersion: 5
+  m_Mass: 5
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1939793144
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939793140}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.20000005, y: 0.30000004, z: 0.040000066}
+  m_Center: {x: -2.4145008e-10, y: 0.000003811153, z: 0.019999946}
+--- !u!23 &1939793145
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939793140}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2d52796919e489e4699d446245548870, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1939793146
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939793140}
+  m_Mesh: {fileID: -927626855165405315, guid: 01e1bf68bd40bf54aa9b97f12ea816b5, type: 3}
 --- !u!1001 &1941853321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88745,6 +89150,7 @@ MonoBehaviour:
   timeToDestroy: 0.3
   floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 0}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -88919,6 +89325,7 @@ MonoBehaviour:
   timeToDestroy: 0.3
   floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -89754,7 +90161,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Press C to close.ENTER to validate
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7a6cb3c8d420609438c0436c8f5cc636, type: 2}
   m_sharedMaterial: {fileID: -7570980477634951052, guid: 7a6cb3c8d420609438c0436c8f5cc636, type: 2}
@@ -89781,8 +90188,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 19.86
+  m_fontSizeBase: 19.86
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -95383,6 +95790,7 @@ MonoBehaviour:
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -95583,6 +95991,7 @@ MonoBehaviour:
   timeToDestroy: 0.22
   floorCheckDelay: 0.5
   prefabDeParticulas: {fileID: 0}
+  crumps: {fileID: 0}
   fmodEvent:
     Guid:
       Data1: 0
@@ -95729,20 +96138,21 @@ MonoBehaviour:
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -2118111382
+      Data2: 1168186721
+      Data3: -1678574175
+      Data4: 1905688001
+    Path: event:/Dialogue/Nivel 3/Trump/t_00
 --- !u!54 &2107167926
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -96162,6 +96572,7 @@ MonoBehaviour:
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -96331,6 +96742,180 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122564534}
   m_Mesh: {fileID: -5495902117074765545, guid: 9fb6d6ad86f179b48b5e10ee112bc927, type: 3}
+--- !u!1 &2123636281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2123636282}
+  - component: {fileID: 2123636287}
+  - component: {fileID: 2123636286}
+  - component: {fileID: 2123636285}
+  - component: {fileID: 2123636284}
+  - component: {fileID: 2123636283}
+  m_Layer: 3
+  m_Name: NightrapGame (2)
+  m_TagString: ObjectosCrumpsBad
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2123636282
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123636281}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.09275484, y: -0.70099676, z: -0.70099694, w: 0.09275484}
+  m_LocalPosition: {x: 0.73, y: -0.09, z: 15.47}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 839301181}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 15.075}
+--- !u!114 &2123636283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123636281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13c85256a8602648a3bb2b53f5f784b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Destruible
+  floorLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  destroyOnFloorTouch: 1
+  timeToDestroy: 0.2
+  floorCheckDelay: 0.3
+  prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
+  fmodEvent:
+    Guid:
+      Data1: 1018262660
+      Data2: 1283633708
+      Data3: -1418956119
+      Data4: -530662935
+    Path: event:/SFX/nivel 3/rompermadera
+  audioDespuesDeRomper:
+    Guid:
+      Data1: -349892186
+      Data2: 1131334561
+      Data3: -1328881734
+      Data4: 458386729
+    Path: event:/Dialogue/Nivel 3/Trump/t_04
+--- !u!54 &2123636284
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123636281}
+  serializedVersion: 5
+  m_Mass: 5
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &2123636285
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123636281}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.20000005, y: 0.30000004, z: 0.040000066}
+  m_Center: {x: -2.4145008e-10, y: 0.000003811153, z: 0.019999946}
+--- !u!23 &2123636286
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123636281}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2d52796919e489e4699d446245548870, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2123636287
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123636281}
+  m_Mesh: {fileID: -927626855165405315, guid: 01e1bf68bd40bf54aa9b97f12ea816b5, type: 3}
 --- !u!1 &2128632636
 GameObject:
   m_ObjectHideFlags: 0
@@ -97796,10 +98381,11 @@ Transform:
   m_GameObject: {fileID: 919132149291026001}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0000005020114, y: 0.70710677, z: 0.7071069, w: 0.0000004917383}
-  m_LocalPosition: {x: -0.23691894, y: -0.6710001, z: 12.203911}
+  m_LocalPosition: {x: -0.23691894, y: -0.683, z: 12.203911}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 407705017}
   m_Father: {fileID: 839301181}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 360}
 --- !u!4 &543450653577925277
@@ -103118,6 +103704,7 @@ GameObject:
   - component: {fileID: 543450651738180496}
   - component: {fileID: 3469287837868753973}
   - component: {fileID: 1711813854881706239}
+  - component: {fileID: 3469287837868753974}
   m_Layer: 0
   m_Name: Columna
   m_TagString: Untagged
@@ -103297,6 +103884,7 @@ GameObject:
   - component: {fileID: 543450652382101006}
   - component: {fileID: 3469287838514639275}
   - component: {fileID: 1711813854720132449}
+  - component: {fileID: 3469287838514639276}
   m_Layer: 0
   m_Name: Columna (3)
   m_TagString: Untagged
@@ -103653,6 +104241,7 @@ GameObject:
   - component: {fileID: 543450653027130417}
   - component: {fileID: 3469287836810597268}
   - component: {fileID: 1711813856306472798}
+  - component: {fileID: 3469287836810597269}
   m_Layer: 0
   m_Name: Columna (1)
   m_TagString: Untagged
@@ -103893,6 +104482,7 @@ GameObject:
   - component: {fileID: 543450653701189639}
   - component: {fileID: 3469287837484924834}
   - component: {fileID: 1711813855636605800}
+  - component: {fileID: 3469287837484924835}
   m_Layer: 0
   m_Name: Columna (2)
   m_TagString: Untagged
@@ -104804,14 +105394,6 @@ Transform:
   - {fileID: 7006624638011170152}
   m_Father: {fileID: 4576360387889679517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1472119564189777149
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2921164661964433890}
-  m_Mesh: {fileID: -8586770294792153069, guid: 81e7e2efa9f8fb44d87c6f296ba07277, type: 3}
 --- !u!4 &1485881534841310171
 Transform:
   m_ObjectHideFlags: 0
@@ -108865,6 +109447,7 @@ MonoBehaviour:
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -108942,21 +109525,6 @@ Transform:
   - {fileID: 1852576806173004509}
   m_Father: {fileID: 6000407480386712080}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &2576586086388085592
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2921164661964433890}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.5520526, y: -0.4418573, z: -0.44185734, w: 0.5520527}
-  m_LocalPosition: {x: 0.090081066, y: -0.6810001, z: 11.897911}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 839301181}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 102.653}
 --- !u!1 &2586065996753676011
 GameObject:
   m_ObjectHideFlags: 0
@@ -109294,27 +109862,6 @@ Transform:
   - {fileID: 8044669280713267999}
   m_Father: {fileID: 608321761369951081}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2921164661964433890
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2576586086388085592}
-  - component: {fileID: 1472119564189777149}
-  - component: {fileID: 3714048815402043447}
-  - component: {fileID: 3714048815402043449}
-  - component: {fileID: 3714048815402043448}
-  - component: {fileID: 3714048815402043450}
-  m_Layer: 3
-  m_Name: NuevoLibro
-  m_TagString: ObjectosCrumpsGood
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!4 &2925517128473287950
 Transform:
   m_ObjectHideFlags: 0
@@ -119265,6 +119812,7 @@ MonoBehaviour:
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -119402,20 +119950,21 @@ MonoBehaviour:
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 945984033
+      Data2: 1090509562
+      Data3: 1441393564
+      Data4: -805565005
+    Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -2118111382
+      Data2: 1168186721
+      Data3: -1678574175
+      Data4: 1905688001
+    Path: event:/Dialogue/Nivel 3/Trump/t_00
 --- !u!33 &3469287836627419453
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -119491,6 +120040,7 @@ MonoBehaviour:
   timeToDestroy: 0.2
   floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -119593,6 +120143,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148753139339}
   m_Mesh: {fileID: 8720653040151070463, guid: 6ac96d75d21e6c341bee0f1cc46aa2ca, type: 3}
+--- !u!65 &3469287836810597269
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148753139339}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7805756, y: 0.6827992, z: 3.8849454}
+  m_Center: {x: -0.0000012703055, y: -0.0074041863, z: 1.9230075}
 --- !u!33 &3469287836812793251
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -119800,6 +120371,7 @@ MonoBehaviour:
   timeToDestroy: 0.2
   floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -119888,7 +120460,8 @@ MonoBehaviour:
   destroyOnFloorTouch: 1
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
+  prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -119898,11 +120471,11 @@ MonoBehaviour:
     Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
-      Data1: -1842266484
-      Data2: 1338044830
-      Data3: 503407746
-      Data4: 1104283061
-    Path: event:/Dialogue/Nivel 3/Trump/t_06
+      Data1: -1939846174
+      Data2: 1245293606
+      Data3: -2066886736
+      Data4: -555172354
+    Path: event:/Dialogue/Nivel 3/Trump/trump
 --- !u!54 &3469287837027036881
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -119978,6 +120551,7 @@ MonoBehaviour:
   timeToDestroy: 0.2
   floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -120159,9 +120733,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaoriTrigger
   crumpsLogic: {fileID: 5866666019861991558}
-  floatSpeed: 0.03
-  rotationSpeed: 100
-  maxHeight: 2.7
+  floatSpeed: 0.39
+  rotationSpeed: 357
+  maxHeight: 3.94
+  llum: {fileID: 407705016}
+  llumsgens: {fileID: 502977516}
 --- !u!114 &3469287837346386768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120177,7 +120753,7 @@ MonoBehaviour:
   canvasToActivate: {fileID: 1459020364}
   interactAction: {fileID: -3359667613083277608, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
   Health: {fileID: 5866666019861991558}
-  delayAfterDeath: 5
+  delayAfterDeath: 4
   ambienceEvent:
     Guid:
       Data1: 822738645
@@ -120212,6 +120788,7 @@ MonoBehaviour:
   timeToDestroy: 0.2
   floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -120221,11 +120798,11 @@ MonoBehaviour:
     Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 977470110
+      Data2: 1185415281
+      Data3: -549725553
+      Data4: -1293119385
+    Path: event:/Dialogue/Nivel 3/Trump/t_02
 --- !u!54 &3469287837360741690
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -120451,6 +121028,7 @@ MonoBehaviour:
   timeToDestroy: 0.5
   floorCheckDelay: 3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -120484,6 +121062,7 @@ MonoBehaviour:
   timeToDestroy: 0.5
   floorCheckDelay: 3
   prefabDeParticulas: {fileID: 0}
+  crumps: {fileID: 0}
   fmodEvent:
     Guid:
       Data1: 667744343
@@ -120506,6 +121085,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149160897213}
   m_Mesh: {fileID: 8720653040151070463, guid: 6ac96d75d21e6c341bee0f1cc46aa2ca, type: 3}
+--- !u!65 &3469287837484924835
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149160897213}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7805755, y: 0.68279886, z: 3.884946}
+  m_Center: {x: -0.0000005535989, y: -0.007402504, z: 1.9230078}
 --- !u!33 &3469287837506713094
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -120676,6 +121276,7 @@ MonoBehaviour:
   timeToDestroy: 0.2
   floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -120716,7 +121317,8 @@ MonoBehaviour:
   destroyOnFloorTouch: 1
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
+  prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -120726,11 +121328,11 @@ MonoBehaviour:
     Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
-      Data1: -1842266484
-      Data2: 1338044830
-      Data3: 503407746
-      Data4: 1104283061
-    Path: event:/Dialogue/Nivel 3/Trump/t_06
+      Data1: -1939846174
+      Data2: 1245293606
+      Data3: -2066886736
+      Data4: -555172354
+    Path: event:/Dialogue/Nivel 3/Trump/trump
 --- !u!54 &3469287837557900425
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -120891,6 +121493,7 @@ MonoBehaviour:
   timeToDestroy: 0.2
   floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -120979,7 +121582,8 @@ MonoBehaviour:
   destroyOnFloorTouch: 1
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 3038125645167316238, guid: 2d43cc98791cb2b4cb43765dfda45af3, type: 3}
+  prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -120989,11 +121593,11 @@ MonoBehaviour:
     Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
-      Data1: -1671348161
-      Data2: 1289002779
-      Data3: -758632269
-      Data4: -771272510
-    Path: event:/Dialogue/Nivel 1/Dicks/Dick1
+      Data1: -147487282
+      Data2: 1178110421
+      Data3: -2060867138
+      Data4: 472313078
+    Path: event:/Dialogue/Nivel 3/Trump/t_01
 --- !u!33 &3469287837823994239
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -121018,6 +121622,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132147803967786}
   m_Mesh: {fileID: 8720653040151070463, guid: 6ac96d75d21e6c341bee0f1cc46aa2ca, type: 3}
+--- !u!65 &3469287837868753974
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147803967786}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.78057504, y: 0.68279856, z: 3.8849452}
+  m_Center: {x: -0.000000953895, y: -0.0074038664, z: 1.9230076}
 --- !u!33 &3469287837972438315
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -121074,6 +121699,7 @@ MonoBehaviour:
   timeToDestroy: 0.5
   floorCheckDelay: 1.4
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -121083,11 +121709,11 @@ MonoBehaviour:
     Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
-      Data1: -1842266484
-      Data2: 1338044830
-      Data3: 503407746
-      Data4: 1104283061
-    Path: event:/Dialogue/Nivel 3/Trump/t_06
+      Data1: -1939846174
+      Data2: 1245293606
+      Data3: -2066886736
+      Data4: -555172354
+    Path: event:/Dialogue/Nivel 3/Trump/trump
 --- !u!54 &3469287838007118558
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -121179,6 +121805,7 @@ MonoBehaviour:
   timeToDestroy: 0.2
   floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -121188,11 +121815,11 @@ MonoBehaviour:
     Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -2118111382
+      Data2: 1168186721
+      Data3: -1678574175
+      Data4: 1905688001
+    Path: event:/Dialogue/Nivel 3/Trump/t_00
 --- !u!54 &3469287838058919459
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -121297,6 +121924,7 @@ MonoBehaviour:
   timeToDestroy: 0.3
   floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -121386,6 +122014,7 @@ MonoBehaviour:
   timeToDestroy: 0.3
   floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -121634,6 +122263,7 @@ MonoBehaviour:
   timeToDestroy: 0.3
   floorCheckDelay: 0.22
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 945984033
@@ -121643,11 +122273,11 @@ MonoBehaviour:
     Path: event:/SFX/nivel 3/rompercristales
   audioDespuesDeRomper:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -349892186
+      Data2: 1131334561
+      Data3: -1328881734
+      Data4: 458386729
+    Path: event:/Dialogue/Nivel 3/Trump/t_04
 --- !u!54 &3469287838346732964
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -121787,6 +122417,7 @@ MonoBehaviour:
   timeToDestroy: 0.2
   floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -121932,6 +122563,7 @@ MonoBehaviour:
   timeToDestroy: 0.2
   floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -122021,6 +122653,7 @@ MonoBehaviour:
   timeToDestroy: 0.2
   floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -122030,11 +122663,11 @@ MonoBehaviour:
     Path: event:/SFX/nivel 3/rompermadera
   audioDespuesDeRomper:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 977470110
+      Data2: 1185415281
+      Data3: -549725553
+      Data4: -1293119385
+    Path: event:/Dialogue/Nivel 3/Trump/t_02
 --- !u!33 &3469287838514639275
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -122043,6 +122676,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148189897908}
   m_Mesh: {fileID: 8720653040151070463, guid: 6ac96d75d21e6c341bee0f1cc46aa2ca, type: 3}
+--- !u!65 &3469287838514639276
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148189897908}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.78057504, y: 0.68279856, z: 3.8849452}
+  m_Center: {x: -0.000001907128, y: -0.007402912, z: 1.9230076}
 --- !u!33 &3469287838597987661
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -122261,136 +122915,6 @@ Transform:
   - {fileID: 6341119540960227865}
   m_Father: {fileID: 1852576806173004509}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &3714048815402043447
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2921164661964433890}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 27ad18460e649ec48b2df501202f237f, type: 2}
-  - {fileID: 2100000, guid: e4411832e96f7004db621d6e2a689fb6, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &3714048815402043448
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2921164661964433890}
-  serializedVersion: 5
-  m_Mass: 5
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &3714048815402043449
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2921164661964433890}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.21000002, y: 0.14999999, z: 0.04000001}
-  m_Center: {x: 5.3814414e-10, y: -5.2225224e-10, z: 0.02}
---- !u!114 &3714048815402043450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2921164661964433890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c13c85256a8602648a3bb2b53f5f784b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Destruible
-  floorLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  destroyOnFloorTouch: 1
-  timeToDestroy: 0.5
-  floorCheckDelay: 1.4
-  prefabDeParticulas: {fileID: 1797844696}
-  fmodEvent:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  audioDespuesDeRomper:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
 --- !u!4 &3719413535791733881
 Transform:
   m_ObjectHideFlags: 0
@@ -122551,6 +123075,7 @@ MonoBehaviour:
   timeToDestroy: 0.2
   floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -124401,7 +124926,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   health: 100
-  healthChangeAmount: 20
+  healthChangeAmount: 10
 --- !u!114 &5866666019861991559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125740,6 +126265,7 @@ MonoBehaviour:
   timeToDestroy: 0.2
   floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -127753,6 +128279,7 @@ MonoBehaviour:
   timeToDestroy: 0.2
   floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660
@@ -128460,6 +128987,7 @@ MonoBehaviour:
   timeToDestroy: 0.2
   floorCheckDelay: 0.3
   prefabDeParticulas: {fileID: 1797844696}
+  crumps: {fileID: 5866666019861991558}
   fmodEvent:
     Guid:
       Data1: 1018262660

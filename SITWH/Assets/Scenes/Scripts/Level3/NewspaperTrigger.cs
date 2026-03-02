@@ -4,10 +4,11 @@ using System.Collections;
 
 public class NewspaperTrigger : MonoBehaviour
 {
-    [SerializeField] private GameObject canvasToActivate; // Canvas a activar
-    [SerializeField] private InputActionReference interactAction; // Input Action tipo "Interact"
-    [SerializeField] public  CrumpsLogic Health; // Referencia a tu script de vida
-    [SerializeField] private float delayAfterDeath = 2f; // Segundos antes de permitir interacción
+    [SerializeField] private GameObject canvasToActivate; 
+    [SerializeField] private InputActionReference interactAction; 
+    [SerializeField] public  CrumpsLogic Health; 
+    [SerializeField] private float delayAfterDeath = 2f;
+   
 
     public FMODUnity.EventReference ambienceEvent;
     private bool canInteract = false;
@@ -32,7 +33,6 @@ public class NewspaperTrigger : MonoBehaviour
 
     private void Update()
     {
-        // Comprobamos si la vida llegó a 0 y aún no empezamos la espera
         if (!canInteract && Health.health<= 0)
         {
             StartCoroutine(EnableInteractionAfterDelay());
@@ -42,7 +42,7 @@ public class NewspaperTrigger : MonoBehaviour
     private IEnumerator EnableInteractionAfterDelay()
     {
         yield return new WaitForSeconds(delayAfterDeath);
-        canInteract = true; // Ya se puede interactuar
+        canInteract = true; 
     }
 
     private void OnInteract(InputAction.CallbackContext context)
