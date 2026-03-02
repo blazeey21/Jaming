@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections;
 using FMODUnity;
 using FMOD.Studio;
-using System.Collections.Generic;
 
 public class Destruible : MonoBehaviour
 {
@@ -12,7 +11,6 @@ public class Destruible : MonoBehaviour
     [SerializeField] private float floorCheckDelay = 3f;
     [SerializeField] private GameObject prefabDeParticulas;
 
-    [Header("FMOD audio")]
     public EventReference fmodEvent;
     public EventReference audioDespuesDeRomper;
 
@@ -23,10 +21,6 @@ public class Destruible : MonoBehaviour
     private Collider objectCollider;
 
     CrumpsLogic crumps;
-
-    // Gestión de cola de audio
-    private static bool isAudioPlaying = false;
-    private static Queue<System.Func<IEnumerator>> audioQueue = new Queue<System.Func<IEnumerator>>();
 
     void Start()
     {
@@ -110,62 +104,48 @@ public class Destruible : MonoBehaviour
 
         int hits = 0;
         foreach (var origin in rayOrigins)
-        {
             if (Physics.Raycast(origin, Vector3.down, raycastDistance, floorLayer))
                 hits++;
-        }
 
         return hits >= 3;
     }
 
     private void EnqueueAudioDestruction()
     {
-        audioQueue.Enqueue(() => HandleDestructionWithFMOD());
-        if (!isAudioPlaying)
-            StartCoroutine(ProcessAudioQueue());
+        AudioQueueManager.Instance.PlaySFX(() => PlayBreakSound());
+        AudioQueueManager.Instance.EnqueueVoice(() => PlayVoiceAfterBreak());
     }
 
-    private IEnumerator ProcessAudioQueue()
+    private IEnumerator PlayBreakSound()
     {
-        isAudioPlaying = true;
-        while (audioQueue.Count > 0)
-        {
-            var audioCoroutine = audioQueue.Dequeue();
-            yield return StartCoroutine(audioCoroutine());
-        }
-        isAudioPlaying = false;
+        if (fmodEvent.IsNull) yield break;
+
+        var instance = RuntimeManager.CreateInstance(fmodEvent);
+        instance.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
+        instance.start();
+        instance.release();
     }
 
-    private IEnumerator HandleDestructionWithFMOD()
+    private IEnumerator PlayVoiceAfterBreak()
     {
-        // SONIDO DE ROMPERSE
-        if (!fmodEvent.IsNull)
-        {
-            var instance = RuntimeManager.CreateInstance(fmodEvent);
-            instance.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
-            instance.start();
-
-            instance.getDescription(out EventDescription desc);
-            desc.getLength(out int lengthMs);
-
-            instance.release();
-
-            yield return new WaitForSeconds(lengthMs / 1000f);
-        }
-
-        // ESPERAR 3 SEGUNDOS
         yield return new WaitForSeconds(3f);
 
-        // AUDIO EXTRA
         if (!audioDespuesDeRomper.IsNull)
         {
             var instance = RuntimeManager.CreateInstance(audioDespuesDeRomper);
             instance.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
             instance.start();
+
+            PLAYBACK_STATE state = PLAYBACK_STATE.PLAYING;
+            while (state != PLAYBACK_STATE.STOPPED)
+            {
+                instance.getPlaybackState(out state);
+                yield return null;
+            }
+
             instance.release();
         }
 
-        // DESTRUIR O DESACTIVAR
         if (destroyOnFloorTouch)
             Destroy(gameObject, timeToDestroy);
         else
