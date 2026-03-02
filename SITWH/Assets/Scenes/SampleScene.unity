@@ -19306,8 +19306,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.025939, y: 1.005742, z: 4.4807158}
-  m_Center: {x: -1.3442103, y: 0.0028721502, z: 1.7403584}
+  m_Size: {x: 3.7315962, y: 2.0531967, z: 4.4807158}
+  m_Center: {x: -1.4913812, y: 0.5266002, z: 1.7403584}
 --- !u!1 &320128353
 GameObject:
   m_ObjectHideFlags: 0
@@ -127528,8 +127528,9 @@ MonoBehaviour:
         Data3: 632405380
         Data4: 47584829
       Path: event:/Dialogue/Nivel 1/Dicks/Dicks4_2LC
-    subtitle: This place saw worse decisions than the launch of Mortal Kombat without
-      the blood code.
+    subtitle: This place A true representative of the old and good American values
+      named Joe Lieberman shouted in here. worse decisions than the launch of Mortal
+      Kombat without the blood code.
     showSubtitle: 1
     subtitleDuration: 5
   - id: Incorrect

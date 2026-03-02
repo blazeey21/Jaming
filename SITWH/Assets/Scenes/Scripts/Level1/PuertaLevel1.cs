@@ -113,6 +113,7 @@ public class PuertaLevel1 : MonoBehaviour
         if (targetLight != null)
             StartCoroutine(FadeLight(targetLight, targetLight.intensity, lightFinalIntensity, 3f));
         FMODUnity.RuntimeManager.PlayOneShot(ambienceEvent);
+        GetComponent<Collider>().enabled = false;
         ActivarPuerta();
         StartCoroutine(SecuenciaRadio());
     }
@@ -126,6 +127,7 @@ public class PuertaLevel1 : MonoBehaviour
             yield return PlayAndWait(radioSequence[i]);
             yield return new WaitForSeconds(1f);
         }
+        
     }
 
     void ActivarPuerta()
