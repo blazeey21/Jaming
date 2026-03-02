@@ -565,6 +565,17 @@
                 },
                 {
                     "name": "",
+                    "id": "fd690212-7946-454e-b7e9-91e32fed7b0a",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "2b072fda-498a-4501-bba2-b67221a75e81",
                     "path": "<Keyboard>/w",
                     "interactions": "",

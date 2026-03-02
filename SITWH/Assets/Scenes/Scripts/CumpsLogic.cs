@@ -16,7 +16,7 @@ public class CrumpsLogic : MonoBehaviour
     void Start()
     {
         if (animator == null) animator = GetComponent<Animator>();
-        health = 110f;
+        health = 100f;
     }
 
     public void OnGoodObjectDestroyed(Vector3 position)

@@ -979,7 +979,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c3f106a78e1aa142b294d8d1a41114b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: GifForUnity::GifImporter.GifPlayer
-  Gifs: []
+  Gifs:
+  - {fileID: 11400000, guid: eaaf6615e8ac1fd48bae0dcaf0908a8b, type: 2}
+  - {fileID: 11400000, guid: eaaf6615e8ac1fd48bae0dcaf0908a8b, type: 2}
   changeGifEverySeconds: 5
 --- !u!1 &2074603531
 GameObject:
@@ -1039,7 +1041,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 192bf33f74166cb44a8668e1729e6f4c, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -12,7 +12,7 @@ public class NewspaperTrigger : MonoBehaviour
 
     public FMODUnity.EventReference ambienceEvent;
     private bool canInteract = false;
-
+    
     private void OnEnable()
     {
         if (interactAction != null)
