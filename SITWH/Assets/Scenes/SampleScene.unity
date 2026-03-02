@@ -25885,7 +25885,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 3.37
-  m_Range: 0.3
+  m_Range: 1.57
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -113944,7 +113944,7 @@ Transform:
   m_GameObject: {fileID: 919132149291026001}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0000005020114, y: 0.70710677, z: 0.7071069, w: 0.0000004917383}
-  m_LocalPosition: {x: -0.23691894, y: -0.683, z: 12.203911}
+  m_LocalPosition: {x: -0.237, y: -0.694, z: 12.203911}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -136297,8 +136297,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SaoriTrigger
   crumpsLogic: {fileID: 5866666019861991558}
   floatSpeed: 0.39
-  rotationSpeed: 357
-  maxHeight: 3.94
+  rotationSpeed: 70.6
+  maxHeight: 1.14
   llum: {fileID: 407705016}
   llumsgens: {fileID: 502977516}
 --- !u!114 &3469287837346386768
