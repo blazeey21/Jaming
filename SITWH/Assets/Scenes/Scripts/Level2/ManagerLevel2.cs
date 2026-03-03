@@ -22,6 +22,7 @@ public class ManagerLevel2 : MonoBehaviour
     [SerializeField] private InputActionProperty validarAction;
     [SerializeField] public GameObject Cerra;
 
+    [SerializeField] public GameObject puert;
     private bool isPlayerInTrigger = false;
     private int[] numeroActual = new int[4];
     private int indiceSeleccionado = 0;
@@ -266,6 +267,7 @@ public class ManagerLevel2 : MonoBehaviour
                 {
                     anim.SetBool("Open", true);
                     FMODUnity.RuntimeManager.PlayOneShot(ambienceEvent);
+                    Destroy(puert);
                 }
                 //GetComponent<MeshRenderer>().enabled = false;
                 StartCoroutine(DestruirPanelDespuesDeTiempo());

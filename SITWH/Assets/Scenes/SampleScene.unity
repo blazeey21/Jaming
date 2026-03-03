@@ -20790,6 +20790,7 @@ MonoBehaviour:
   - Nop
   - Are you even trying?
   - You could be a great politician
+  - Look at the numbers in the cells dumbfuck
   player: {fileID: 1412512085}
   closeAction:
     m_UseReference: 1
@@ -20852,6 +20853,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 6805858867419907508, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
   Cerra: {fileID: 919132148998215363}
+  puert: {fileID: 1768738911}
   ambienceEvent:
     Guid:
       Data1: 659100334
@@ -39503,8 +39505,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e0c0d19dfdcc84486c5d69f7df1328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  intensidadMin: 0.08
-  intensidadMax: 0.099
+  intensidadMin: 0.98
+  intensidadMax: 1.44
   intervaloMin: 0.2
   intervaloMax: 0.66
 --- !u!114 &623068885
@@ -47257,8 +47259,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e0c0d19dfdcc84486c5d69f7df1328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  intensidadMin: 0.22
-  intensidadMax: 0.35
+  intensidadMin: 0.98
+  intensidadMax: 1.44
   intervaloMin: 0.2
   intervaloMax: 0.66
 --- !u!114 &763013538
@@ -90597,8 +90599,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e0c0d19dfdcc84486c5d69f7df1328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  intensidadMin: 0.22
-  intensidadMax: 0.35
+  intensidadMin: 0.98
+  intensidadMax: 1.44
   intervaloMin: 0.2
   intervaloMax: 0.66
 --- !u!1 &1550443288
@@ -92040,8 +92042,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e0c0d19dfdcc84486c5d69f7df1328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  intensidadMin: 0.22
-  intensidadMax: 0.35
+  intensidadMin: 0.98
+  intensidadMax: 1.44
   intervaloMin: 0.2
   intervaloMax: 0.66
 --- !u!114 &1615131820
