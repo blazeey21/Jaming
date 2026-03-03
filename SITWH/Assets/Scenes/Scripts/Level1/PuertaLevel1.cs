@@ -39,6 +39,7 @@ public class PuertaLevel1 : MonoBehaviour
     private bool puertaAbierta = false;
     private Animator animator;
     public FMODUnity.EventReference ambienceEvent;
+   
 
 
     void Start()
@@ -121,11 +122,11 @@ public class PuertaLevel1 : MonoBehaviour
     IEnumerator SecuenciaRadio()
     {
         yield return new WaitForSeconds(5f);
-
+        
         for (int i = 0; i < radioSequence.Length; i++)
         {
             yield return PlayAndWait(radioSequence[i]);
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.4f);
         }
         
     }

@@ -20853,7 +20853,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 6805858867419907508, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
   Cerra: {fileID: 919132148998215363}
-  puert: {fileID: 1768738911}
+  puert: {fileID: 0}
   ambienceEvent:
     Guid:
       Data1: 659100334
@@ -83142,7 +83142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3777d1d70465ffe40a9769d968c7541e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  moveSpeed: 3.44
+  moveSpeed: 2
   sprintSpeed: 8
   acceleration: 5
   deceleration: 10
@@ -99187,8 +99187,6 @@ MonoBehaviour:
   - Radio10
   - Radio11
   - Radio12
-  - Radio13
-  - Raadio14
   - Radio15
   targetLight: {fileID: 1102414921}
   lightFinalIntensity: 0.01
@@ -114379,7 +114377,7 @@ MonoBehaviour:
   jugador: {fileID: 1412512083}
   objeto1: {fileID: 352304446}
   objeto2: {fileID: 1494064958}
-  duracionFade: 12
+  duracionFade: 24
 --- !u!4 &2081383049
 Transform:
   m_ObjectHideFlags: 0
