@@ -20853,6 +20853,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 6805858867419907508, guid: 555ca47d718a7744eb3a8a7466164e07, type: 3}
   Cerra: {fileID: 919132148998215363}
+  Candad: {fileID: 919132148998215363}
   puert: {fileID: 0}
   ambienceEvent:
     Guid:

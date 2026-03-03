@@ -21,7 +21,7 @@ public class ManagerLevel2 : MonoBehaviour
     [SerializeField] private InputActionProperty decrementAction;
     [SerializeField] private InputActionProperty validarAction;
     [SerializeField] public GameObject Cerra;
-
+    [SerializeField] public GameObject Candad;
     [SerializeField] public GameObject puert;
     private bool isPlayerInTrigger = false;
     private int[] numeroActual = new int[4];
@@ -267,7 +267,9 @@ public class ManagerLevel2 : MonoBehaviour
                 {
                     anim.SetBool("Open", true);
                     FMODUnity.RuntimeManager.PlayOneShot(ambienceEvent);
-                    Destroy(puert);
+                  //  Destroy(puert);
+                    Candad.GetComponent<Collider>().enabled = false;
+                    this.GetComponent<Collider>().enabled = false;
                 }
                 //GetComponent<MeshRenderer>().enabled = false;
                 StartCoroutine(DestruirPanelDespuesDeTiempo());
